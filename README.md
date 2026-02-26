@@ -42,20 +42,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/NicolasReboule/CPPTemplate">
+  <a href="https://github.com/NicolasReboule/Dodo">
     <img src="assets/logo.ico" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">CPPTemplate</h3>
+<h3 align="center">Dodo</h3>
 
   <p align="center">
-    CPPTemplate is a C++ Template for my future projects <br />
+    Dodo is a C++ Vulkan Graphics Library <br />
     <br />
-    <a href="https://NicolasReboule.github.io/CPPTemplate"><strong>Explore the source code docs »</strong></a>
+    <a href="https://NicolasReboule.github.io/Dodo"><strong>Explore the source code docs »</strong></a>
     <br />
-    <a href="https://github.com/NicolasReboule/CPPTemplate/issues">Report Bug</a>
+    <a href="https://github.com/NicolasReboule/Dodo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/NicolasReboule/CPPTemplate/issues">Request Feature</a>
+    <a href="https://github.com/NicolasReboule/Dodo/issues">Request Feature</a>
   </p>
 </div>
 
@@ -86,20 +86,28 @@
 
 ## About The Project
 
+I am building the library as I learn Vulkan following the documentation. So all the raw code and testing is in the main.cpp for learning and the cleaner code is in the sources but it may change as I learn more about Vulkan.
+
+Project is built in C++ 23 as I wanted to try out std::expected to treat errors as values, that is why you will see "Create" methods instead of using constructors directly.
+
 ### Built With
 
 * [![CPP][CPP]][CPP-url]
+* [![Vulkan][Vulkan]][Vulkan-url]
+* [![GLFW][GLFW]][GLFW-url]
 * [![CMake][CMake]][CMake-url]
 * [![CLion][CLion]][CLion-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Getting Started
 
 ### Prerequisites
 
 - CMake
-- C++20
+- C++23
+- Vulkan SDK
 
 ### Installation
 
@@ -108,7 +116,7 @@
 ## Documentation
 
 The documentation of this project can be found at:
-- Source code documentation: [https://nicolasreboule.github.io/CPPTemplate][github.io-url]
+- Source code documentation: [https://nicolasreboule.github.io/Dodo][github.io-url]
 
 ## Usage
 
@@ -146,28 +154,28 @@ Distributed under the MIT License. See [LICENSE][license-url] for more informati
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/NicolasReboule/CPPTemplate.svg?style=for-the-badge
-[contributors-url]: https://github.com/NicolasReboule/CPPTemplate/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/NicolasReboule/CPPTemplate.svg?style=for-the-badge
-[forks-url]: https://github.com/NicolasReboule/CPPTemplate/network/members
-[stars-shield]: https://img.shields.io/github/stars/NicolasReboule/CPPTemplate.svg?style=for-the-badge
-[stars-url]: https://github.com/NicolasReboule/CPPTemplate/stargazers
-[issues-shield]: https://img.shields.io/github/issues/NicolasReboule/CPPTemplate.svg?style=for-the-badge
-[issues-url]: https://github.com/NicolasReboule/CPPTemplate/issues
-[license-shield]: https://img.shields.io/github/license/NicolasReboule/CPPTemplate.svg?style=for-the-badge
-[license-url]: https://github.com/NicolasReboule/CPPTemplate/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/NicolasReboule/Dodo.svg?style=for-the-badge
+[contributors-url]: https://github.com/NicolasReboule/Dodo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/NicolasReboule/Dodo.svg?style=for-the-badge
+[forks-url]: https://github.com/NicolasReboule/Dodo/network/members
+[stars-shield]: https://img.shields.io/github/stars/NicolasReboule/Dodo.svg?style=for-the-badge
+[stars-url]: https://github.com/NicolasReboule/Dodo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/NicolasReboule/Dodo.svg?style=for-the-badge
+[issues-url]: https://github.com/NicolasReboule/Dodo/issues
+[license-shield]: https://img.shields.io/github/license/NicolasReboule/Dodo.svg?style=for-the-badge
+[license-url]: https://github.com/NicolasReboule/Dodo/blob/master/LICENSE
 [contributing-url]: CONTRIBUTING.md
-[github.io-url]: https://NicolasReboule.github.io/CPPTemplate/
-[release-shield]: https://img.shields.io/github/v/release/NicolasReboule/CPPTemplate?color=lime&label=LATEST%20RELEASE&style=for-the-badge
-[release-url]: https://github.com/NicolasReboule/CPPTemplate/releases/latest
-[build-url]: https://github.com/NicolasReboule/CPPTemplate/actions/workflows/build.yml
-[build-shield]: https://img.shields.io/github/actions/workflow/status/NicolasReboule/CPPTemplate/build.yml?style=for-the-badge
-[lint-url]: https://github.com/NicolasReboule/CPPTemplate/actions/workflows/linter.yml
-[lint-shield]: https://img.shields.io/github/actions/workflow/status/NicolasReboule/CPPTemplate/linter.yml?style=for-the-badge&label=Linting
-[docs-url]: https://github.com/NicolasReboule/CPPTemplate/actions/workflows/pages/pages-build-deployment
-[docs-shield]: https://img.shields.io/github/actions/workflow/status/NicolasReboule/CPPTemplate/pages/pages-build-deployment?style=for-the-badge&label=Docs
-[coverage-url]: https://app.codecov.io/github/NicolasReboule/CPPTemplate
-[coverage-shield]: https://img.shields.io/codecov/c/github/NicolasReboule/CPPTemplate?token=0Z3FKJ3XLE&style=for-the-badge
+[github.io-url]: https://NicolasReboule.github.io/Dodo/
+[release-shield]: https://img.shields.io/github/v/release/NicolasReboule/Dodo?color=lime&label=LATEST%20RELEASE&style=for-the-badge
+[release-url]: https://github.com/NicolasReboule/Dodo/releases/latest
+[build-url]: https://github.com/NicolasReboule/Dodo/actions/workflows/build.yml
+[build-shield]: https://img.shields.io/github/actions/workflow/status/NicolasReboule/Dodo/build.yml?style=for-the-badge
+[lint-url]: https://github.com/NicolasReboule/Dodo/actions/workflows/linter.yml
+[lint-shield]: https://img.shields.io/github/actions/workflow/status/NicolasReboule/Dodo/linter.yml?style=for-the-badge&label=Linting
+[docs-url]: https://github.com/NicolasReboule/Dodo/actions/workflows/pages/pages-build-deployment
+[docs-shield]: https://img.shields.io/github/actions/workflow/status/NicolasReboule/Dodo/pages/pages-build-deployment?style=for-the-badge&label=Docs
+[coverage-url]: https://app.codecov.io/github/NicolasReboule/Dodo
+[coverage-shield]: https://img.shields.io/codecov/c/github/NicolasReboule/Dodo?token=0Z3FKJ3XLE&style=for-the-badge
 
 
 [CPP]: https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white
@@ -176,3 +184,7 @@ Distributed under the MIT License. See [LICENSE][license-url] for more informati
 [CMake-url]: https://cmake.org
 [CLion]: https://img.shields.io/badge/CLion-black?style=for-the-badge&logo=clion&logoColor=white
 [CLion-url]: https://www.jetbrains.com/clion/
+[Vulkan]: https://img.shields.io/badge/Vulkan-AE0F28?logo=Vulkan&logoColor=fff&style=for-the-badge
+[Vulkan-url]: https://www.vulkan.org
+[GLFW]: https://img.shields.io/badge/GLFW-ff7f13?style=for-the-badge
+[GLFW-url]: https://www.glfw.org
