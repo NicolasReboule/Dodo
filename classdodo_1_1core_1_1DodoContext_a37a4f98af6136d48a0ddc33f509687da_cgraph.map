@@ -1,0 +1,13 @@
+<map id="dodo::core::DodoContext::createDodoContext" name="dodo::core::DodoContext::createDodoContext">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,166,113"/>
+<area shape="rect" id="Node000002" href="$classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0" title=" " alt="" coords="215,39,383,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,78,199,72,199,78,166,83"/>
+<area shape="rect" id="Node000005" href="$classdodo_1_1core_1_1VulkanContext.html#afed694e96c1ea50d8c68161666c8cc6b" title=" " alt="" coords="214,104,384,145"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="166,102,198,107,198,112,165,107"/>
+<area shape="rect" id="Node000003" href="$group__init.html#gaee7bac4c7e1b2769207747c1b5ae2f9e" title="Returns and clears the last error for the calling thread." alt="" coords="500,5,594,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,43,485,26,486,31,384,48"/>
+<area shape="rect" id="Node000004" href="$group__init.html#gab41771f0215a2e0afb4cf1cf98082d40" title="Initializes the GLFW library." alt="" coords="516,55,579,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="383,60,500,63,500,69,383,65"/>
+<area shape="rect" id="Node000006" href="$group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c" title="Returns the Vulkan instance extensions required by GLFW." alt="" coords="432,112,662,138"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="384,122,416,122,416,128,384,128"/>
+</map>

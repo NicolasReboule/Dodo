@@ -1,5 +1,24 @@
 <map id="main" name="main">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,55,38"/>
-<area shape="rect" id="Node000002" href="$classexample_1_1ExampleClass.html#a11f4e9c2eb8c8073e86a12aa9f36bb1f" title="Prints Hello." alt="" coords="103,5,260,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,23,87,23,87,28,55,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,55,122"/>
+<area shape="rect" id="Node000002" href="$classdodo_1_1core_1_1App.html#a83d509ec5bcdc2774fff7a606965b35c" title=" " alt="" coords="103,64,277,90"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,101,107,91,108,96,56,107"/>
+<area shape="rect" id="Node000007" href="$classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da" title=" " alt="" coords="110,116,270,157"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="56,110,95,117,94,123,55,116"/>
+<area shape="rect" id="Node000003" href="$classdodo_1_1core_1_1App.html#ab7e3dcdb328f7fccde18d193ba005cb0" title=" " alt="" coords="325,57,560,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="278,72,309,71,309,76,278,77"/>
+<area shape="rect" id="Node000004" href="$group__window.html#gaaccd00fafe81e2db94e8cdf55721e055" title="Creates a window and its associated context." alt="" coords="659,5,788,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="516,54,643,30,644,35,516,59"/>
+<area shape="rect" id="Node000005" href="$group__init.html#gaee7bac4c7e1b2769207747c1b5ae2f9e" title="Returns and clears the last error for the calling thread." alt="" coords="677,104,770,130"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="525,81,662,104,661,109,524,86"/>
+<area shape="rect" id="Node000006" href="$group__window.html#ga69c40728499720bef8a49aa925ea0efa" title="Sets the specified window hint to the desired value." alt="" coords="666,55,781,80"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="561,66,650,66,650,71,561,72"/>
+<area shape="rect" id="Node000008" href="$classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0" title=" " alt="" coords="358,116,527,157"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="271,134,343,134,343,140,271,140"/>
+<area shape="rect" id="Node000010" href="$classdodo_1_1core_1_1VulkanContext.html#afed694e96c1ea50d8c68161666c8cc6b" title=" " alt="" coords="358,183,528,224"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="270,155,349,176,347,181,269,160"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="527,128,661,119,662,124,528,133"/>
+<area shape="rect" id="Node000009" href="$group__init.html#gab41771f0215a2e0afb4cf1cf98082d40" title="Initializes the GLFW library." alt="" coords="692,153,755,179"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="528,143,677,159,676,164,527,148"/>
+<area shape="rect" id="Node000011" href="$group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c" title="Returns the Vulkan instance extensions required by GLFW." alt="" coords="608,203,839,228"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="528,204,593,207,593,213,528,210"/>
 </map>

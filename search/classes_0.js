@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['exampleclass_0',['ExampleClass',['../classexample_1_1ExampleClass.html',1,'example']]]
+  ['app_0',['App',['../classdodo_1_1core_1_1App.html',1,'dodo::core']]],
+  ['appinfo_1',['AppInfo',['../structdodo_1_1core_1_1App_1_1AppInfo.html',1,'dodo::core::App']]]
 ];

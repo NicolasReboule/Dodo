@@ -1,0 +1,11 @@
+<map id="dodo::core::App::createApp" name="dodo::core::App::createApp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,180,80"/>
+<area shape="rect" id="Node000002" href="$classdodo_1_1core_1_1App.html#ab7e3dcdb328f7fccde18d193ba005cb0" title=" " alt="" coords="228,55,463,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,65,212,65,212,70,180,70"/>
+<area shape="rect" id="Node000003" href="$group__window.html#gaaccd00fafe81e2db94e8cdf55721e055" title="Creates a window and its associated context." alt="" coords="511,5,640,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,51,497,32,498,37,409,57"/>
+<area shape="rect" id="Node000004" href="$group__init.html#gaee7bac4c7e1b2769207747c1b5ae2f9e" title="Returns and clears the last error for the calling thread." alt="" coords="529,55,622,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="464,65,514,65,514,70,464,70"/>
+<area shape="rect" id="Node000005" href="$group__window.html#ga69c40728499720bef8a49aa925ea0efa" title="Sets the specified window hint to the desired value." alt="" coords="518,104,633,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="409,78,503,99,502,104,408,84"/>
+</map>

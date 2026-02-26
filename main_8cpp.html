@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CPPTemplate: /github/workspace/main.cpp File Reference</title>
+<title>Dodo: /github/workspace/main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CPPTemplate<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">Dodo<span id="projectnumber">&#160;0.1</span>
    </div>
    <div id="projectbrief">Template for CPP projects</div>
   </td>
@@ -86,28 +86,95 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">/github/workspace/main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="example_8hpp_source.html">example.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;vulkan/vulkan_raii.hpp&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &quot;<a class="el" href="glfw3_8h_source.html">GLFW/glfw3.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="App_8hpp_source.html">dodo/core/App.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#a_2github_2workspace_2main_8cpp" alt=""/></div>
 <map name="a_2github_2workspace_2main_8cpp" id="a_2github_2workspace_2main_8cpp">
-<area shape="rect" title=" " alt="" coords="5,5,189,31"/>
-<area shape="rect" href="example_8hpp.html" title=" " alt="" coords="50,79,144,105"/>
-<area shape="poly" title=" " alt="" coords="100,31,100,63,94,63,94,31"/>
-<area shape="rect" title=" " alt="" coords="61,153,133,178"/>
-<area shape="poly" title=" " alt="" coords="100,105,100,137,94,137,94,105"/>
+<area shape="rect" title=" " alt="" coords="147,5,330,31"/>
+<area shape="rect" title=" " alt="" coords="5,300,155,326"/>
+<area shape="poly" title=" " alt="" coords="169,34,128,52,110,64,95,81,82,105,73,131,65,188,68,241,76,284,70,285,63,242,60,188,67,130,77,103,91,77,107,61,125,47,167,29"/>
+<area shape="rect" title=" " alt="" coords="105,79,164,105"/>
+<area shape="poly" title=" " alt="" coords="223,34,166,72,163,68,220,29"/>
+<area shape="rect" title=" " alt="" coords="223,300,294,326"/>
+<area shape="poly" title=" " alt="" coords="238,32,229,79,228,137,234,193,253,284,248,285,229,194,223,137,224,79,233,31"/>
+<area shape="rect" title=" " alt="" coords="239,79,316,105"/>
+<area shape="poly" title=" " alt="" coords="247,30,266,64,261,66,243,32"/>
+<area shape="rect" href="glfw3_8h.html" title="The header of the GLFW 3 API." alt="" coords="341,300,446,326"/>
+<area shape="poly" title=" " alt="" coords="268,29,301,49,330,77,359,130,378,188,389,241,394,284,389,285,384,242,373,189,355,133,326,81,297,53,265,34"/>
+<area shape="rect" href="App_8hpp.html" title=" " alt="" coords="594,79,723,105"/>
+<area shape="poly" title=" " alt="" coords="311,29,579,74,578,80,310,34"/>
+<area shape="rect" title=" " alt="" coords="270,374,338,399"/>
+<area shape="poly" title=" " alt="" coords="380,328,333,366,329,362,377,324"/>
+<area shape="rect" title=" " alt="" coords="362,374,425,399"/>
+<area shape="poly" title=" " alt="" coords="396,326,396,358,391,358,391,326"/>
+<area shape="rect" title=" " alt="" coords="450,374,513,399"/>
+<area shape="poly" title=" " alt="" coords="410,324,456,362,453,366,407,328"/>
+<area shape="poly" title=" " alt="" coords="625,108,582,126,531,152,479,186,433,228,414,256,403,286,398,284,410,254,429,225,476,182,528,148,580,121,623,103"/>
+<area shape="rect" title=" " alt="" coords="719,300,793,326"/>
+<area shape="poly" title=" " alt="" coords="709,103,748,121,766,134,781,151,795,177,799,200,796,224,789,253,775,288,770,285,784,251,791,223,793,200,790,178,776,154,762,138,745,126,707,108"/>
+<area shape="rect" title=" " alt="" coords="826,300,884,326"/>
+<area shape="poly" title=" " alt="" coords="720,103,765,121,787,134,806,151,828,183,842,219,856,284,850,285,837,220,823,185,802,154,784,138,763,126,718,108"/>
+<area shape="rect" title=" " alt="" coords="641,300,695,326"/>
+<area shape="poly" title=" " alt="" coords="655,106,645,128,637,153,630,203,637,251,653,286,648,288,632,253,625,203,632,152,640,126,650,104"/>
+<area shape="rect" href="DodoContext_8hpp.html" title=" " alt="" coords="647,153,766,178"/>
+<area shape="poly" title=" " alt="" coords="669,103,692,138,688,141,664,106"/>
+<area shape="rect" href="GLFWContext_8hpp.html" title=" " alt="" coords="647,226,774,252"/>
+<area shape="poly" title=" " alt="" coords="710,178,712,211,706,211,705,179"/>
+<area shape="rect" href="VulkanContext_8hpp.html" title=" " alt="" coords="442,226,571,252"/>
+<area shape="poly" title=" " alt="" coords="674,181,556,223,554,218,672,176"/>
+<area shape="poly" title=" " alt="" coords="657,255,461,299,460,294,656,250"/>
+<area shape="poly" title=" " alt="" coords="720,251,743,285,738,288,716,254"/>
+<area shape="poly" title=" " alt="" coords="736,250,818,290,815,295,734,255"/>
+<area shape="poly" title=" " alt="" coords="706,254,685,288,681,285,701,251"/>
+<area shape="poly" title=" " alt="" coords="442,254,168,300,167,294,441,249"/>
+<area shape="poly" title=" " alt="" coords="465,255,310,299,309,294,464,250"/>
+<area shape="poly" title=" " alt="" coords="489,255,427,294,424,289,486,250"/>
+<area shape="poly" title=" " alt="" coords="550,250,705,294,703,299,548,255"/>
+<area shape="poly" title=" " alt="" coords="535,250,628,291,626,296,533,255"/>
+<area shape="rect" title=" " alt="" coords="540,300,617,326"/>
+<area shape="poly" title=" " alt="" coords="520,250,558,287,554,291,517,254"/>
+<area shape="rect" title=" " alt="" coords="470,300,516,326"/>
+<area shape="poly" title=" " alt="" coords="507,253,501,285,496,284,502,252"/>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHelloTriangleApplication.html">HelloTriangleApplication</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTest.html">Test&lt; Features &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a3b210367c065e41dede56eab40b474ff" id="r_a3b210367c065e41dede56eab40b474ff"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3b210367c065e41dede56eab40b474ff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3b210367c065e41dede56eab40b474ff">printType</a> ()</td></tr>
+<tr class="separator:a3b210367c065e41dede56eab40b474ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7d4730c093de422c8a210b7d799d811" id="r_aa7d4730c093de422c8a210b7d799d811"><td class="memTemplParams" colspan="2">template&lt;typename FirstFeature , typename... OtherFeatures&gt; </td></tr>
+<tr class="memitem:aa7d4730c093de422c8a210b7d799d811"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa7d4730c093de422c8a210b7d799d811">testStructureChains</a> (const vk::StructureChain&lt; FirstFeature, OtherFeatures... &gt; &amp;features)</td></tr>
+<tr class="separator:aa7d4730c093de422c8a210b7d799d811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2ef71d26f33a696147bfd1b7b56b6ba2" id="r_a2ef71d26f33a696147bfd1b7b56b6ba2"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; char const  * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a></td></tr>
+<tr class="separator:a2ef71d26f33a696147bfd1b7b56b6ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa19a430be1b9d313312e3194456b1a20" id="r_aa19a430be1b9d313312e3194456b1a20"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa19a430be1b9d313312e3194456b1a20">enableValidationLayers</a> = true</td></tr>
+<tr class="separator:aa19a430be1b9d313312e3194456b1a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
@@ -124,23 +191,232 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    3</span>           {</div>
-<div class="line"><span class="lineno">    4</span>    <a class="code hl_function" href="classexample_1_1ExampleClass.html#a11f4e9c2eb8c8073e86a12aa9f36bb1f">example::ExampleClass::printHello</a>();</div>
-<div class="line"><span class="lineno">    5</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">    6</span>}</div>
-<div class="ttc" id="aclassexample_1_1ExampleClass_html_a11f4e9c2eb8c8073e86a12aa9f36bb1f"><div class="ttname"><a href="classexample_1_1ExampleClass.html#a11f4e9c2eb8c8073e86a12aa9f36bb1f">example::ExampleClass::printHello</a></div><div class="ttdeci">static void printHello()</div><div class="ttdoc">Prints Hello.</div><div class="ttdef"><b>Definition</b> example.cpp:9</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  338</span>           {</div>
+<div class="line"><span class="lineno">  339</span>    std::array&lt;const char *, 1&gt; vLayers {</div>
+<div class="line"><span class="lineno">  340</span>        <span class="stringliteral">&quot;VK_LAYER_KHRONOS_validation&quot;</span>,</div>
+<div class="line"><span class="lineno">  341</span>    };</div>
+<div class="line"><span class="lineno">  342</span> </div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>    <span class="keyword">const</span> vk::ApplicationInfo vkInfo {</div>
+<div class="line"><span class="lineno">  345</span>        .pApplicationName   = <span class="stringliteral">&quot;Hello Triangle&quot;</span>,</div>
+<div class="line"><span class="lineno">  346</span>        .applicationVersion = VK_MAKE_VERSION( 1, 0, 0 ),</div>
+<div class="line"><span class="lineno">  347</span>        .pEngineName        = <span class="stringliteral">&quot;No Engine&quot;</span>,</div>
+<div class="line"><span class="lineno">  348</span>        .engineVersion      = VK_MAKE_VERSION( 1, 0, 0 ),</div>
+<div class="line"><span class="lineno">  349</span>        .apiVersion         = vk::ApiVersion13</div>
+<div class="line"><span class="lineno">  350</span>    };</div>
+<div class="line"><span class="lineno">  351</span> </div>
+<div class="line"><span class="lineno">  352</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structdodo_1_1core_1_1App_1_1AppInfo.html">dodo::core::App::AppInfo</a> appInfo {</div>
+<div class="line"><span class="lineno">  353</span>        .width =  800,</div>
+<div class="line"><span class="lineno">  354</span>        .height = 600,</div>
+<div class="line"><span class="lineno">  355</span>        .title = <span class="stringliteral">&quot;TestApplication&quot;</span></div>
+<div class="line"><span class="lineno">  356</span>    };</div>
+<div class="line"><span class="lineno">  357</span> </div>
+<div class="line"><span class="lineno">  358</span>    vk::StructureChain&lt;vk::PhysicalDeviceFeatures2,</div>
+<div class="line"><span class="lineno">  359</span>                         vk::PhysicalDeviceVulkan13Features,</div>
+<div class="line"><span class="lineno">  360</span>                         vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT&gt; featureChain = {</div>
+<div class="line"><span class="lineno">  361</span>        {},                               <span class="comment">// vk::PhysicalDeviceFeatures2 (empty for now)</span></div>
+<div class="line"><span class="lineno">  362</span>        {.dynamicRendering = <span class="keyword">true</span> },      <span class="comment">// Enable dynamic rendering from Vulkan 1.3</span></div>
+<div class="line"><span class="lineno">  363</span>        {.extendedDynamicState = <span class="keyword">true</span> },   <span class="comment">// Enable extended dynamic state from the extension</span></div>
+<div class="line"><span class="lineno">  364</span>    };</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanDebug.html">dodo::core::VulkanContext::VulkanDebug</a> debugInfo {</div>
+<div class="line"><span class="lineno">  367</span>        .debugEnabled = <span class="keyword">true</span>,</div>
+<div class="line"><span class="lineno">  368</span>        .validationLayers = vLayers,</div>
+<div class="line"><span class="lineno">  369</span>    };</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>     <span class="keyword">const</span> <a class="code hl_struct" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanContextInfo.html">dodo::core::VulkanContext::VulkanContextInfo</a>&lt;vk::PhysicalDeviceFeatures2,</div>
+<div class="line"><span class="lineno">  372</span>                         vk::PhysicalDeviceVulkan13Features,</div>
+<div class="line"><span class="lineno">  373</span>                         vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT&gt; vkCtxInfo {</div>
+<div class="line"><span class="lineno">  374</span>        .vkInfo = vkInfo,</div>
+<div class="line"><span class="lineno">  375</span>        .featureChain = featureChain,</div>
+<div class="line"><span class="lineno">  376</span>        .debugInfo = debugInfo</div>
+<div class="line"><span class="lineno">  377</span>    };</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>    <span class="keyword">auto</span> ctx = <a class="code hl_function" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da">dodo::core::DodoContext::createDodoContext</a>(vkCtxInfo);</div>
+<div class="line"><span class="lineno">  380</span>    <span class="keyword">auto</span> app = <a class="code hl_function" href="classdodo_1_1core_1_1App.html#a83d509ec5bcdc2774fff7a606965b35c">dodo::core::App::createApp</a>(*ctx, appInfo);</div>
+<div class="line"><span class="lineno">  381</span>    <span class="keywordflow">if</span> (app) {</div>
+<div class="line"><span class="lineno">  382</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Success&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  383</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  384</span>        std::cout &lt;&lt; app.error() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><span class="lineno">  386</span>    }</div>
+<div class="line"><span class="lineno">  387</span>    <span class="keywordflow">while</span> (app-&gt;isRunning()) {</div>
+<div class="line"><span class="lineno">  388</span>        app-&gt;pollEvents();</div>
+<div class="line"><span class="lineno">  389</span>    }</div>
+<div class="line"><span class="lineno">  390</span>    <span class="comment">// HelloTriangleApplication app;</span></div>
+<div class="line"><span class="lineno">  391</span>    <span class="comment">// try {</span></div>
+<div class="line"><span class="lineno">  392</span>    <span class="comment">//     app.run();</span></div>
+<div class="line"><span class="lineno">  393</span>    <span class="comment">// } catch (const std::exception&amp; e) {</span></div>
+<div class="line"><span class="lineno">  394</span>    <span class="comment">//     std::cerr &lt;&lt; e.what() &lt;&lt; std::endl;</span></div>
+<div class="line"><span class="lineno">  395</span>    <span class="comment">//     return EXIT_FAILURE;</span></div>
+<div class="line"><span class="lineno">  396</span>    <span class="comment">// }</span></div>
+<div class="line"><span class="lineno">  397</span>    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><span class="lineno">  398</span>}</div>
+<div class="ttc" id="aclassdodo_1_1core_1_1App_html_a83d509ec5bcdc2774fff7a606965b35c"><div class="ttname"><a href="classdodo_1_1core_1_1App.html#a83d509ec5bcdc2774fff7a606965b35c">dodo::core::App::createApp</a></div><div class="ttdeci">static auto createApp(const DodoContext &amp;ctx, const AppInfo &amp;appInfo) -&gt; std::expected&lt; App, std::string &gt;</div><div class="ttdef"><b>Definition</b> App.cpp:11</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1DodoContext_html_a37a4f98af6136d48a0ddc33f509687da"><div class="ttname"><a href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da">dodo::core::DodoContext::createDodoContext</a></div><div class="ttdeci">static auto createDodoContext(const VulkanContext::VulkanContextInfo&lt; Features... &gt; &amp;ctxInfo) -&gt; std::expected&lt; DodoContext, std::string &gt;</div><div class="ttdef"><b>Definition</b> DodoContext.cpp:10</div></div>
+<div class="ttc" id="astructdodo_1_1core_1_1App_1_1AppInfo_html"><div class="ttname"><a href="structdodo_1_1core_1_1App_1_1AppInfo.html">dodo::core::App::AppInfo</a></div><div class="ttdef"><b>Definition</b> App.hpp:21</div></div>
+<div class="ttc" id="astructdodo_1_1core_1_1VulkanContext_1_1VulkanContextInfo_html"><div class="ttname"><a href="structdodo_1_1core_1_1VulkanContext_1_1VulkanContextInfo.html">dodo::core::VulkanContext::VulkanContextInfo</a></div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:37</div></div>
+<div class="ttc" id="astructdodo_1_1core_1_1VulkanContext_1_1VulkanDebug_html"><div class="ttname"><a href="structdodo_1_1core_1_1VulkanContext_1_1VulkanDebug.html">dodo::core::VulkanContext::VulkanDebug</a></div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:30</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="classexample_1_1ExampleClass.html#a11f4e9c2eb8c8073e86a12aa9f36bb1f">example::ExampleClass::printHello()</a>.</p>
+<p class="reference">References <a class="el" href="classdodo_1_1core_1_1App.html#a83d509ec5bcdc2774fff7a606965b35c">dodo::core::App::createApp()</a>, and <a class="el" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da">dodo::core::DodoContext::createDodoContext()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
 <map name="amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,55,38"/>
-<area shape="rect" href="classexample_1_1ExampleClass.html#a11f4e9c2eb8c8073e86a12aa9f36bb1f" title="Prints Hello." alt="" coords="103,5,260,46"/>
-<area shape="poly" title=" " alt="" coords="55,23,87,23,87,28,55,28"/>
+<area shape="rect" title=" " alt="" coords="5,96,55,122"/>
+<area shape="rect" href="classdodo_1_1core_1_1App.html#a83d509ec5bcdc2774fff7a606965b35c" title=" " alt="" coords="103,64,277,90"/>
+<area shape="poly" title=" " alt="" coords="55,101,107,91,108,96,56,107"/>
+<area shape="rect" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da" title=" " alt="" coords="110,116,270,157"/>
+<area shape="poly" title=" " alt="" coords="56,110,95,117,94,123,55,116"/>
+<area shape="rect" href="classdodo_1_1core_1_1App.html#ab7e3dcdb328f7fccde18d193ba005cb0" title=" " alt="" coords="325,57,560,83"/>
+<area shape="poly" title=" " alt="" coords="278,72,309,71,309,76,278,77"/>
+<area shape="rect" href="group__window.html#gaaccd00fafe81e2db94e8cdf55721e055" title="Creates a window and its associated context." alt="" coords="659,5,788,31"/>
+<area shape="poly" title=" " alt="" coords="516,54,643,30,644,35,516,59"/>
+<area shape="rect" href="group__init.html#gaee7bac4c7e1b2769207747c1b5ae2f9e" title="Returns and clears the last error for the calling thread." alt="" coords="677,104,770,130"/>
+<area shape="poly" title=" " alt="" coords="525,81,662,104,661,109,524,86"/>
+<area shape="rect" href="group__window.html#ga69c40728499720bef8a49aa925ea0efa" title="Sets the specified window hint to the desired value." alt="" coords="666,55,781,80"/>
+<area shape="poly" title=" " alt="" coords="561,66,650,66,650,71,561,72"/>
+<area shape="rect" href="classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0" title=" " alt="" coords="358,116,527,157"/>
+<area shape="poly" title=" " alt="" coords="271,134,343,134,343,140,271,140"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#afed694e96c1ea50d8c68161666c8cc6b" title=" " alt="" coords="358,183,528,224"/>
+<area shape="poly" title=" " alt="" coords="270,155,349,176,347,181,269,160"/>
+<area shape="poly" title=" " alt="" coords="527,128,661,119,662,124,528,133"/>
+<area shape="rect" href="group__init.html#gab41771f0215a2e0afb4cf1cf98082d40" title="Initializes the GLFW library." alt="" coords="692,153,755,179"/>
+<area shape="poly" title=" " alt="" coords="528,143,677,159,676,164,527,148"/>
+<area shape="rect" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c" title="Returns the Vulkan instance extensions required by GLFW." alt="" coords="608,203,839,228"/>
+<area shape="poly" title=" " alt="" coords="528,204,593,207,593,213,528,210"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a3b210367c065e41dede56eab40b474ff" name="a3b210367c065e41dede56eab40b474ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b210367c065e41dede56eab40b474ff">&#9670;&#160;</a></span>printType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void printType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  316</span>{</div>
+<div class="line"><span class="lineno">  317</span><span class="preprocessor">#if defined(__clang__) || defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  318</span>    std::cout &lt;&lt; __PRETTY_FUNCTION__ &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  319</span><span class="preprocessor">#elif defined(_MSC_VER)</span></div>
+<div class="line"><span class="lineno">  320</span>    std::cout &lt;&lt; __FUNCSIG__ &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  321</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  322</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#aa7d4730c093de422c8a210b7d799d811">testStructureChains()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a3b210367c065e41dede56eab40b474ff_icgraph.png" border="0" usemap="#amain_8cpp_a3b210367c065e41dede56eab40b474ff_icgraph" alt=""/></div>
+<map name="amain_8cpp_a3b210367c065e41dede56eab40b474ff_icgraph" id="amain_8cpp_a3b210367c065e41dede56eab40b474ff_icgraph">
+<area shape="rect" title=" " alt="" coords="190,5,264,31"/>
+<area shape="rect" href="main_8cpp.html#aa7d4730c093de422c8a210b7d799d811" title=" " alt="" coords="5,5,142,31"/>
+<area shape="poly" title=" " alt="" coords="174,21,142,21,142,16,174,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa7d4730c093de422c8a210b7d799d811" name="aa7d4730c093de422c8a210b7d799d811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d4730c093de422c8a210b7d799d811">&#9670;&#160;</a></span>testStructureChains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void testStructureChains </td>
+          <td>(</td>
+          <td class="paramtype">const vk::StructureChain&lt; FirstFeature, OtherFeatures... &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>features</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  325</span>                                                                                           {</div>
+<div class="line"><span class="lineno">  326</span>    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;first = features.template get&lt;FirstFeature&gt;();</div>
+<div class="line"><span class="lineno">  327</span>    <a class="code hl_function" href="#a3b210367c065e41dede56eab40b474ff">printType&lt;FirstFeature&gt;</a>();</div>
+<div class="line"><span class="lineno">  328</span> </div>
+<div class="line"><span class="lineno">  329</span>    vk::DeviceCreateInfo deviceCreateInfo{</div>
+<div class="line"><span class="lineno">  330</span>        .pNext = &amp;first,</div>
+<div class="line"><span class="lineno">  331</span>        .queueCreateInfoCount = 1,</div>
+<div class="line"><span class="lineno">  332</span>        <span class="comment">// .pQueueCreateInfos = &amp;deviceQueueCreateInfo,</span></div>
+<div class="line"><span class="lineno">  333</span>        <span class="comment">// .enabledExtensionCount = static_cast&lt;uint32_t&gt;(deviceExtensions.size()),</span></div>
+<div class="line"><span class="lineno">  334</span>        <span class="comment">// .ppEnabledExtensionNames = deviceExtensions.data()</span></div>
+<div class="line"><span class="lineno">  335</span>    };</div>
+<div class="line"><span class="lineno">  336</span>}</div>
+<div class="ttc" id="amain_8cpp_html_a3b210367c065e41dede56eab40b474ff"><div class="ttname"><a href="#a3b210367c065e41dede56eab40b474ff">printType</a></div><div class="ttdeci">void printType()</div><div class="ttdef"><b>Definition</b> main.cpp:315</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a3b210367c065e41dede56eab40b474ff">printType()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_aa7d4730c093de422c8a210b7d799d811_cgraph.png" border="0" usemap="#amain_8cpp_aa7d4730c093de422c8a210b7d799d811_cgraph" alt=""/></div>
+<map name="amain_8cpp_aa7d4730c093de422c8a210b7d799d811_cgraph" id="amain_8cpp_aa7d4730c093de422c8a210b7d799d811_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,142,31"/>
+<area shape="rect" href="main_8cpp.html#a3b210367c065e41dede56eab40b474ff" title=" " alt="" coords="190,5,264,31"/>
+<area shape="poly" title=" " alt="" coords="142,16,174,16,174,21,142,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aa19a430be1b9d313312e3194456b1a20" name="aa19a430be1b9d313312e3194456b1a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa19a430be1b9d313312e3194456b1a20">&#9670;&#160;</a></span>enableValidationLayers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool enableValidationLayers = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classHelloTriangleApplication.html#a2c7e569908ececa03347bf6471ef86b7">HelloTriangleApplication::createInstance()</a>.</p>
+
+</div>
+</div>
+<a id="a2ef71d26f33a696147bfd1b7b56b6ba2" name="a2ef71d26f33a696147bfd1b7b56b6ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef71d26f33a696147bfd1b7b56b6ba2">&#9670;&#160;</a></span>validationLayers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;char const*&gt; validationLayers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="stringliteral">&quot;VK_LAYER_KHRONOS_validation&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="lineno">   28</span>                                                {</div>
+<div class="line"><span class="lineno">   29</span>    <span class="stringliteral">&quot;VK_LAYER_KHRONOS_validation&quot;</span></div>
+<div class="line"><span class="lineno">   30</span>};</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="classdodo_1_1core_1_1VulkanContext.html#a21bc913a3f41899ec0eb6b5573ba411f">dodo::core::VulkanContext::checkRequiredLayers()</a>, and <a class="el" href="classHelloTriangleApplication.html#a2c7e569908ececa03347bf6471ef86b7">HelloTriangleApplication::createInstance()</a>.</p>
 
 </div>
 </div>

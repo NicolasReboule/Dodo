@@ -1,0 +1,9 @@
+<map id="dodo::core::App::createGLFWWindow" name="dodo::core::App::createGLFWWindow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,241,80"/>
+<area shape="rect" id="Node000002" href="$group__window.html#gaaccd00fafe81e2db94e8cdf55721e055" title="Creates a window and its associated context." alt="" coords="289,5,418,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,51,275,32,276,37,187,57"/>
+<area shape="rect" id="Node000003" href="$group__init.html#gaee7bac4c7e1b2769207747c1b5ae2f9e" title="Returns and clears the last error for the calling thread." alt="" coords="307,55,400,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,65,291,65,291,70,241,70"/>
+<area shape="rect" id="Node000004" href="$group__window.html#ga69c40728499720bef8a49aa925ea0efa" title="Sets the specified window hint to the desired value." alt="" coords="296,104,411,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="187,78,281,99,280,104,186,84"/>
+</map>

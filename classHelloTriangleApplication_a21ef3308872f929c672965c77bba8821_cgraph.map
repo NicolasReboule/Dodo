@@ -1,0 +1,9 @@
+<map id="HelloTriangleApplication::initWindow" name="HelloTriangleApplication::initWindow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,167,88"/>
+<area shape="rect" id="Node000002" href="$group__window.html#gaaccd00fafe81e2db94e8cdf55721e055" title="Creates a window and its associated context." alt="" coords="215,5,344,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,44,211,33,212,38,168,49"/>
+<area shape="rect" id="Node000003" href="$group__init.html#gab41771f0215a2e0afb4cf1cf98082d40" title="Initializes the GLFW library." alt="" coords="248,55,311,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,65,233,65,233,70,167,70"/>
+<area shape="rect" id="Node000004" href="$group__window.html#ga69c40728499720bef8a49aa925ea0efa" title="Sets the specified window hint to the desired value." alt="" coords="222,104,337,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="168,86,212,97,211,102,166,91"/>
+</map>

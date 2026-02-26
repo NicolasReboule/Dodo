@@ -1,0 +1,9 @@
+<map id="glfwWindowShouldClose" name="glfwWindowShouldClose">
+<area shape="rect" id="Node000001" title="Checks the close flag of the specified window." alt="" coords="459,35,623,60"/>
+<area shape="rect" id="Node000002" href="$classdodo_1_1core_1_1App.html#a2bd60af7bbb8c9d5293932f415526cd5" title=" " alt="" coords="239,5,411,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="443,37,411,33,412,27,444,32"/>
+<area shape="rect" id="Node000003" href="$classHelloTriangleApplication.html#a6de2d3e759d5978212e0925b899b9e5e" title=" " alt="" coords="244,55,406,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="444,63,406,68,406,62,443,58"/>
+<area shape="rect" id="Node000004" href="$classHelloTriangleApplication.html#af77c7c3324cc1fd3fa821d1f953b65ef" title=" " alt="" coords="5,63,191,88"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="229,78,191,78,191,73,229,73"/>
+</map>

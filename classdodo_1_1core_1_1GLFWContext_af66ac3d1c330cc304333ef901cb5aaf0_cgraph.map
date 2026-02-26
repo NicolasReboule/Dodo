@@ -1,0 +1,7 @@
+<map id="dodo::core::GLFWContext::createContext" name="dodo::core::GLFWContext::createContext">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,174,64"/>
+<area shape="rect" id="Node000002" href="$group__init.html#gaee7bac4c7e1b2769207747c1b5ae2f9e" title="Returns and clears the last error for the calling thread." alt="" coords="222,5,315,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,29,206,24,207,30,175,34"/>
+<area shape="rect" id="Node000003" href="$group__init.html#gab41771f0215a2e0afb4cf1cf98082d40" title="Initializes the GLFW library." alt="" coords="237,55,300,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,52,222,59,221,64,174,58"/>
+</map>
