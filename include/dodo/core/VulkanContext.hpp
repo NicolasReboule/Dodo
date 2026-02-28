@@ -26,7 +26,7 @@ private:
     vk::raii::PhysicalDevice _physicalDevice = nullptr;
     vk::raii::DebugUtilsMessengerEXT _debugMessenger = nullptr;
 public:
-    using DebugCallback = PFN_vkDebugUtilsMessengerCallbackEXT;
+    using DebugCallback = vk::PFN_DebugUtilsMessengerCallbackEXT;
 
     struct VulkanDebug {
         bool debugEnabled = false;
@@ -51,7 +51,10 @@ public:
 
     VulkanContext &operator=(VulkanContext &&other) noexcept;
 
-    static VKAPI_ATTR vk::Bool32 VKAPI_CALL defaultDebugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT severity, VkDebugUtilsMessageTypeFlagsEXT type, const VkDebugUtilsMessengerCallbackDataEXT *pCallbackData, void *);
+    static VKAPI_ATTR vk::Bool32 VKAPI_CALL defaultDebugCallback(vk::DebugUtilsMessageSeverityFlagBitsEXT severity,
+                                                      vk::DebugUtilsMessageTypeFlagsEXT type,
+                                                      const vk::DebugUtilsMessengerCallbackDataEXT *pCallbackData,
+                                                      void *);
 
 private:
     VulkanContext() = default;

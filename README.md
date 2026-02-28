@@ -107,7 +107,7 @@ Project is built in C++ 23 as I wanted to try out std::expected to treat errors 
 
 - CMake
 - C++23
-- Vulkan SDK
+- Vulkan SDK 1.4.341.1
 
 ### Installation
 
