@@ -74,6 +74,34 @@ private:
     friend class DodoContext;
 };
 
+template<typename... Features>
+auto VulkanContext::createContext(const VulkanContextInfo<Features...> &ctxInfo)
+-> std::expected<VulkanContext, std::string> {
+    VulkanContext vulkanContext;
+    VulkanDebug debugInfo = ctxInfo.debugInfo;
+    if (debugInfo.debugEnabled) {
+        if (auto result = checkRequiredLayers(vulkanContext, debugInfo.validationLayers); !result)
+            return std::unexpected(result.error());
+        // setupDebugMessenger(vulkanContext, debugInfo.debugCallback);
+    }
+
+    uint32_t glfwExtensionCount = 0;
+    const auto glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
+    if (auto result = checkRequiredExtensions(vulkanContext, std::span(glfwExtensions, glfwExtensionCount)); !result)
+        return std::unexpected(result.error());
+
+    const vk::InstanceCreateInfo createInfo{
+        .pApplicationInfo = &ctxInfo.vkInfo,
+        .enabledLayerCount = static_cast<uint32_t>(debugInfo.validationLayers.size()),
+        .ppEnabledLayerNames = debugInfo.validationLayers.data(),
+        .enabledExtensionCount = glfwExtensionCount,
+        .ppEnabledExtensionNames = glfwExtensions,
+    };
+
+    vulkanContext._instance = vk::raii::Instance(vulkanContext._context, createInfo);
+    return vulkanContext;
+}
+
 }
 
 #endif  // DODO_VULKANCONTEXT_HPP
