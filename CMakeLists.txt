@@ -37,7 +37,7 @@ endif()
 
 # Sources
 add_library(${PROJECT_NAME}_Sources STATIC
-        src/dodo/core/app.cpp
+        src/dodo/core/App.cpp
         src/dodo/core/DodoContext.cpp
         src/dodo/core/VulkanContext.cpp
         src/dodo/core/GLFWContext.cpp
