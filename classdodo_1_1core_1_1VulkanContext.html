@@ -114,8 +114,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab0cb5569654f765b29ed6f37cc5ff01e" id="r_ab0cb5569654f765b29ed6f37cc5ff01e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0cb5569654f765b29ed6f37cc5ff01e">DebugCallback</a> = PFN_vkDebugUtilsMessengerCallbackEXT</td></tr>
-<tr class="separator:ab0cb5569654f765b29ed6f37cc5ff01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8099f6355f3297fc635d14e3cb34f412" id="r_a8099f6355f3297fc635d14e3cb34f412"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8099f6355f3297fc635d14e3cb34f412">DebugCallback</a> = vk::PFN_DebugUtilsMessengerCallbackEXT</td></tr>
+<tr class="separator:a8099f6355f3297fc635d14e3cb34f412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -132,8 +132,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a429c94603a841becc52bc6152d2e4232" id="r_a429c94603a841becc52bc6152d2e4232"><td class="memItemLeft" align="right" valign="top">static VKAPI_ATTR vk::Bool32 VKAPI_CALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a429c94603a841becc52bc6152d2e4232">defaultDebugCallback</a> (VkDebugUtilsMessageSeverityFlagBitsEXT severity, VkDebugUtilsMessageTypeFlagsEXT type, const VkDebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)</td></tr>
-<tr class="separator:a429c94603a841becc52bc6152d2e4232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acece5bed58ddc63c71eccedee2ca4786" id="r_acece5bed58ddc63c71eccedee2ca4786"><td class="memItemLeft" align="right" valign="top">static VKAPI_ATTR vk::Bool32 VKAPI_CALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acece5bed58ddc63c71eccedee2ca4786">defaultDebugCallback</a> (vk::DebugUtilsMessageSeverityFlagBitsEXT severity, vk::DebugUtilsMessageTypeFlagsEXT type, const vk::DebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)</td></tr>
+<tr class="separator:acece5bed58ddc63c71eccedee2ca4786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -149,7 +149,7 @@ Static Private Member Functions</h2></td></tr>
 <tr class="separator:a21bc913a3f41899ec0eb6b5573ba411f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d4ef9cb3df491b6e1e22530fba05e44" id="r_a1d4ef9cb3df491b6e1e22530fba05e44"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d4ef9cb3df491b6e1e22530fba05e44">checkRequiredExtensions</a> (const <a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;vulkanContext, std::span&lt; const char *const &gt; glfwExtensions) -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
 <tr class="separator:a1d4ef9cb3df491b6e1e22530fba05e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a411e22adbedd744f90ecec66e46561d2" id="r_a411e22adbedd744f90ecec66e46561d2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411e22adbedd744f90ecec66e46561d2">setupDebugMessenger</a> (<a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;vulkanContext, <a class="el" href="#ab0cb5569654f765b29ed6f37cc5ff01e">DebugCallback</a> debugCallback)</td></tr>
+<tr class="memitem:a411e22adbedd744f90ecec66e46561d2" id="r_a411e22adbedd744f90ecec66e46561d2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411e22adbedd744f90ecec66e46561d2">setupDebugMessenger</a> (<a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;vulkanContext, <a class="el" href="#a8099f6355f3297fc635d14e3cb34f412">DebugCallback</a> debugCallback)</td></tr>
 <tr class="separator:a411e22adbedd744f90ecec66e46561d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0afee5f00b187472d64f8388ac2f069d" id="r_a0afee5f00b187472d64f8388ac2f069d"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0afee5f00b187472d64f8388ac2f069d">pickPhysicalDevice</a> (<a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;vulkanContext) -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
 <tr class="separator:a0afee5f00b187472d64f8388ac2f069d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,14 +176,14 @@ Friends</h2></td></tr>
 <tr class="separator:a3c4f141170270e2268da2dc698029eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ab0cb5569654f765b29ed6f37cc5ff01e" name="ab0cb5569654f765b29ed6f37cc5ff01e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0cb5569654f765b29ed6f37cc5ff01e">&#9670;&#160;</a></span>DebugCallback</h2>
+<a id="a8099f6355f3297fc635d14e3cb34f412" name="a8099f6355f3297fc635d14e3cb34f412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8099f6355f3297fc635d14e3cb34f412">&#9670;&#160;</a></span>DebugCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ab0cb5569654f765b29ed6f37cc5ff01e">dodo::core::VulkanContext::DebugCallback</a> = PFN_vkDebugUtilsMessengerCallbackEXT</td>
+          <td class="memname">using <a class="el" href="#a8099f6355f3297fc635d14e3cb34f412">dodo::core::VulkanContext::DebugCallback</a> = vk::PFN_DebugUtilsMessengerCallbackEXT</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -418,31 +418,31 @@ template&lt;typename... Features&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                         {</div>
-<div class="line"><span class="lineno">   81</span>    <a class="code hl_function" href="#ac39df23ac0afd2cc4b55bfae463ce7eb">VulkanContext</a> vulkanContext;</div>
-<div class="line"><span class="lineno">   82</span>    VulkanDebug debugInfo = ctxInfo.debugInfo;</div>
-<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span> (debugInfo.debugEnabled) {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a21bc913a3f41899ec0eb6b5573ba411f">checkRequiredLayers</a>(vulkanContext, debugInfo.validationLayers); !result)</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span> std::unexpected(result.error());</div>
-<div class="line"><span class="lineno">   86</span>        <span class="comment">// setupDebugMessenger(vulkanContext, debugInfo.debugCallback);</span></div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>    uint32_t glfwExtensionCount = 0;</div>
-<div class="line"><span class="lineno">   90</span>    <span class="keyword">const</span> <span class="keyword">auto</span> glfwExtensions = <a class="code hl_function" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a>(&amp;glfwExtensionCount);</div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a1d4ef9cb3df491b6e1e22530fba05e44">checkRequiredExtensions</a>(vulkanContext, std::span(glfwExtensions, glfwExtensionCount)); !result)</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>    <span class="keyword">const</span> vk::InstanceCreateInfo createInfo{</div>
-<div class="line"><span class="lineno">   95</span>        .pApplicationInfo = &amp;ctxInfo.vkInfo,</div>
-<div class="line"><span class="lineno">   96</span>        .enabledLayerCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(debugInfo.validationLayers.size()),</div>
-<div class="line"><span class="lineno">   97</span>        .ppEnabledLayerNames = debugInfo.validationLayers.data(),</div>
-<div class="line"><span class="lineno">   98</span>        .enabledExtensionCount = glfwExtensionCount,</div>
-<div class="line"><span class="lineno">   99</span>        .ppEnabledExtensionNames = glfwExtensions,</div>
-<div class="line"><span class="lineno">  100</span>    };</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>    vulkanContext._instance = vk::raii::Instance(vulkanContext._context, createInfo);</div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> vulkanContext;</div>
-<div class="line"><span class="lineno">  104</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                         {</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_function" href="#ac39df23ac0afd2cc4b55bfae463ce7eb">VulkanContext</a> vulkanContext;</div>
+<div class="line"><span class="lineno">   85</span>    VulkanDebug debugInfo = ctxInfo.debugInfo;</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">if</span> (debugInfo.debugEnabled) {</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a21bc913a3f41899ec0eb6b5573ba411f">checkRequiredLayers</a>(vulkanContext, debugInfo.validationLayers); !result)</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">   89</span>        <span class="comment">// setupDebugMessenger(vulkanContext, debugInfo.debugCallback);</span></div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    uint32_t glfwExtensionCount = 0;</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keyword">const</span> <span class="keyword">auto</span> glfwExtensions = <a class="code hl_function" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a>(&amp;glfwExtensionCount);</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a1d4ef9cb3df491b6e1e22530fba05e44">checkRequiredExtensions</a>(vulkanContext, std::span(glfwExtensions, glfwExtensionCount)); !result)</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>    <span class="keyword">const</span> vk::InstanceCreateInfo createInfo{</div>
+<div class="line"><span class="lineno">   98</span>        .pApplicationInfo = &amp;ctxInfo.vkInfo,</div>
+<div class="line"><span class="lineno">   99</span>        .enabledLayerCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(debugInfo.validationLayers.size()),</div>
+<div class="line"><span class="lineno">  100</span>        .ppEnabledLayerNames = debugInfo.validationLayers.data(),</div>
+<div class="line"><span class="lineno">  101</span>        .enabledExtensionCount = glfwExtensionCount,</div>
+<div class="line"><span class="lineno">  102</span>        .ppEnabledExtensionNames = glfwExtensions,</div>
+<div class="line"><span class="lineno">  103</span>    };</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    vulkanContext._instance = vk::raii::Instance(vulkanContext._context, createInfo);</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> vulkanContext;</div>
+<div class="line"><span class="lineno">  107</span>}</div>
 <div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a1d4ef9cb3df491b6e1e22530fba05e44"><div class="ttname"><a href="#a1d4ef9cb3df491b6e1e22530fba05e44">dodo::core::VulkanContext::checkRequiredExtensions</a></div><div class="ttdeci">static auto checkRequiredExtensions(const VulkanContext &amp;vulkanContext, std::span&lt; const char *const &gt; glfwExtensions) -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:41</div></div>
 <div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a21bc913a3f41899ec0eb6b5573ba411f"><div class="ttname"><a href="#a21bc913a3f41899ec0eb6b5573ba411f">dodo::core::VulkanContext::checkRequiredLayers</a></div><div class="ttdeci">static auto checkRequiredLayers(const VulkanContext &amp;vulkanContext, std::span&lt; const char *const &gt; validationLayers) -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:27</div></div>
 <div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_ac39df23ac0afd2cc4b55bfae463ce7eb"><div class="ttname"><a href="#ac39df23ac0afd2cc4b55bfae463ce7eb">dodo::core::VulkanContext::VulkanContext</a></div><div class="ttdeci">VulkanContext()=default</div></div>
@@ -476,8 +476,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a429c94603a841becc52bc6152d2e4232" name="a429c94603a841becc52bc6152d2e4232"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a429c94603a841becc52bc6152d2e4232">&#9670;&#160;</a></span>defaultDebugCallback()</h2>
+<a id="acece5bed58ddc63c71eccedee2ca4786" name="acece5bed58ddc63c71eccedee2ca4786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acece5bed58ddc63c71eccedee2ca4786">&#9670;&#160;</a></span>defaultDebugCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -486,19 +486,19 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">VKAPI_ATTR VkBool32 VKAPI_CALL dodo::core::VulkanContext::defaultDebugCallback </td>
+          <td class="memname">VKAPI_ATTR vk::Bool32 VKAPI_CALL dodo::core::VulkanContext::defaultDebugCallback </td>
           <td>(</td>
-          <td class="paramtype">VkDebugUtilsMessageSeverityFlagBitsEXT</td>          <td class="paramname"><span class="paramname"><em>severity</em></span>, </td>
+          <td class="paramtype">vk::DebugUtilsMessageSeverityFlagBitsEXT</td>          <td class="paramname"><span class="paramname"><em>severity</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">VkDebugUtilsMessageTypeFlagsEXT</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+          <td class="paramtype">vk::DebugUtilsMessageTypeFlagsEXT</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VkDebugUtilsMessengerCallbackDataEXT *</td>          <td class="paramname"><span class="paramname"><em>pCallbackData</em></span>, </td>
+          <td class="paramtype">const vk::DebugUtilsMessengerCallbackDataEXT *</td>          <td class="paramname"><span class="paramname"><em>pCallbackData</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -512,11 +512,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT || severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT)</div>
-<div class="line"><span class="lineno">   76</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> VK_FALSE;</div>
-<div class="line"><span class="lineno">   78</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>{</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span> (severity &gt;= vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning)</div>
+<div class="line"><span class="lineno">   79</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; to_string(type) &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> vk::False;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -544,9 +544,9 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> featureChain.template get&lt;FirstFeature&gt;();</div>
-<div class="line"><span class="lineno">  118</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                                                          {</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> featureChain.template get&lt;FirstFeature&gt;();</div>
+<div class="line"><span class="lineno">  121</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -572,12 +572,12 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                                                                               {</div>
-<div class="line"><span class="lineno">  109</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceProperties = physicalDevice.getProperties();</div>
-<div class="line"><span class="lineno">  110</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceFeatures = physicalDevice.getFeatures();</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">return</span> deviceProperties.deviceType == vk::PhysicalDeviceType::eDiscreteGpu &amp;&amp; deviceFeatures.geometryShader;</div>
-<div class="line"><span class="lineno">  113</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                                               {</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceProperties = physicalDevice.getProperties();</div>
+<div class="line"><span class="lineno">  113</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceFeatures = physicalDevice.getFeatures();</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">return</span> deviceProperties.deviceType == vk::PhysicalDeviceType::eDiscreteGpu &amp;&amp; deviceFeatures.geometryShader;</div>
+<div class="line"><span class="lineno">  116</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -661,33 +661,33 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">   81</span>    <span class="comment">// auto devices = vulkanContext._instance.enumeratePhysicalDevices();</span></div>
-<div class="line"><span class="lineno">   82</span>    <span class="comment">// const auto devIter = std::ranges::find_if(devices,</span></div>
-<div class="line"><span class="lineno">   83</span>    <span class="comment">// [&amp;](auto const &amp; device) {</span></div>
-<div class="line"><span class="lineno">   84</span>    <span class="comment">//         auto queueFamilies = device.getQueueFamilyProperties();</span></div>
-<div class="line"><span class="lineno">   85</span>    <span class="comment">//         bool isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</span></div>
-<div class="line"><span class="lineno">   86</span>    <span class="comment">//         const auto qfpIter = std::ranges::find_if(queueFamilies,</span></div>
-<div class="line"><span class="lineno">   87</span>    <span class="comment">//         []( vk::QueueFamilyProperties const &amp; qfp )</span></div>
-<div class="line"><span class="lineno">   88</span>    <span class="comment">//                 {</span></div>
-<div class="line"><span class="lineno">   89</span>    <span class="comment">//                     return (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != static_cast&lt;vk::QueueFlags&gt;(0);</span></div>
-<div class="line"><span class="lineno">   90</span>    <span class="comment">//                 } );</span></div>
-<div class="line"><span class="lineno">   91</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; ( qfpIter != queueFamilies.end() );</span></div>
-<div class="line"><span class="lineno">   92</span>    <span class="comment">//         auto extensions = device.enumerateDeviceExtensionProperties( );</span></div>
-<div class="line"><span class="lineno">   93</span>    <span class="comment">//         bool found = true;</span></div>
-<div class="line"><span class="lineno">   94</span>    <span class="comment">//         for (auto const &amp; extension : deviceExtensions) {</span></div>
-<div class="line"><span class="lineno">   95</span>    <span class="comment">//             auto extensionIter = std::ranges::find_if(extensions, [extension](auto const &amp; ext) {return strcmp(ext.extensionName, extension) == 0;});</span></div>
-<div class="line"><span class="lineno">   96</span>    <span class="comment">//             found = found &amp;&amp; extensionIter != extensions.end();</span></div>
-<div class="line"><span class="lineno">   97</span>    <span class="comment">//         }</span></div>
-<div class="line"><span class="lineno">   98</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; found;</span></div>
-<div class="line"><span class="lineno">   99</span>    <span class="comment">//         if (isSuitable)</span></div>
-<div class="line"><span class="lineno">  100</span>    <span class="comment">//             vulkanContext._physicalDevice = device;</span></div>
-<div class="line"><span class="lineno">  101</span>    <span class="comment">//         return isSuitable;</span></div>
-<div class="line"><span class="lineno">  102</span>    <span class="comment">// });</span></div>
-<div class="line"><span class="lineno">  103</span>    <span class="comment">// if (devIter == devices.end())</span></div>
-<div class="line"><span class="lineno">  104</span>    <span class="comment">//     return std::unexpected(&quot;Failed to find a suitable GPU&quot;);</span></div>
-<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  106</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                                                   {</div>
+<div class="line"><span class="lineno">   84</span>    <span class="comment">// auto devices = vulkanContext._instance.enumeratePhysicalDevices();</span></div>
+<div class="line"><span class="lineno">   85</span>    <span class="comment">// const auto devIter = std::ranges::find_if(devices,</span></div>
+<div class="line"><span class="lineno">   86</span>    <span class="comment">// [&amp;](auto const &amp; device) {</span></div>
+<div class="line"><span class="lineno">   87</span>    <span class="comment">//         auto queueFamilies = device.getQueueFamilyProperties();</span></div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment">//         bool isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</span></div>
+<div class="line"><span class="lineno">   89</span>    <span class="comment">//         const auto qfpIter = std::ranges::find_if(queueFamilies,</span></div>
+<div class="line"><span class="lineno">   90</span>    <span class="comment">//         []( vk::QueueFamilyProperties const &amp; qfp )</span></div>
+<div class="line"><span class="lineno">   91</span>    <span class="comment">//                 {</span></div>
+<div class="line"><span class="lineno">   92</span>    <span class="comment">//                     return (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != static_cast&lt;vk::QueueFlags&gt;(0);</span></div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment">//                 } );</span></div>
+<div class="line"><span class="lineno">   94</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; ( qfpIter != queueFamilies.end() );</span></div>
+<div class="line"><span class="lineno">   95</span>    <span class="comment">//         auto extensions = device.enumerateDeviceExtensionProperties( );</span></div>
+<div class="line"><span class="lineno">   96</span>    <span class="comment">//         bool found = true;</span></div>
+<div class="line"><span class="lineno">   97</span>    <span class="comment">//         for (auto const &amp; extension : deviceExtensions) {</span></div>
+<div class="line"><span class="lineno">   98</span>    <span class="comment">//             auto extensionIter = std::ranges::find_if(extensions, [extension](auto const &amp; ext) {return strcmp(ext.extensionName, extension) == 0;});</span></div>
+<div class="line"><span class="lineno">   99</span>    <span class="comment">//             found = found &amp;&amp; extensionIter != extensions.end();</span></div>
+<div class="line"><span class="lineno">  100</span>    <span class="comment">//         }</span></div>
+<div class="line"><span class="lineno">  101</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; found;</span></div>
+<div class="line"><span class="lineno">  102</span>    <span class="comment">//         if (isSuitable)</span></div>
+<div class="line"><span class="lineno">  103</span>    <span class="comment">//             vulkanContext._physicalDevice = device;</span></div>
+<div class="line"><span class="lineno">  104</span>    <span class="comment">//         return isSuitable;</span></div>
+<div class="line"><span class="lineno">  105</span>    <span class="comment">// });</span></div>
+<div class="line"><span class="lineno">  106</span>    <span class="comment">// if (devIter == devices.end())</span></div>
+<div class="line"><span class="lineno">  107</span>    <span class="comment">//     return std::unexpected(&quot;Failed to find a suitable GPU&quot;);</span></div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  109</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -708,7 +708,7 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#ab0cb5569654f765b29ed6f37cc5ff01e">DebugCallback</a></td>          <td class="paramname"><span class="paramname"><em>debugCallback</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a8099f6355f3297fc635d14e3cb34f412">DebugCallback</a></td>          <td class="paramname"><span class="paramname"><em>debugCallback</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

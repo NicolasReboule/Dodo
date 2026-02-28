@@ -125,8 +125,8 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:aa8eed5e54aaf3bcc49b9214a6e8c8e20" id="r_aa8eed5e54aaf3bcc49b9214a6e8c8e20"><td class="memItemLeft" align="right" valign="top">static VKAPI_ATTR vk::Bool32 VKAPI_CALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8eed5e54aaf3bcc49b9214a6e8c8e20">debugCallback</a> (VkDebugUtilsMessageSeverityFlagBitsEXT severity, VkDebugUtilsMessageTypeFlagsEXT type, const VkDebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)</td></tr>
-<tr class="separator:aa8eed5e54aaf3bcc49b9214a6e8c8e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255ceee02b1a75f5809d94bf87beb14b" id="r_a255ceee02b1a75f5809d94bf87beb14b"><td class="memItemLeft" align="right" valign="top">static VKAPI_ATTR vk::Bool32 VKAPI_CALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a255ceee02b1a75f5809d94bf87beb14b">debugCallback</a> (vk::DebugUtilsMessageSeverityFlagBitsEXT severity, vk::DebugUtilsMessageTypeFlagsEXT type, const vk::DebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)</td></tr>
+<tr class="separator:a255ceee02b1a75f5809d94bf87beb14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -353,82 +353,82 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  227</span>                               {</div>
-<div class="line"><span class="lineno">  228</span>        std::vector&lt;vk::QueueFamilyProperties&gt; queueFamilyProperties = <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getQueueFamilyProperties();</div>
-<div class="line"><span class="lineno">  229</span>        uint32_t graphicsIndex = <a class="code hl_function" href="#aeae6119968142acd9b4fa43e9c5e6c84">findQueueFamilies</a>(<a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>);</div>
-<div class="line"><span class="lineno">  230</span> </div>
-<div class="line"><span class="lineno">  231</span>        <span class="comment">// determine a queueFamilyIndex that supports present</span></div>
-<div class="line"><span class="lineno">  232</span>        <span class="comment">// first check if the graphicsIndex is good enough</span></div>
-<div class="line"><span class="lineno">  233</span>        <span class="keyword">auto</span> presentIndex = <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR(graphicsIndex, *<a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> )</div>
-<div class="line"><span class="lineno">  234</span>                                           ? graphicsIndex : <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(queueFamilyProperties.size());</div>
-<div class="line"><span class="lineno">  235</span> </div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">if</span> ( presentIndex == queueFamilyProperties.size() )</div>
-<div class="line"><span class="lineno">  237</span>        {</div>
-<div class="line"><span class="lineno">  238</span>            <span class="comment">// the graphicsIndex doesn&#39;t support present -&gt; look for another family index that supports both</span></div>
-<div class="line"><span class="lineno">  239</span>            <span class="comment">// graphics and present</span></div>
-<div class="line"><span class="lineno">  240</span>            <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyProperties.size(); i++ )</div>
-<div class="line"><span class="lineno">  241</span>            {</div>
-<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">if</span> ( ( queueFamilyProperties[i].queueFlags &amp; vk::QueueFlagBits::eGraphics ) &amp;&amp;</div>
-<div class="line"><span class="lineno">  243</span>                     <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR( <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i ), *<a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> ) )</div>
-<div class="line"><span class="lineno">  244</span>                {</div>
-<div class="line"><span class="lineno">  245</span>                    graphicsIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i );</div>
-<div class="line"><span class="lineno">  246</span>                    presentIndex  = graphicsIndex;</div>
-<div class="line"><span class="lineno">  247</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  248</span>                }</div>
-<div class="line"><span class="lineno">  249</span>            }</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">if</span> ( presentIndex == queueFamilyProperties.size() )</div>
-<div class="line"><span class="lineno">  251</span>            {</div>
-<div class="line"><span class="lineno">  252</span>                <span class="comment">// there&#39;s nothing like a single family index that supports both graphics and present -&gt; look for another</span></div>
-<div class="line"><span class="lineno">  253</span>                <span class="comment">// family index that supports present</span></div>
-<div class="line"><span class="lineno">  254</span>                <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyProperties.size(); i++ )</div>
-<div class="line"><span class="lineno">  255</span>                {</div>
-<div class="line"><span class="lineno">  256</span>                    <span class="keywordflow">if</span> ( <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR( <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i ), *<a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> ) )</div>
-<div class="line"><span class="lineno">  257</span>                    {</div>
-<div class="line"><span class="lineno">  258</span>                        presentIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i );</div>
-<div class="line"><span class="lineno">  259</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  260</span>                    }</div>
-<div class="line"><span class="lineno">  261</span>                }</div>
-<div class="line"><span class="lineno">  262</span>            }</div>
-<div class="line"><span class="lineno">  263</span>        }</div>
-<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span> ( ( graphicsIndex == queueFamilyProperties.size() ) || ( presentIndex == queueFamilyProperties.size() ) )</div>
-<div class="line"><span class="lineno">  265</span>        {</div>
-<div class="line"><span class="lineno">  266</span>            <span class="keywordflow">throw</span> std::runtime_error( <span class="stringliteral">&quot;Could not find a queue for graphics or present -&gt; terminating&quot;</span> );</div>
-<div class="line"><span class="lineno">  267</span>        }</div>
-<div class="line"><span class="lineno">  268</span> </div>
-<div class="line"><span class="lineno">  269</span> </div>
-<div class="line"><span class="lineno">  270</span> </div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordtype">float</span> queuePriority = 1.0f; <span class="comment">// Vulkan lets you assign priorities to queues to influence the scheduling of command buffer execution using floating point numbers between 0.0 and 1.0</span></div>
-<div class="line"><span class="lineno">  272</span>        <span class="comment">//The currently available drivers will only allow you to create a small number of queues for each queue family, and you don’t really need more than one</span></div>
-<div class="line"><span class="lineno">  273</span>        vk::DeviceQueueCreateInfo deviceQueueCreateInfo { .queueFamilyIndex = graphicsIndex, .queueCount = 1, .pQueuePriorities = &amp;queuePriority };</div>
-<div class="line"><span class="lineno">  274</span>        vk::PhysicalDeviceFeatures deviceFeatures;</div>
-<div class="line"><span class="lineno">  275</span> </div>
-<div class="line"><span class="lineno">  276</span> </div>
-<div class="line"><span class="lineno">  277</span> </div>
-<div class="line"><span class="lineno">  278</span>        <span class="comment">// Here maybe use a builder to add features to pnext</span></div>
-<div class="line"><span class="lineno">  279</span>        <span class="comment">// Create a chain of feature structures</span></div>
-<div class="line"><span class="lineno">  280</span>        vk::StructureChain&lt;vk::PhysicalDeviceFeatures2, vk::PhysicalDeviceVulkan13Features, vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT&gt; featureChain = {</div>
-<div class="line"><span class="lineno">  281</span>            {},                               <span class="comment">// vk::PhysicalDeviceFeatures2 (empty for now)</span></div>
-<div class="line"><span class="lineno">  282</span>            {.dynamicRendering = <span class="keyword">true</span> },      <span class="comment">// Enable dynamic rendering from Vulkan 1.3</span></div>
-<div class="line"><span class="lineno">  283</span>            {.extendedDynamicState = <span class="keyword">true</span> },   <span class="comment">// Enable extended dynamic state from the extension</span></div>
-<div class="line"><span class="lineno">  284</span>        };</div>
-<div class="line"><span class="lineno">  285</span> </div>
-<div class="line"><span class="lineno">  286</span>        vk::DeviceCreateInfo deviceCreateInfo{</div>
-<div class="line"><span class="lineno">  287</span>            .pNext = &amp;featureChain.get&lt;vk::PhysicalDeviceFeatures2&gt;(),</div>
-<div class="line"><span class="lineno">  288</span>            .queueCreateInfoCount = 1,</div>
-<div class="line"><span class="lineno">  289</span>            .pQueueCreateInfos = &amp;deviceQueueCreateInfo,</div>
-<div class="line"><span class="lineno">  290</span>            .enabledExtensionCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.size()),</div>
-<div class="line"><span class="lineno">  291</span>            .ppEnabledExtensionNames = <a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.data()</div>
-<div class="line"><span class="lineno">  292</span>        };</div>
-<div class="line"><span class="lineno">  293</span> </div>
-<div class="line"><span class="lineno">  294</span>        <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a> = vk::raii::Device(<a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>, deviceCreateInfo);</div>
-<div class="line"><span class="lineno">  295</span>        <a class="code hl_variable" href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">_graphicsQueue</a> = vk::raii::Queue( <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, graphicsIndex, 0 );</div>
-<div class="line"><span class="lineno">  296</span>        <a class="code hl_variable" href="#ac7d80be67b1603c428d20a77d66cacb3">_presentQueue</a> = vk::raii::Queue( <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, presentIndex, 0 );</div>
-<div class="line"><span class="lineno">  297</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>                               {</div>
+<div class="line"><span class="lineno">  231</span>        std::vector&lt;vk::QueueFamilyProperties&gt; queueFamilyProperties = <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getQueueFamilyProperties();</div>
+<div class="line"><span class="lineno">  232</span>        uint32_t graphicsIndex = <a class="code hl_function" href="#aeae6119968142acd9b4fa43e9c5e6c84">findQueueFamilies</a>(<a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>);</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>        <span class="comment">// determine a queueFamilyIndex that supports present</span></div>
+<div class="line"><span class="lineno">  235</span>        <span class="comment">// first check if the graphicsIndex is good enough</span></div>
+<div class="line"><span class="lineno">  236</span>        <span class="keyword">auto</span> presentIndex = <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR(graphicsIndex, *<a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> )</div>
+<div class="line"><span class="lineno">  237</span>                                           ? graphicsIndex : <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(queueFamilyProperties.size());</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">if</span> ( presentIndex == queueFamilyProperties.size() )</div>
+<div class="line"><span class="lineno">  240</span>        {</div>
+<div class="line"><span class="lineno">  241</span>            <span class="comment">// the graphicsIndex doesn&#39;t support present -&gt; look for another family index that supports both</span></div>
+<div class="line"><span class="lineno">  242</span>            <span class="comment">// graphics and present</span></div>
+<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyProperties.size(); i++ )</div>
+<div class="line"><span class="lineno">  244</span>            {</div>
+<div class="line"><span class="lineno">  245</span>                <span class="keywordflow">if</span> ( ( queueFamilyProperties[i].queueFlags &amp; vk::QueueFlagBits::eGraphics ) &amp;&amp;</div>
+<div class="line"><span class="lineno">  246</span>                     <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR( <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i ), *<a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> ) )</div>
+<div class="line"><span class="lineno">  247</span>                {</div>
+<div class="line"><span class="lineno">  248</span>                    graphicsIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i );</div>
+<div class="line"><span class="lineno">  249</span>                    presentIndex  = graphicsIndex;</div>
+<div class="line"><span class="lineno">  250</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  251</span>                }</div>
+<div class="line"><span class="lineno">  252</span>            }</div>
+<div class="line"><span class="lineno">  253</span>            <span class="keywordflow">if</span> ( presentIndex == queueFamilyProperties.size() )</div>
+<div class="line"><span class="lineno">  254</span>            {</div>
+<div class="line"><span class="lineno">  255</span>                <span class="comment">// there&#39;s nothing like a single family index that supports both graphics and present -&gt; look for another</span></div>
+<div class="line"><span class="lineno">  256</span>                <span class="comment">// family index that supports present</span></div>
+<div class="line"><span class="lineno">  257</span>                <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyProperties.size(); i++ )</div>
+<div class="line"><span class="lineno">  258</span>                {</div>
+<div class="line"><span class="lineno">  259</span>                    <span class="keywordflow">if</span> ( <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR( <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i ), *<a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> ) )</div>
+<div class="line"><span class="lineno">  260</span>                    {</div>
+<div class="line"><span class="lineno">  261</span>                        presentIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i );</div>
+<div class="line"><span class="lineno">  262</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  263</span>                    }</div>
+<div class="line"><span class="lineno">  264</span>                }</div>
+<div class="line"><span class="lineno">  265</span>            }</div>
+<div class="line"><span class="lineno">  266</span>        }</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">if</span> ( ( graphicsIndex == queueFamilyProperties.size() ) || ( presentIndex == queueFamilyProperties.size() ) )</div>
+<div class="line"><span class="lineno">  268</span>        {</div>
+<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">throw</span> std::runtime_error( <span class="stringliteral">&quot;Could not find a queue for graphics or present -&gt; terminating&quot;</span> );</div>
+<div class="line"><span class="lineno">  270</span>        }</div>
+<div class="line"><span class="lineno">  271</span> </div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>        <span class="keywordtype">float</span> queuePriority = 1.0f; <span class="comment">// Vulkan lets you assign priorities to queues to influence the scheduling of command buffer execution using floating point numbers between 0.0 and 1.0</span></div>
+<div class="line"><span class="lineno">  275</span>        <span class="comment">//The currently available drivers will only allow you to create a small number of queues for each queue family, and you don’t really need more than one</span></div>
+<div class="line"><span class="lineno">  276</span>        vk::DeviceQueueCreateInfo deviceQueueCreateInfo { .queueFamilyIndex = graphicsIndex, .queueCount = 1, .pQueuePriorities = &amp;queuePriority };</div>
+<div class="line"><span class="lineno">  277</span>        vk::PhysicalDeviceFeatures deviceFeatures;</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span> </div>
+<div class="line"><span class="lineno">  280</span> </div>
+<div class="line"><span class="lineno">  281</span>        <span class="comment">// Here maybe use a builder to add features to pnext</span></div>
+<div class="line"><span class="lineno">  282</span>        <span class="comment">// Create a chain of feature structures</span></div>
+<div class="line"><span class="lineno">  283</span>        vk::StructureChain&lt;vk::PhysicalDeviceFeatures2, vk::PhysicalDeviceVulkan13Features, vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT&gt; featureChain = {</div>
+<div class="line"><span class="lineno">  284</span>            {},                               <span class="comment">// vk::PhysicalDeviceFeatures2 (empty for now)</span></div>
+<div class="line"><span class="lineno">  285</span>            {.dynamicRendering = <span class="keyword">true</span> },      <span class="comment">// Enable dynamic rendering from Vulkan 1.3</span></div>
+<div class="line"><span class="lineno">  286</span>            {.extendedDynamicState = <span class="keyword">true</span> },   <span class="comment">// Enable extended dynamic state from the extension</span></div>
+<div class="line"><span class="lineno">  287</span>        };</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>        vk::DeviceCreateInfo deviceCreateInfo{</div>
+<div class="line"><span class="lineno">  290</span>            .pNext = &amp;featureChain.get&lt;vk::PhysicalDeviceFeatures2&gt;(),</div>
+<div class="line"><span class="lineno">  291</span>            .queueCreateInfoCount = 1,</div>
+<div class="line"><span class="lineno">  292</span>            .pQueueCreateInfos = &amp;deviceQueueCreateInfo,</div>
+<div class="line"><span class="lineno">  293</span>            .enabledExtensionCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.size()),</div>
+<div class="line"><span class="lineno">  294</span>            .ppEnabledExtensionNames = <a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.data()</div>
+<div class="line"><span class="lineno">  295</span>        };</div>
+<div class="line"><span class="lineno">  296</span> </div>
+<div class="line"><span class="lineno">  297</span>        <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a> = vk::raii::Device(<a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>, deviceCreateInfo);</div>
+<div class="line"><span class="lineno">  298</span>        <a class="code hl_variable" href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">_graphicsQueue</a> = vk::raii::Queue( <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, graphicsIndex, 0 );</div>
+<div class="line"><span class="lineno">  299</span>        <a class="code hl_variable" href="#ac7d80be67b1603c428d20a77d66cacb3">_presentQueue</a> = vk::raii::Queue( <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, presentIndex, 0 );</div>
+<div class="line"><span class="lineno">  300</span>    }</div>
 <div class="ttc" id="aclassHelloTriangleApplication_html_a7f917cfdab06f60c22cc4c1057c16f4e"><div class="ttname"><a href="#a7f917cfdab06f60c22cc4c1057c16f4e">HelloTriangleApplication::surface</a></div><div class="ttdeci">vk::raii::SurfaceKHR surface</div><div class="ttdef"><b>Definition</b> main.cpp:54</div></div>
 <div class="ttc" id="aclassHelloTriangleApplication_html_ab88af09ee4ccadfb011ede916b00270c"><div class="ttname"><a href="#ab88af09ee4ccadfb011ede916b00270c">HelloTriangleApplication::_device</a></div><div class="ttdeci">vk::raii::Device _device</div><div class="ttdef"><b>Definition</b> main.cpp:52</div></div>
 <div class="ttc" id="aclassHelloTriangleApplication_html_ac7d80be67b1603c428d20a77d66cacb3"><div class="ttname"><a href="#ac7d80be67b1603c428d20a77d66cacb3">HelloTriangleApplication::_presentQueue</a></div><div class="ttdeci">vk::raii::Queue _presentQueue</div><div class="ttdef"><b>Definition</b> main.cpp:55</div></div>
 <div class="ttc" id="aclassHelloTriangleApplication_html_acc044f0ec31c4eacf8e512087cf7743e"><div class="ttname"><a href="#acc044f0ec31c4eacf8e512087cf7743e">HelloTriangleApplication::deviceExtensions</a></div><div class="ttdeci">std::vector&lt; const char * &gt; deviceExtensions</div><div class="ttdef"><b>Definition</b> main.cpp:174</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_aeae6119968142acd9b4fa43e9c5e6c84"><div class="ttname"><a href="#aeae6119968142acd9b4fa43e9c5e6c84">HelloTriangleApplication::findQueueFamilies</a></div><div class="ttdeci">uint32_t findQueueFamilies(vk::raii::PhysicalDevice physicalDevice)</div><div class="ttdef"><b>Definition</b> main.cpp:214</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_aeae6119968142acd9b4fa43e9c5e6c84"><div class="ttname"><a href="#aeae6119968142acd9b4fa43e9c5e6c84">HelloTriangleApplication::findQueueFamilies</a></div><div class="ttdeci">uint32_t findQueueFamilies(vk::raii::PhysicalDevice physicalDevice)</div><div class="ttdef"><b>Definition</b> main.cpp:217</div></div>
 <div class="ttc" id="aclassHelloTriangleApplication_html_af1e1e2e874c12db0a39d1bdd68d1aa3b"><div class="ttname"><a href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">HelloTriangleApplication::_graphicsQueue</a></div><div class="ttdeci">vk::raii::Queue _graphicsQueue</div><div class="ttdef"><b>Definition</b> main.cpp:53</div></div>
 <div class="ttc" id="aclassHelloTriangleApplication_html_af2f79301bd4696826a248764b203ff75"><div class="ttname"><a href="#af2f79301bd4696826a248764b203ff75">HelloTriangleApplication::_physicalDevice</a></div><div class="ttdeci">vk::raii::PhysicalDevice _physicalDevice</div><div class="ttdef"><b>Definition</b> main.cpp:50</div></div>
 </div><!-- fragment -->
@@ -468,20 +468,20 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  300</span>                         {</div>
-<div class="line"><span class="lineno">  301</span>        VkSurfaceKHR _surface;</div>
-<div class="line"><span class="lineno">  302</span>        <span class="keywordflow">if</span> (glfwCreateWindowSurface(*<a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>, <span class="keyword">nullptr</span>, &amp;_surface) != 0) {</div>
-<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;failed to create window surface!&quot;</span>);</div>
-<div class="line"><span class="lineno">  304</span>        }</div>
-<div class="line"><span class="lineno">  305</span>        <a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> = vk::raii::SurfaceKHR(<a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, _surface);</div>
-<div class="line"><span class="lineno">  306</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  303</span>                         {</div>
+<div class="line"><span class="lineno">  304</span>        VkSurfaceKHR _surface;</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">if</span> (glfwCreateWindowSurface(*<a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>, <span class="keyword">nullptr</span>, &amp;_surface) != 0) {</div>
+<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;failed to create window surface!&quot;</span>);</div>
+<div class="line"><span class="lineno">  307</span>        }</div>
+<div class="line"><span class="lineno">  308</span>        <a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> = vk::raii::SurfaceKHR(<a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, _surface);</div>
+<div class="line"><span class="lineno">  309</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="el" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>, and <a class="el" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a>.</p>
 
 </div>
 </div>
-<a id="aa8eed5e54aaf3bcc49b9214a6e8c8e20" name="aa8eed5e54aaf3bcc49b9214a6e8c8e20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8eed5e54aaf3bcc49b9214a6e8c8e20">&#9670;&#160;</a></span>debugCallback()</h2>
+<a id="a255ceee02b1a75f5809d94bf87beb14b" name="a255ceee02b1a75f5809d94bf87beb14b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255ceee02b1a75f5809d94bf87beb14b">&#9670;&#160;</a></span>debugCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -492,17 +492,17 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">static VKAPI_ATTR vk::Bool32 VKAPI_CALL HelloTriangleApplication::debugCallback </td>
           <td>(</td>
-          <td class="paramtype">VkDebugUtilsMessageSeverityFlagBitsEXT</td>          <td class="paramname"><span class="paramname"><em>severity</em></span>, </td>
+          <td class="paramtype">vk::DebugUtilsMessageSeverityFlagBitsEXT</td>          <td class="paramname"><span class="paramname"><em>severity</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">VkDebugUtilsMessageTypeFlagsEXT</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+          <td class="paramtype">vk::DebugUtilsMessageTypeFlagsEXT</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VkDebugUtilsMessengerCallbackDataEXT *</td>          <td class="paramname"><span class="paramname"><em>pCallbackData</em></span>, </td>
+          <td class="paramtype">const vk::DebugUtilsMessengerCallbackDataEXT *</td>          <td class="paramname"><span class="paramname"><em>pCallbackData</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -516,18 +516,18 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  179</span>    {</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT || severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT)</div>
-<div class="line"><span class="lineno">  181</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span> vk::False;</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>    {</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (severity &gt;= vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning)</div>
+<div class="line"><span class="lineno">  184</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; to_string(type) &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">return</span> vk::False;</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a571e5442b665fa0f4d321b6114eb0b86">setupDebugMessenger()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classHelloTriangleApplication_aa8eed5e54aaf3bcc49b9214a6e8c8e20_icgraph.png" border="0" usemap="#aclassHelloTriangleApplication_aa8eed5e54aaf3bcc49b9214a6e8c8e20_icgraph" alt=""/></div>
-<map name="aclassHelloTriangleApplication_aa8eed5e54aaf3bcc49b9214a6e8c8e20_icgraph" id="aclassHelloTriangleApplication_aa8eed5e54aaf3bcc49b9214a6e8c8e20_icgraph">
+<div class="center"><img src="classHelloTriangleApplication_a255ceee02b1a75f5809d94bf87beb14b_icgraph.png" border="0" usemap="#aclassHelloTriangleApplication_a255ceee02b1a75f5809d94bf87beb14b_icgraph" alt=""/></div>
+<map name="aclassHelloTriangleApplication_a255ceee02b1a75f5809d94bf87beb14b_icgraph" id="aclassHelloTriangleApplication_a255ceee02b1a75f5809d94bf87beb14b_icgraph">
 <area shape="rect" title=" " alt="" coords="215,5,376,46"/>
 <area shape="rect" href="classHelloTriangleApplication.html#a571e5442b665fa0f4d321b6114eb0b86" title=" " alt="" coords="5,5,167,46"/>
 <area shape="poly" title=" " alt="" coords="199,28,167,28,167,23,199,23"/>
@@ -558,18 +558,18 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  214</span>                                                                    {</div>
-<div class="line"><span class="lineno">  215</span>        <span class="comment">// find the index of the first queue family that supports graphics</span></div>
-<div class="line"><span class="lineno">  216</span>        std::vector&lt;vk::QueueFamilyProperties&gt; queueFamilyProperties = physicalDevice.getQueueFamilyProperties();</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>        <span class="comment">// get the first index into queueFamilyProperties which supports graphics</span></div>
-<div class="line"><span class="lineno">  219</span>        <span class="keyword">auto</span> graphicsQueueFamilyProperty =</div>
-<div class="line"><span class="lineno">  220</span>          std::find_if( queueFamilyProperties.begin(),</div>
-<div class="line"><span class="lineno">  221</span>                        queueFamilyProperties.end(),</div>
-<div class="line"><span class="lineno">  222</span>                        []( vk::QueueFamilyProperties <span class="keyword">const</span> &amp; qfp ) { return qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics; } );</div>
-<div class="line"><span class="lineno">  223</span> </div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(std::distance(queueFamilyProperties.begin(), graphicsQueueFamilyProperty));</div>
-<div class="line"><span class="lineno">  225</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>                                                                    {</div>
+<div class="line"><span class="lineno">  218</span>        <span class="comment">// find the index of the first queue family that supports graphics</span></div>
+<div class="line"><span class="lineno">  219</span>        std::vector&lt;vk::QueueFamilyProperties&gt; queueFamilyProperties = physicalDevice.getQueueFamilyProperties();</div>
+<div class="line"><span class="lineno">  220</span> </div>
+<div class="line"><span class="lineno">  221</span>        <span class="comment">// get the first index into queueFamilyProperties which supports graphics</span></div>
+<div class="line"><span class="lineno">  222</span>        <span class="keyword">auto</span> graphicsQueueFamilyProperty =</div>
+<div class="line"><span class="lineno">  223</span>          std::find_if( queueFamilyProperties.begin(),</div>
+<div class="line"><span class="lineno">  224</span>                        queueFamilyProperties.end(),</div>
+<div class="line"><span class="lineno">  225</span>                        []( vk::QueueFamilyProperties <span class="keyword">const</span> &amp; qfp ) { return qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics; } );</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(std::distance(queueFamilyProperties.begin(), graphicsQueueFamilyProperty));</div>
+<div class="line"><span class="lineno">  228</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#afec790ea6335f736bc175819d7e50e18">createLogicalDevice()</a>.</p>
 <div class="dynheader">
@@ -613,7 +613,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   68</span>        <a class="code hl_function" href="#a78e19fdbfeffdafb9630a0a4ad275a94">pickPhysicalDevice</a>();</div>
 <div class="line"><span class="lineno">   69</span>    }</div>
 <div class="ttc" id="aclassHelloTriangleApplication_html_a2c7e569908ececa03347bf6471ef86b7"><div class="ttname"><a href="#a2c7e569908ececa03347bf6471ef86b7">HelloTriangleApplication::createInstance</a></div><div class="ttdeci">void createInstance()</div><div class="ttdef"><b>Definition</b> main.cpp:95</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a78e19fdbfeffdafb9630a0a4ad275a94"><div class="ttname"><a href="#a78e19fdbfeffdafb9630a0a4ad275a94">HelloTriangleApplication::pickPhysicalDevice</a></div><div class="ttdeci">void pickPhysicalDevice()</div><div class="ttdef"><b>Definition</b> main.cpp:185</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a78e19fdbfeffdafb9630a0a4ad275a94"><div class="ttname"><a href="#a78e19fdbfeffdafb9630a0a4ad275a94">HelloTriangleApplication::pickPhysicalDevice</a></div><div class="ttdeci">void pickPhysicalDevice()</div><div class="ttdef"><b>Definition</b> main.cpp:188</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a2c7e569908ececa03347bf6471ef86b7">createInstance()</a>, and <a class="el" href="#a78e19fdbfeffdafb9630a0a4ad275a94">pickPhysicalDevice()</a>.</p>
 
@@ -797,34 +797,34 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                              {</div>
-<div class="line"><span class="lineno">  186</span>        std::vector&lt;vk::raii::PhysicalDevice&gt; devices = <a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>.enumeratePhysicalDevices();</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keyword">const</span> <span class="keyword">auto</span> devIter = std::ranges::find_if(devices,</div>
-<div class="line"><span class="lineno">  188</span>        [&amp;](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; device) {</div>
-<div class="line"><span class="lineno">  189</span>                <span class="keyword">auto</span> queueFamilies = device.getQueueFamilyProperties();</div>
-<div class="line"><span class="lineno">  190</span>                <span class="keywordtype">bool</span> isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</div>
-<div class="line"><span class="lineno">  191</span>                <span class="keyword">const</span> <span class="keyword">auto</span> qfpIter = std::ranges::find_if(queueFamilies,</div>
-<div class="line"><span class="lineno">  192</span>                []( vk::QueueFamilyProperties <span class="keyword">const</span> &amp; qfp )</div>
-<div class="line"><span class="lineno">  193</span>                        {</div>
-<div class="line"><span class="lineno">  194</span>                            <span class="keywordflow">return</span> (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != <span class="keyword">static_cast&lt;</span>vk::QueueFlags<span class="keyword">&gt;</span>(0);</div>
-<div class="line"><span class="lineno">  195</span>                        } );</div>
-<div class="line"><span class="lineno">  196</span>                isSuitable = isSuitable &amp;&amp; ( qfpIter != queueFamilies.end() );</div>
-<div class="line"><span class="lineno">  197</span>                <span class="keyword">auto</span> extensions = device.enumerateDeviceExtensionProperties( );</div>
-<div class="line"><span class="lineno">  198</span>                <span class="keywordtype">bool</span> found = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  199</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span> &amp; extension : <a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>) {</div>
-<div class="line"><span class="lineno">  200</span>                    <span class="keyword">auto</span> extensionIter = std::ranges::find_if(extensions, [extension](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; ext) {<span class="keywordflow">return</span> strcmp(ext.extensionName, extension) == 0;});</div>
-<div class="line"><span class="lineno">  201</span>                    found = found &amp;&amp;  extensionIter != extensions.end();</div>
-<div class="line"><span class="lineno">  202</span>                }</div>
-<div class="line"><span class="lineno">  203</span>                isSuitable = isSuitable &amp;&amp; found;</div>
-<div class="line"><span class="lineno">  204</span>                <span class="keywordflow">if</span> (isSuitable) {</div>
-<div class="line"><span class="lineno">  205</span>                    <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a> = device;</div>
-<div class="line"><span class="lineno">  206</span>                }</div>
-<div class="line"><span class="lineno">  207</span>                <span class="keywordflow">return</span> isSuitable;</div>
-<div class="line"><span class="lineno">  208</span>        });</div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (devIter == devices.end()) {</div>
-<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;failed to find a suitable GPU!&quot;</span>);</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>                              {</div>
+<div class="line"><span class="lineno">  189</span>        std::vector&lt;vk::raii::PhysicalDevice&gt; devices = <a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>.enumeratePhysicalDevices();</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keyword">const</span> <span class="keyword">auto</span> devIter = std::ranges::find_if(devices,</div>
+<div class="line"><span class="lineno">  191</span>        [&amp;](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; device) {</div>
+<div class="line"><span class="lineno">  192</span>                <span class="keyword">auto</span> queueFamilies = device.getQueueFamilyProperties();</div>
+<div class="line"><span class="lineno">  193</span>                <span class="keywordtype">bool</span> isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</div>
+<div class="line"><span class="lineno">  194</span>                <span class="keyword">const</span> <span class="keyword">auto</span> qfpIter = std::ranges::find_if(queueFamilies,</div>
+<div class="line"><span class="lineno">  195</span>                []( vk::QueueFamilyProperties <span class="keyword">const</span> &amp; qfp )</div>
+<div class="line"><span class="lineno">  196</span>                        {</div>
+<div class="line"><span class="lineno">  197</span>                            <span class="keywordflow">return</span> (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != <span class="keyword">static_cast&lt;</span>vk::QueueFlags<span class="keyword">&gt;</span>(0);</div>
+<div class="line"><span class="lineno">  198</span>                        } );</div>
+<div class="line"><span class="lineno">  199</span>                isSuitable = isSuitable &amp;&amp; ( qfpIter != queueFamilies.end() );</div>
+<div class="line"><span class="lineno">  200</span>                <span class="keyword">auto</span> extensions = device.enumerateDeviceExtensionProperties( );</div>
+<div class="line"><span class="lineno">  201</span>                <span class="keywordtype">bool</span> found = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  202</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span> &amp; extension : <a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>) {</div>
+<div class="line"><span class="lineno">  203</span>                    <span class="keyword">auto</span> extensionIter = std::ranges::find_if(extensions, [extension](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; ext) {<span class="keywordflow">return</span> strcmp(ext.extensionName, extension) == 0;});</div>
+<div class="line"><span class="lineno">  204</span>                    found = found &amp;&amp;  extensionIter != extensions.end();</div>
+<div class="line"><span class="lineno">  205</span>                }</div>
+<div class="line"><span class="lineno">  206</span>                isSuitable = isSuitable &amp;&amp; found;</div>
+<div class="line"><span class="lineno">  207</span>                <span class="keywordflow">if</span> (isSuitable) {</div>
+<div class="line"><span class="lineno">  208</span>                    <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a> = device;</div>
+<div class="line"><span class="lineno">  209</span>                }</div>
+<div class="line"><span class="lineno">  210</span>                <span class="keywordflow">return</span> isSuitable;</div>
+<div class="line"><span class="lineno">  211</span>        });</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">if</span> (devIter == devices.end()) {</div>
+<div class="line"><span class="lineno">  213</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;failed to find a suitable GPU!&quot;</span>);</div>
+<div class="line"><span class="lineno">  214</span>        }</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="el" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>, and <a class="el" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.</p>
 
@@ -947,20 +947,20 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  167</span>    vk::DebugUtilsMessageTypeFlagBitsEXT::eGeneral | vk::DebugUtilsMessageTypeFlagBitsEXT::ePerformance | vk::DebugUtilsMessageTypeFlagBitsEXT::eValidation);</div>
 <div class="line"><span class="lineno">  168</span>        vk::DebugUtilsMessengerCreateInfoEXT debugUtilsMessengerCreateInfoEXT{.messageSeverity = severityFlags,</div>
 <div class="line"><span class="lineno">  169</span>                                                                              .messageType     = messageTypeFlags,</div>
-<div class="line"><span class="lineno">  170</span>                                                                              .pfnUserCallback = &amp;<a class="code hl_function" href="#aa8eed5e54aaf3bcc49b9214a6e8c8e20">debugCallback</a>};</div>
+<div class="line"><span class="lineno">  170</span>                                                                              .pfnUserCallback = &amp;<a class="code hl_function" href="#a255ceee02b1a75f5809d94bf87beb14b">debugCallback</a>};</div>
 <div class="line"><span class="lineno">  171</span>        <a class="code hl_variable" href="#a469a914a3f4e518f9717724e7f83c4de">_debugMessenger</a> = <a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>.createDebugUtilsMessengerEXT(debugUtilsMessengerCreateInfoEXT);</div>
 <div class="line"><span class="lineno">  172</span>    }</div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a255ceee02b1a75f5809d94bf87beb14b"><div class="ttname"><a href="#a255ceee02b1a75f5809d94bf87beb14b">HelloTriangleApplication::debugCallback</a></div><div class="ttdeci">static VKAPI_ATTR vk::Bool32 VKAPI_CALL debugCallback(vk::DebugUtilsMessageSeverityFlagBitsEXT severity, vk::DebugUtilsMessageTypeFlagsEXT type, const vk::DebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)</div><div class="ttdef"><b>Definition</b> main.cpp:178</div></div>
 <div class="ttc" id="aclassHelloTriangleApplication_html_a469a914a3f4e518f9717724e7f83c4de"><div class="ttname"><a href="#a469a914a3f4e518f9717724e7f83c4de">HelloTriangleApplication::_debugMessenger</a></div><div class="ttdeci">vk::raii::DebugUtilsMessengerEXT _debugMessenger</div><div class="ttdef"><b>Definition</b> main.cpp:51</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_aa8eed5e54aaf3bcc49b9214a6e8c8e20"><div class="ttname"><a href="#aa8eed5e54aaf3bcc49b9214a6e8c8e20">HelloTriangleApplication::debugCallback</a></div><div class="ttdeci">static VKAPI_ATTR vk::Bool32 VKAPI_CALL debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT severity, VkDebugUtilsMessageTypeFlagsEXT type, const VkDebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)</div><div class="ttdef"><b>Definition</b> main.cpp:178</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a469a914a3f4e518f9717724e7f83c4de">_debugMessenger</a>, <a class="el" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, and <a class="el" href="#aa8eed5e54aaf3bcc49b9214a6e8c8e20">debugCallback()</a>.</p>
+<p class="reference">References <a class="el" href="#a469a914a3f4e518f9717724e7f83c4de">_debugMessenger</a>, <a class="el" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, and <a class="el" href="#a255ceee02b1a75f5809d94bf87beb14b">debugCallback()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classHelloTriangleApplication_a571e5442b665fa0f4d321b6114eb0b86_cgraph.png" border="0" usemap="#aclassHelloTriangleApplication_a571e5442b665fa0f4d321b6114eb0b86_cgraph" alt=""/></div>
 <map name="aclassHelloTriangleApplication_a571e5442b665fa0f4d321b6114eb0b86_cgraph" id="aclassHelloTriangleApplication_a571e5442b665fa0f4d321b6114eb0b86_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,167,46"/>
-<area shape="rect" href="classHelloTriangleApplication.html#aa8eed5e54aaf3bcc49b9214a6e8c8e20" title=" " alt="" coords="215,5,376,46"/>
+<area shape="rect" href="classHelloTriangleApplication.html#a255ceee02b1a75f5809d94bf87beb14b" title=" " alt="" coords="215,5,376,46"/>
 <area shape="poly" title=" " alt="" coords="167,23,199,23,199,28,167,28"/>
 </map>
 </div>
