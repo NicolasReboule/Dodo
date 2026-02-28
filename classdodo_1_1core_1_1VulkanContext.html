@@ -263,12 +263,12 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                          :</div>
-<div class="line"><span class="lineno">   38</span><a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a>(std::exchange(other._context, vk::raii::Context())),</div>
-<div class="line"><span class="lineno">   39</span><a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>(std::exchange(other._instance, <span class="keyword">nullptr</span>)),</div>
-<div class="line"><span class="lineno">   40</span><a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a>(std::exchange(other._physicalDevice, <span class="keyword">nullptr</span>))</div>
-<div class="line"><span class="lineno">   41</span>{</div>
-<div class="line"><span class="lineno">   42</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                          :</div>
+<div class="line"><span class="lineno">   11</span><a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a>(std::exchange(other._context, vk::raii::Context())),</div>
+<div class="line"><span class="lineno">   12</span><a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>(std::exchange(other._instance, <span class="keyword">nullptr</span>)),</div>
+<div class="line"><span class="lineno">   13</span><a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a>(std::exchange(other._physicalDevice, <span class="keyword">nullptr</span>))</div>
+<div class="line"><span class="lineno">   14</span>{</div>
+<div class="line"><span class="lineno">   15</span>}</div>
 <div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a6dac383923a97a66040c310284d6decf"><div class="ttname"><a href="#a6dac383923a97a66040c310284d6decf">dodo::core::VulkanContext::_physicalDevice</a></div><div class="ttdeci">vk::raii::PhysicalDevice _physicalDevice</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:25</div></div>
 <div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a737856ea6a2321a1a28669d9e6eae68d"><div class="ttname"><a href="#a737856ea6a2321a1a28669d9e6eae68d">dodo::core::VulkanContext::_context</a></div><div class="ttdeci">vk::raii::Context _context</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:23</div></div>
 <div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_ac4f6b520fc7806980a2a9f45e53d8fa0"><div class="ttname"><a href="#ac4f6b520fc7806980a2a9f45e53d8fa0">dodo::core::VulkanContext::_instance</a></div><div class="ttdeci">vk::raii::Instance _instance</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:24</div></div>
@@ -327,25 +327,25 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                                                                                                          {</div>
-<div class="line"><span class="lineno">   69</span>    <span class="keyword">auto</span> extensionProperties = vulkanContext._context.enumerateInstanceExtensionProperties();</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;available extensions:\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[extensionName, specVersion] : extensionProperties) {</div>
-<div class="line"><span class="lineno">   73</span>        std::cout &lt;&lt; <span class="charliteral">&#39;\t&#39;</span> &lt;&lt; extensionName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; specVersion &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> glfwExtension : glfwExtensions)</div>
-<div class="line"><span class="lineno">   77</span>    {</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (std::ranges::none_of(extensionProperties,</div>
-<div class="line"><span class="lineno">   79</span>                                 [glfwExtension](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; extensionProperty)</div>
-<div class="line"><span class="lineno">   80</span>                                 { <span class="keywordflow">return</span> strcmp(extensionProperty.extensionName, glfwExtension) == 0; }))</div>
-<div class="line"><span class="lineno">   81</span>        {</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;Required GLFW extension not supported: &quot;</span> + std::string(glfwExtension));</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   86</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                                                                                                          {</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keyword">auto</span> extensionProperties = vulkanContext._context.enumerateInstanceExtensionProperties();</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;available extensions:\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[extensionName, specVersion] : extensionProperties) {</div>
+<div class="line"><span class="lineno">   46</span>        std::cout &lt;&lt; <span class="charliteral">&#39;\t&#39;</span> &lt;&lt; extensionName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; specVersion &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> glfwExtension : glfwExtensions)</div>
+<div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (std::ranges::none_of(extensionProperties,</div>
+<div class="line"><span class="lineno">   52</span>                                 [glfwExtension](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; extensionProperty)</div>
+<div class="line"><span class="lineno">   53</span>                                 { <span class="keywordflow">return</span> strcmp(extensionProperty.extensionName, glfwExtension) == 0; }))</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;Required GLFW extension not supported: &quot;</span> + std::string(glfwExtension));</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   59</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -375,19 +375,19 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                                                                                                                        {</div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.empty()) {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keyword">auto</span> layerProperties = vulkanContext._context.enumerateInstanceLayerProperties();</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (std::ranges::any_of(<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>, [&amp;layerProperties](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;requiredLayer) {</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> std::ranges::none_of(layerProperties, [requiredLayer](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;layerProperty) {</div>
-<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">return</span> strcmp(layerProperty.layerName, requiredLayer) == 0;</div>
-<div class="line"><span class="lineno">   60</span>            });</div>
-<div class="line"><span class="lineno">   61</span>        })) {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;One or more required layers are not supported!&quot;</span>);</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   66</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                                                                                                        {</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.empty()) {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keyword">auto</span> layerProperties = vulkanContext._context.enumerateInstanceLayerProperties();</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (std::ranges::any_of(<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>, [&amp;layerProperties](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;requiredLayer) {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> std::ranges::none_of(layerProperties, [requiredLayer](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;layerProperty) {</div>
+<div class="line"><span class="lineno">   32</span>                <span class="keywordflow">return</span> strcmp(layerProperty.layerName, requiredLayer) == 0;</div>
+<div class="line"><span class="lineno">   33</span>            });</div>
+<div class="line"><span class="lineno">   34</span>        })) {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;One or more required layers are not supported!&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   39</span>}</div>
 <div class="ttc" id="amain_8cpp_html_a2ef71d26f33a696147bfd1b7b56b6ba2"><div class="ttname"><a href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a></div><div class="ttdeci">const std::vector&lt; char const  * &gt; validationLayers</div><div class="ttdef"><b>Definition</b> main.cpp:28</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.</p>
@@ -418,33 +418,33 @@ template&lt;typename... Features&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                                         {</div>
-<div class="line"><span class="lineno">   12</span>    <a class="code hl_function" href="#ac39df23ac0afd2cc4b55bfae463ce7eb">VulkanContext</a> vulkanContext;</div>
-<div class="line"><span class="lineno">   13</span>    VulkanDebug debugInfo = ctxInfo.debugInfo;</div>
-<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">if</span> (debugInfo.debugEnabled) {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a21bc913a3f41899ec0eb6b5573ba411f">checkRequiredLayers</a>(vulkanContext, debugInfo.validationLayers); !result)</div>
-<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> std::unexpected(result.error());</div>
-<div class="line"><span class="lineno">   17</span>        <span class="comment">// setupDebugMessenger(vulkanContext, debugInfo.debugCallback);</span></div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-<div class="line"><span class="lineno">   19</span> </div>
-<div class="line"><span class="lineno">   20</span>    uint32_t glfwExtensionCount = 0;</div>
-<div class="line"><span class="lineno">   21</span>    <span class="keyword">const</span> <span class="keyword">auto</span> glfwExtensions = <a class="code hl_function" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a>(&amp;glfwExtensionCount);</div>
-<div class="line"><span class="lineno">   22</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a1d4ef9cb3df491b6e1e22530fba05e44">checkRequiredExtensions</a>(vulkanContext, std::span(glfwExtensions, glfwExtensionCount)); !result)</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
-<div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>    <span class="keyword">const</span> vk::InstanceCreateInfo createInfo{</div>
-<div class="line"><span class="lineno">   26</span>        .pApplicationInfo = &amp;ctxInfo.vkInfo,</div>
-<div class="line"><span class="lineno">   27</span>        .enabledLayerCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(debugInfo.validationLayers.size()),</div>
-<div class="line"><span class="lineno">   28</span>        .ppEnabledLayerNames = debugInfo.validationLayers.data(),</div>
-<div class="line"><span class="lineno">   29</span>        .enabledExtensionCount = glfwExtensionCount,</div>
-<div class="line"><span class="lineno">   30</span>        .ppEnabledExtensionNames = glfwExtensions,</div>
-<div class="line"><span class="lineno">   31</span>    };</div>
-<div class="line"><span class="lineno">   32</span> </div>
-<div class="line"><span class="lineno">   33</span>    vulkanContext._instance = vk::raii::Instance(vulkanContext._context, createInfo);</div>
-<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">return</span> vulkanContext;</div>
-<div class="line"><span class="lineno">   35</span>}</div>
-<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a1d4ef9cb3df491b6e1e22530fba05e44"><div class="ttname"><a href="#a1d4ef9cb3df491b6e1e22530fba05e44">dodo::core::VulkanContext::checkRequiredExtensions</a></div><div class="ttdeci">static auto checkRequiredExtensions(const VulkanContext &amp;vulkanContext, std::span&lt; const char *const &gt; glfwExtensions) -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:68</div></div>
-<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a21bc913a3f41899ec0eb6b5573ba411f"><div class="ttname"><a href="#a21bc913a3f41899ec0eb6b5573ba411f">dodo::core::VulkanContext::checkRequiredLayers</a></div><div class="ttdeci">static auto checkRequiredLayers(const VulkanContext &amp;vulkanContext, std::span&lt; const char *const &gt; validationLayers) -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:54</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                         {</div>
+<div class="line"><span class="lineno">   80</span>    <a class="code hl_function" href="#ac39df23ac0afd2cc4b55bfae463ce7eb">VulkanContext</a> vulkanContext;</div>
+<div class="line"><span class="lineno">   81</span>    VulkanDebug debugInfo = ctxInfo.debugInfo;</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">if</span> (debugInfo.debugEnabled) {</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a21bc913a3f41899ec0eb6b5573ba411f">checkRequiredLayers</a>(vulkanContext, debugInfo.validationLayers); !result)</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">   85</span>        <span class="comment">// setupDebugMessenger(vulkanContext, debugInfo.debugCallback);</span></div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    uint32_t glfwExtensionCount = 0;</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keyword">const</span> <span class="keyword">auto</span> glfwExtensions = <a class="code hl_function" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a>(&amp;glfwExtensionCount);</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a1d4ef9cb3df491b6e1e22530fba05e44">checkRequiredExtensions</a>(vulkanContext, std::span(glfwExtensions, glfwExtensionCount)); !result)</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="keyword">const</span> vk::InstanceCreateInfo createInfo{</div>
+<div class="line"><span class="lineno">   94</span>        .pApplicationInfo = &amp;ctxInfo.vkInfo,</div>
+<div class="line"><span class="lineno">   95</span>        .enabledLayerCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(debugInfo.validationLayers.size()),</div>
+<div class="line"><span class="lineno">   96</span>        .ppEnabledLayerNames = debugInfo.validationLayers.data(),</div>
+<div class="line"><span class="lineno">   97</span>        .enabledExtensionCount = glfwExtensionCount,</div>
+<div class="line"><span class="lineno">   98</span>        .ppEnabledExtensionNames = glfwExtensions,</div>
+<div class="line"><span class="lineno">   99</span>    };</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    vulkanContext._instance = vk::raii::Instance(vulkanContext._context, createInfo);</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">return</span> vulkanContext;</div>
+<div class="line"><span class="lineno">  103</span>}</div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a1d4ef9cb3df491b6e1e22530fba05e44"><div class="ttname"><a href="#a1d4ef9cb3df491b6e1e22530fba05e44">dodo::core::VulkanContext::checkRequiredExtensions</a></div><div class="ttdeci">static auto checkRequiredExtensions(const VulkanContext &amp;vulkanContext, std::span&lt; const char *const &gt; glfwExtensions) -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:41</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a21bc913a3f41899ec0eb6b5573ba411f"><div class="ttname"><a href="#a21bc913a3f41899ec0eb6b5573ba411f">dodo::core::VulkanContext::checkRequiredLayers</a></div><div class="ttdeci">static auto checkRequiredLayers(const VulkanContext &amp;vulkanContext, std::span&lt; const char *const &gt; validationLayers) -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:27</div></div>
 <div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_ac39df23ac0afd2cc4b55bfae463ce7eb"><div class="ttname"><a href="#ac39df23ac0afd2cc4b55bfae463ce7eb">dodo::core::VulkanContext::VulkanContext</a></div><div class="ttdeci">VulkanContext()=default</div></div>
 <div class="ttc" id="agroup__vulkan_html_gada152edc5bbbd0c2138728878632fd9c"><div class="ttname"><a href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a></div><div class="ttdeci">GLFWAPI const char ** glfwGetRequiredInstanceExtensions(uint32_t *count)</div><div class="ttdoc">Returns the Vulkan instance extensions required by GLFW.</div></div>
 </div><!-- fragment -->
@@ -512,11 +512,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  101</span>{</div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT || severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT)</div>
-<div class="line"><span class="lineno">  103</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> vk::False;</div>
-<div class="line"><span class="lineno">  105</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT || severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT)</div>
+<div class="line"><span class="lineno">   76</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> vk::False;</div>
+<div class="line"><span class="lineno">   78</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -544,9 +544,9 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  143</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">return</span> featureChain.template get&lt;FirstFeature&gt;();</div>
-<div class="line"><span class="lineno">  145</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                                                                          {</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> featureChain.template get&lt;FirstFeature&gt;();</div>
+<div class="line"><span class="lineno">  118</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -572,12 +572,12 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                               {</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceProperties = physicalDevice.getProperties();</div>
-<div class="line"><span class="lineno">  137</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceFeatures = physicalDevice.getFeatures();</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> deviceProperties.deviceType == vk::PhysicalDeviceType::eDiscreteGpu &amp;&amp; deviceFeatures.geometryShader;</div>
-<div class="line"><span class="lineno">  140</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                                                                               {</div>
+<div class="line"><span class="lineno">  109</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceProperties = physicalDevice.getProperties();</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceFeatures = physicalDevice.getFeatures();</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">return</span> deviceProperties.deviceType == vk::PhysicalDeviceType::eDiscreteGpu &amp;&amp; deviceFeatures.geometryShader;</div>
+<div class="line"><span class="lineno">  113</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -628,14 +628,14 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                                      {</div>
-<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;other) {</div>
-<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a> = std::exchange(other._context, vk::raii::Context());</div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a> = std::exchange(other._instance, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a> = std::exchange(other._physicalDevice, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   51</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                                      {</div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;other) {</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a> = std::exchange(other._context, vk::raii::Context());</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a> = std::exchange(other._instance, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a> = std::exchange(other._physicalDevice, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   24</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -661,33 +661,33 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">  108</span>    <span class="comment">// auto devices = vulkanContext._instance.enumeratePhysicalDevices();</span></div>
-<div class="line"><span class="lineno">  109</span>    <span class="comment">// const auto devIter = std::ranges::find_if(devices,</span></div>
-<div class="line"><span class="lineno">  110</span>    <span class="comment">// [&amp;](auto const &amp; device) {</span></div>
-<div class="line"><span class="lineno">  111</span>    <span class="comment">//         auto queueFamilies = device.getQueueFamilyProperties();</span></div>
-<div class="line"><span class="lineno">  112</span>    <span class="comment">//         bool isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</span></div>
-<div class="line"><span class="lineno">  113</span>    <span class="comment">//         const auto qfpIter = std::ranges::find_if(queueFamilies,</span></div>
-<div class="line"><span class="lineno">  114</span>    <span class="comment">//         []( vk::QueueFamilyProperties const &amp; qfp )</span></div>
-<div class="line"><span class="lineno">  115</span>    <span class="comment">//                 {</span></div>
-<div class="line"><span class="lineno">  116</span>    <span class="comment">//                     return (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != static_cast&lt;vk::QueueFlags&gt;(0);</span></div>
-<div class="line"><span class="lineno">  117</span>    <span class="comment">//                 } );</span></div>
-<div class="line"><span class="lineno">  118</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; ( qfpIter != queueFamilies.end() );</span></div>
-<div class="line"><span class="lineno">  119</span>    <span class="comment">//         auto extensions = device.enumerateDeviceExtensionProperties( );</span></div>
-<div class="line"><span class="lineno">  120</span>    <span class="comment">//         bool found = true;</span></div>
-<div class="line"><span class="lineno">  121</span>    <span class="comment">//         for (auto const &amp; extension : deviceExtensions) {</span></div>
-<div class="line"><span class="lineno">  122</span>    <span class="comment">//             auto extensionIter = std::ranges::find_if(extensions, [extension](auto const &amp; ext) {return strcmp(ext.extensionName, extension) == 0;});</span></div>
-<div class="line"><span class="lineno">  123</span>    <span class="comment">//             found = found &amp;&amp; extensionIter != extensions.end();</span></div>
-<div class="line"><span class="lineno">  124</span>    <span class="comment">//         }</span></div>
-<div class="line"><span class="lineno">  125</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; found;</span></div>
-<div class="line"><span class="lineno">  126</span>    <span class="comment">//         if (isSuitable)</span></div>
-<div class="line"><span class="lineno">  127</span>    <span class="comment">//             vulkanContext._physicalDevice = device;</span></div>
-<div class="line"><span class="lineno">  128</span>    <span class="comment">//         return isSuitable;</span></div>
-<div class="line"><span class="lineno">  129</span>    <span class="comment">// });</span></div>
-<div class="line"><span class="lineno">  130</span>    <span class="comment">// if (devIter == devices.end())</span></div>
-<div class="line"><span class="lineno">  131</span>    <span class="comment">//     return std::unexpected(&quot;Failed to find a suitable GPU&quot;);</span></div>
-<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  133</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                                                                   {</div>
+<div class="line"><span class="lineno">   81</span>    <span class="comment">// auto devices = vulkanContext._instance.enumeratePhysicalDevices();</span></div>
+<div class="line"><span class="lineno">   82</span>    <span class="comment">// const auto devIter = std::ranges::find_if(devices,</span></div>
+<div class="line"><span class="lineno">   83</span>    <span class="comment">// [&amp;](auto const &amp; device) {</span></div>
+<div class="line"><span class="lineno">   84</span>    <span class="comment">//         auto queueFamilies = device.getQueueFamilyProperties();</span></div>
+<div class="line"><span class="lineno">   85</span>    <span class="comment">//         bool isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</span></div>
+<div class="line"><span class="lineno">   86</span>    <span class="comment">//         const auto qfpIter = std::ranges::find_if(queueFamilies,</span></div>
+<div class="line"><span class="lineno">   87</span>    <span class="comment">//         []( vk::QueueFamilyProperties const &amp; qfp )</span></div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment">//                 {</span></div>
+<div class="line"><span class="lineno">   89</span>    <span class="comment">//                     return (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != static_cast&lt;vk::QueueFlags&gt;(0);</span></div>
+<div class="line"><span class="lineno">   90</span>    <span class="comment">//                 } );</span></div>
+<div class="line"><span class="lineno">   91</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; ( qfpIter != queueFamilies.end() );</span></div>
+<div class="line"><span class="lineno">   92</span>    <span class="comment">//         auto extensions = device.enumerateDeviceExtensionProperties( );</span></div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment">//         bool found = true;</span></div>
+<div class="line"><span class="lineno">   94</span>    <span class="comment">//         for (auto const &amp; extension : deviceExtensions) {</span></div>
+<div class="line"><span class="lineno">   95</span>    <span class="comment">//             auto extensionIter = std::ranges::find_if(extensions, [extension](auto const &amp; ext) {return strcmp(ext.extensionName, extension) == 0;});</span></div>
+<div class="line"><span class="lineno">   96</span>    <span class="comment">//             found = found &amp;&amp; extensionIter != extensions.end();</span></div>
+<div class="line"><span class="lineno">   97</span>    <span class="comment">//         }</span></div>
+<div class="line"><span class="lineno">   98</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; found;</span></div>
+<div class="line"><span class="lineno">   99</span>    <span class="comment">//         if (isSuitable)</span></div>
+<div class="line"><span class="lineno">  100</span>    <span class="comment">//             vulkanContext._physicalDevice = device;</span></div>
+<div class="line"><span class="lineno">  101</span>    <span class="comment">//         return isSuitable;</span></div>
+<div class="line"><span class="lineno">  102</span>    <span class="comment">// });</span></div>
+<div class="line"><span class="lineno">  103</span>    <span class="comment">// if (devIter == devices.end())</span></div>
+<div class="line"><span class="lineno">  104</span>    <span class="comment">//     return std::unexpected(&quot;Failed to find a suitable GPU&quot;);</span></div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  106</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -717,17 +717,17 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">   89</span>    <span class="keyword">constexpr</span> vk::DebugUtilsMessageSeverityFlagsEXT SEVERITY_FLAGS(vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |</div>
-<div class="line"><span class="lineno">   90</span>                                                    vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |</div>
-<div class="line"><span class="lineno">   91</span>                                                    vk::DebugUtilsMessageSeverityFlagBitsEXT::eError);</div>
-<div class="line"><span class="lineno">   92</span>    <span class="keyword">constexpr</span> vk::DebugUtilsMessageTypeFlagsEXT MESSAGE_TYPE_FLAGS(</div>
-<div class="line"><span class="lineno">   93</span>            vk::DebugUtilsMessageTypeFlagBitsEXT::eGeneral | vk::DebugUtilsMessageTypeFlagBitsEXT::ePerformance | vk::DebugUtilsMessageTypeFlagBitsEXT::eValidation);</div>
-<div class="line"><span class="lineno">   94</span>    <span class="keyword">const</span> vk::DebugUtilsMessengerCreateInfoEXT debugUtilsMessengerCreateInfoEXT{.messageSeverity = SEVERITY_FLAGS,</div>
-<div class="line"><span class="lineno">   95</span>                                                                          .messageType = MESSAGE_TYPE_FLAGS,</div>
-<div class="line"><span class="lineno">   96</span>                                                                          .pfnUserCallback = debugCallback};</div>
-<div class="line"><span class="lineno">   97</span>    vulkanContext._debugMessenger = vulkanContext._instance.createDebugUtilsMessengerEXT(debugUtilsMessengerCreateInfoEXT);</div>
-<div class="line"><span class="lineno">   98</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                                                                 {</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keyword">constexpr</span> vk::DebugUtilsMessageSeverityFlagsEXT SEVERITY_FLAGS(vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |</div>
+<div class="line"><span class="lineno">   63</span>                                                    vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |</div>
+<div class="line"><span class="lineno">   64</span>                                                    vk::DebugUtilsMessageSeverityFlagBitsEXT::eError);</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keyword">constexpr</span> vk::DebugUtilsMessageTypeFlagsEXT MESSAGE_TYPE_FLAGS(</div>
+<div class="line"><span class="lineno">   66</span>            vk::DebugUtilsMessageTypeFlagBitsEXT::eGeneral | vk::DebugUtilsMessageTypeFlagBitsEXT::ePerformance | vk::DebugUtilsMessageTypeFlagBitsEXT::eValidation);</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keyword">const</span> vk::DebugUtilsMessengerCreateInfoEXT debugUtilsMessengerCreateInfoEXT{.messageSeverity = SEVERITY_FLAGS,</div>
+<div class="line"><span class="lineno">   68</span>                                                                          .messageType = MESSAGE_TYPE_FLAGS,</div>
+<div class="line"><span class="lineno">   69</span>                                                                          .pfnUserCallback = debugCallback};</div>
+<div class="line"><span class="lineno">   70</span>    vulkanContext._debugMessenger = vulkanContext._instance.createDebugUtilsMessengerEXT(debugUtilsMessengerCreateInfoEXT);</div>
+<div class="line"><span class="lineno">   71</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a4737e75936d49d95100dff2c0b4df2e0">_debugMessenger</a>, and <a class="el" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>.</p>
 
