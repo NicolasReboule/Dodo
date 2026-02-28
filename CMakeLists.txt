@@ -47,7 +47,7 @@ target_link_libraries(${PROJECT_NAME}_Sources PUBLIC ${PROJECT_NAME}_Headers)
 # Vulkan
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/CMake")
 find_package(Vulkan REQUIRED)
-target_compile_definitions(${PROJECT_NAME}_Sources PRIVATE
+target_compile_definitions(${PROJECT_NAME}_Sources PUBLIC
         GLFW_INCLUDE_NONE
         GLFW_INCLUDE_VULKAN
 )
