@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.29)
 
-option(ENABLE_CPP23_MODULE "Enable C++ 23 module support for Vulkan" ON)
+option(ENABLE_CPP23_MODULE "Enable C++ 23 module support for Vulkan" OFF)
 if(ENABLE_CPP23_MODULE)
     set(CMAKE_CXX_SCAN_FOR_MODULES ON CACHE BOOL "Enable C++ module import scanning" FORCE)
 endif()
