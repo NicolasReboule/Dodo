@@ -46,7 +46,7 @@ target_link_libraries(${PROJECT_NAME}_Sources PUBLIC ${PROJECT_NAME}_Headers)
 
 # Vulkan
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/CMake")
-find_package (Vulkan REQUIRED)
+find_package(Vulkan REQUIRED)
 
 if(ENABLE_CPP23_MODULE)
     # set up Vulkan C++ module (enabled when ENABLE_CPP23_MODULE=ON)
@@ -97,12 +97,12 @@ else()
     )
 endif()
 
-find_package (glm REQUIRED)
+find_package(glm REQUIRED)
 
 target_link_directories(${PROJECT_NAME}_Sources PUBLIC lib)
 
 if(MSVC)
-    target_link_libraries(${PROJECT_NAME}_Sources PUBLIC Vulkan::cppm glm::glm)
+    target_link_libraries(${PROJECT_NAME}_Sources PUBLIC Vulkan::cppm glm::glm glfw3.lib)
 else()
     target_link_libraries(${PROJECT_NAME}_Sources PUBLIC Vulkan::cppm glm::glm libglfw3.a)
 endif()
@@ -111,7 +111,7 @@ endif()
 add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE ${PROJECT_NAME}_Sources)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC glfw3.lib)
+#target_link_libraries(${PROJECT_NAME} PUBLIC )
 
 # Compiler Warnings
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
