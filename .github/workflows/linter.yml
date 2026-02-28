@@ -37,6 +37,12 @@ jobs:
           path: ./build/_deps
           key: ${{ runner.os }}-libraries-${{ hashFiles('**/CMakeLists.txt') }}
 
+      - name: Install Vulkan SDK
+        uses: humbletim/install-vulkan-sdk@v1.2
+        with:
+          version: 1.4.309.0
+          cache: true
+
       - name: Apply clang-tidy
         run: |
           cmake -B ./build -S . -DUSE_CLANG_TIDY=ON -DUSE_CLANG_TIDY_WITH_FIX=ON
@@ -76,6 +82,12 @@ jobs:
         with:
           path: ./build/_deps
           key: ${{ runner.os }}-libraries-${{ hashFiles('**/CMakeLists.txt') }}
+
+      - name: Install Vulkan SDK
+        uses: humbletim/install-vulkan-sdk@v1.2
+        with:
+          version: 1.4.309.0
+          cache: true
 
       - name: Install clang-format and clang-tidy
         run: |

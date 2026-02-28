@@ -32,6 +32,12 @@ jobs:
           path: ./build/_deps
           key: ${{ runner.os }}-libraries-${{ hashFiles('**/CMakeLists.txt') }}
 
+      - name: Install Vulkan SDK
+        uses: humbletim/install-vulkan-sdk@v1.2
+        with:
+          version: 1.4.309.0
+          cache: true
+
       - name: Configure CMake
         shell: bash
         run: cmake -B ./build -S .
@@ -59,6 +65,12 @@ jobs:
           path: ./build/_deps
           key: ${{ runner.os }}-libraries-${{ hashFiles('**/CMakeLists.txt') }}
 
+      - name: Install Vulkan SDK
+        uses: humbletim/install-vulkan-sdk@v1.2
+        with:
+          version: 1.4.309.0
+          cache: true
+
       - name: Configure CMake
         shell: bash
         run: cmake -B ./build -S .
@@ -85,6 +97,12 @@ jobs:
         with:
           path: ./build/_deps
           key: ${{ runner.os }}-libraries-${{ hashFiles('**/CMakeLists.txt') }}
+
+      - name: Install Vulkan SDK
+        uses: humbletim/install-vulkan-sdk@v1.2
+        with:
+          version: 1.4.309.0
+          cache: true
 
       - name: Configure CMake
         shell: bash
