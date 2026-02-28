@@ -40,7 +40,7 @@ jobs:
 
       - name: Configure CMake
         shell: bash
-        run: cmake -B ./build -S .
+        run: cmake -B ./build -S . -DENABLE_CPP23_MODULE=OFF
 
       - name: Build Debug
         shell: bash
@@ -73,7 +73,7 @@ jobs:
 
       - name: Configure CMake
         shell: bash
-        run: cmake -B ./build -S .
+        run: cmake -B ./build -S . -DENABLE_CPP23_MODULE=OFF
 
       - name: Build Debug
         shell: pwsh
@@ -106,7 +106,7 @@ jobs:
 
       - name: Configure CMake
         shell: bash
-        run: cmake -B ./build -S .
+        run: cmake -B ./build -S . -DENABLE_CPP23_MODULE=OFF
 
       - name: Build Debug
         shell: bash

@@ -42,7 +42,7 @@ jobs:
 
       - name: Configure CMake
         shell: bash
-        run: cmake -B ./build -S . -DBUILD_TESTS=ON
+        run: cmake -B ./build -S . -DBUILD_TESTS=ON -DENABLE_CPP23_MODULE=OFF
 
       - name: Build Unit Test
         shell: bash
@@ -73,7 +73,7 @@ jobs:
 
       - name: Configure CMake
         shell: bash
-        run: cmake -B ./build -S . -DBUILD_TESTS=ON -DBUILD_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug
+        run: cmake -B ./build -S . -DBUILD_TESTS=ON -DBUILD_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug -DENABLE_CPP23_MODULE=OFF
 
       - name: Build Unit Test
         shell: bash

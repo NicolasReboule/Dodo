@@ -45,7 +45,7 @@ jobs:
 
       - name: Apply clang-tidy
         run: |
-          cmake -B ./build -S . -DUSE_CLANG_TIDY=ON -DUSE_CLANG_TIDY_WITH_FIX=ON
+          cmake -B ./build -S . -DUSE_CLANG_TIDY=ON -DUSE_CLANG_TIDY_WITH_FIX=ON -DENABLE_CPP23_MODULE=OFF
           cmake --build ./build --config Release -j`nproc`
 
       - name: Apply clang-format
@@ -97,7 +97,7 @@ jobs:
       - name: Try to run clang-tidy as error
         id: clang-tidy
         run: |
-          cmake -B ./build -S . -DUSE_CLANG_TIDY=ON -DUSE_CLANG_TIDY_WITH_ERRORS=ON
+          cmake -B ./build -S . -DUSE_CLANG_TIDY=ON -DUSE_CLANG_TIDY_WITH_ERRORS=ON -DENABLE_CPP23_MODULE=OFF
           cmake --build ./build --config Release -j`nproc`
 
       - name: Install fd-find
