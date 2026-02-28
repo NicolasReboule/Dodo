@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hellotriangleapplication_0',['HelloTriangleApplication',['../classHelloTriangleApplication.html',1,'']]]
+  ['test_0',['Test',['../structTest.html',1,'']]]
 ];
