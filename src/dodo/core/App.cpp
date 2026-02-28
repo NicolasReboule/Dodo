@@ -4,8 +4,6 @@
 
 #include "dodo/core/App.hpp"
 
-#include <iostream>
-
 namespace dodo::core {
 
 auto App::createApp(const DodoContext &ctx, const AppInfo &appInfo) -> std::expected<App, std::string> {

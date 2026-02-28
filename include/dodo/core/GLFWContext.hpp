@@ -5,10 +5,12 @@
 #ifndef DODO_GLFWCONTEXT_HPP
 #define DODO_GLFWCONTEXT_HPP
 
-#include "GLFW/glfw3.h"
 #include <string>
 #include <expected>
 #include <format>
+#include <utility>
+
+#include "GLFW/glfw3.h"
 
 namespace dodo::core {
 

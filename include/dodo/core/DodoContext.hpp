@@ -5,6 +5,8 @@
 #ifndef DODO_DODOCONTEXT_HPP
 #define DODO_DODOCONTEXT_HPP
 
+#include <utility>
+
 #include "GLFWContext.hpp"
 #include "VulkanContext.hpp"
 

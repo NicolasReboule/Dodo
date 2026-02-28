@@ -70,11 +70,11 @@ void VulkanContext::setupDebugMessenger(VulkanContext &vulkanContext, DebugCallb
     vulkanContext._debugMessenger = vulkanContext._instance.createDebugUtilsMessengerEXT(debugUtilsMessengerCreateInfoEXT);
 }
 
-VKAPI_ATTR vk::Bool32 VKAPI_CALL VulkanContext::defaultDebugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT severity, VkDebugUtilsMessageTypeFlagsEXT type, const VkDebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)
+VKAPI_ATTR VkBool32 VKAPI_CALL VulkanContext::defaultDebugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT severity, VkDebugUtilsMessageTypeFlagsEXT type, const VkDebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)
 {
     if (severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT || severity == VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT)
         std::cerr << "validation layer: type " << type << " msg: " << pCallbackData->pMessage << std::endl;
-    return vk::False;
+    return VK_FALSE;
 }
 
 auto VulkanContext::pickPhysicalDevice(VulkanContext &vulkanContext) -> std::expected<bool, std::string> {
