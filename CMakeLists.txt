@@ -129,7 +129,7 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
 if (MSVC)
     target_compile_options(${PROJECT_NAME} PRIVATE /W4 /WX)
 else ()
-    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -pedantic -Werror -Wno-unused-variable)
 endif()
 
 # Tests
