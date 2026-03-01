@@ -103,19 +103,28 @@ endif()
 
 find_package(glm REQUIRED)
 
-target_link_directories(${PROJECT_NAME}_Sources PUBLIC lib)
-target_link_libraries(${PROJECT_NAME}_Sources PUBLIC Vulkan::cppm glm::glm)
-if (WIN32)
-    if (MSVC)
-        target_link_libraries(${PROJECT_NAME}_Sources PUBLIC windows/msvc_2022/glfw3)
-    else ()
-        target_link_libraries(${PROJECT_NAME}_Sources PUBLIC :windows/mingw/libglfw3.a)
-    endif ()
-elseif(UNIX AND NOT APPLE)
-    target_link_libraries(${PROJECT_NAME}_Sources PUBLIC :linux/libglfw3.a)
+if(MSVC)
+    set(PlatformSuffix "windows/msvc_2022")
+elseif(MINGW)
+    set(PlatformSuffix "windows/mingw")
 elseif(APPLE)
-    target_link_libraries(${PROJECT_NAME}_Sources PUBLIC :macos/libglfw3.a)
-endif ()
+    set(PlatformSuffix "macos")
+else()
+    set(PlatformSuffix "linux")
+endif()
+find_library(GLFW3_LIBRARY glfw3 PATHS
+        ${CMAKE_CURRENT_LIST_DIR}/lib/
+        PATH_SUFFIXES
+        ${PlatformSuffix}
+        NO_CMAKE_PATH
+        NO_DEFAULT_PATH
+        NO_SYSTEM_ENVIRONMENT_PATH
+)
+if(NOT GLFW3_LIBRARY)
+    message(FATAL_ERROR "GLFW3 static library not found!")
+endif()
+
+target_link_libraries(${PROJECT_NAME}_Sources PUBLIC Vulkan::cppm glm::glm ${GLFW3_LIBRARY})
 
 # Main executable
 add_executable(${PROJECT_NAME} main.cpp)
