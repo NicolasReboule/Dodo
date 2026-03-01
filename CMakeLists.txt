@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.29)
 
-option(ENABLE_CPP23_MODULE "Enable C++ 23 module support for Vulkan" ON)
+option(ENABLE_CPP23_MODULE "Enable C++ 23 module support for Vulkan" OFF)
 if(ENABLE_CPP23_MODULE)
     set(CMAKE_CXX_SCAN_FOR_MODULES ON CACHE BOOL "Enable C++ module import scanning" FORCE)
 endif()
@@ -104,12 +104,18 @@ endif()
 find_package(glm REQUIRED)
 
 target_link_directories(${PROJECT_NAME}_Sources PUBLIC lib)
-
-if(MSVC)
-    target_link_libraries(${PROJECT_NAME}_Sources PUBLIC Vulkan::cppm glm::glm glfw3.lib)
-else()
-    target_link_libraries(${PROJECT_NAME}_Sources PUBLIC Vulkan::cppm glm::glm libglfw3.a)
-endif()
+target_link_libraries(${PROJECT_NAME}_Sources PUBLIC Vulkan::cppm glm::glm)
+if (WIN32)
+    if (MSVC)
+        target_link_libraries(${PROJECT_NAME}_Sources PUBLIC windows/msvc_2022/glfw3)
+    else ()
+        target_link_libraries(${PROJECT_NAME}_Sources PUBLIC :windows/mingw/libglfw3.a)
+    endif ()
+elseif(UNIX AND NOT APPLE)
+    target_link_libraries(${PROJECT_NAME}_Sources PUBLIC :linux/libglfw3.a)
+elseif(APPLE)
+    target_link_libraries(${PROJECT_NAME}_Sources PUBLIC :macos/libglfw3.a)
+endif ()
 
 # Main executable
 add_executable(${PROJECT_NAME} main.cpp)
@@ -119,6 +125,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ${PROJECT_NAME}_Sources)
 
 # Compiler Warnings
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
+
 if (MSVC)
     target_compile_options(${PROJECT_NAME} PRIVATE /W4 /WX)
 else ()
