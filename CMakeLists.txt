@@ -109,6 +109,12 @@ elseif(MINGW)
     set(PlatformSuffix "windows/mingw")
 elseif(APPLE)
     set(PlatformSuffix "macos")
+    target_link_libraries(${PROJECT_NAME}_Sources PUBLIC
+            "-framework Cocoa"
+            "-framework OpenGL"
+            "-framework IOKit"
+            "-framework CoreVideo"
+    )
 else()
     set(PlatformSuffix "linux")
 endif()
