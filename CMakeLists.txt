@@ -111,6 +111,7 @@ elseif(APPLE)
     set(PlatformSuffix "macos")
     target_link_libraries(${PROJECT_NAME}_Sources PUBLIC
             "-framework Cocoa"
+            "-framework IOKit"
     )
 else()
     set(PlatformSuffix "linux")
