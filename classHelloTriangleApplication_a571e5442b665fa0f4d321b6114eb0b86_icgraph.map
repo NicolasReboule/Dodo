@@ -1,4 +1,4 @@
-<map id="HelloTriangleApplication::pickPhysicalDevice" name="HelloTriangleApplication::pickPhysicalDevice">
+<map id="HelloTriangleApplication::setupDebugMessenger" name="HelloTriangleApplication::setupDebugMessenger">
 <area shape="rect" id="Node000001" title=" " alt="" coords="448,5,609,46"/>
 <area shape="rect" id="Node000002" href="$classHelloTriangleApplication.html#aceb28a2d94bd541ae1bb575f58848048" title=" " alt="" coords="239,5,400,46"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="432,28,400,28,400,23,432,23"/>

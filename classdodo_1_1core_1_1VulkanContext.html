@@ -134,25 +134,36 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:acece5bed58ddc63c71eccedee2ca4786" id="r_acece5bed58ddc63c71eccedee2ca4786"><td class="memItemLeft" align="right" valign="top">static VKAPI_ATTR vk::Bool32 VKAPI_CALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acece5bed58ddc63c71eccedee2ca4786">defaultDebugCallback</a> (vk::DebugUtilsMessageSeverityFlagBitsEXT severity, vk::DebugUtilsMessageTypeFlagsEXT type, const vk::DebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)</td></tr>
 <tr class="separator:acece5bed58ddc63c71eccedee2ca4786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac005dbfc0f82dc7a07dcc33a63cf8236" id="r_ac005dbfc0f82dc7a07dcc33a63cf8236"><td class="memTemplParams" colspan="2">template&lt;typename... Features&gt; </td></tr>
+<tr class="memitem:ac005dbfc0f82dc7a07dcc33a63cf8236"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac005dbfc0f82dc7a07dcc33a63cf8236">createContext</a> (const <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanContextInfo.html">VulkanContextInfo</a>&lt; Features... &gt; &amp;ctxInfo, const std::experimental::observer_ptr&lt; <a class="el" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a> &gt; &amp;window) -&gt; std::expected&lt; <a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a>, std::string &gt;</td></tr>
+<tr class="separator:ac005dbfc0f82dc7a07dcc33a63cf8236"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ac39df23ac0afd2cc4b55bfae463ce7eb" id="r_ac39df23ac0afd2cc4b55bfae463ce7eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac39df23ac0afd2cc4b55bfae463ce7eb">VulkanContext</a> ()=default</td></tr>
 <tr class="separator:ac39df23ac0afd2cc4b55bfae463ce7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b612bf85e6beb4b0b739e35de29e5be" id="r_a8b612bf85e6beb4b0b739e35de29e5be"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b612bf85e6beb4b0b739e35de29e5be">createInstance</a> (const vk::ApplicationInfo &amp;vkInfo, const <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanDebug.html">VulkanDebug</a> &amp;debugInfo) -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
+<tr class="separator:a8b612bf85e6beb4b0b739e35de29e5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7da52a3c9bd960355396615bda21823" id="r_ac7da52a3c9bd960355396615bda21823"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7da52a3c9bd960355396615bda21823">checkRequiredLayers</a> (std::span&lt; const char *const &gt; <a class="el" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>) const -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
+<tr class="separator:ac7da52a3c9bd960355396615bda21823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61875b0fb60d5ef9df07f05b11e7a953" id="r_a61875b0fb60d5ef9df07f05b11e7a953"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61875b0fb60d5ef9df07f05b11e7a953">checkRequiredExtensions</a> (std::span&lt; const char *const &gt; glfwExtensions) const -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
+<tr class="separator:a61875b0fb60d5ef9df07f05b11e7a953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a150e2d49325fb37d502d80cb2c18630a" id="r_a150e2d49325fb37d502d80cb2c18630a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a150e2d49325fb37d502d80cb2c18630a">setupDebugMessenger</a> (<a class="el" href="#a8099f6355f3297fc635d14e3cb34f412">DebugCallback</a> debugCallback)</td></tr>
+<tr class="separator:a150e2d49325fb37d502d80cb2c18630a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9bd3ee1707edbcadd3db889c4a67216" id="r_aa9bd3ee1707edbcadd3db889c4a67216"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9bd3ee1707edbcadd3db889c4a67216">pickPhysicalDevice</a> (const std::vector&lt; const char * &gt; &amp;deviceExtensions) -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
+<tr class="separator:aa9bd3ee1707edbcadd3db889c4a67216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a292c5109305a3fd739de8787cc4a2ec8" id="r_a292c5109305a3fd739de8787cc4a2ec8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a292c5109305a3fd739de8787cc4a2ec8">findGraphicQueueFamily</a> (const vk::raii::PhysicalDevice &amp;physicalDevice) const -&gt; std::expected&lt; uint32_t, std::string &gt;</td></tr>
+<tr class="separator:a292c5109305a3fd739de8787cc4a2ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34868b028321fad67bdf71ec362aa540" id="r_a34868b028321fad67bdf71ec362aa540"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34868b028321fad67bdf71ec362aa540">findPresentationQueueFamily</a> (const vk::raii::PhysicalDevice &amp;physicalDevice, uint32_t &amp;graphicsIndex) const -&gt; std::expected&lt; uint32_t, std::string &gt;</td></tr>
+<tr class="separator:a34868b028321fad67bdf71ec362aa540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a360fba2d5871039fb29388d602665" id="r_ac0a360fba2d5871039fb29388d602665"><td class="memTemplParams" colspan="2">template&lt;typename... Features&gt; </td></tr>
+<tr class="memitem:ac0a360fba2d5871039fb29388d602665"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac0a360fba2d5871039fb29388d602665">createLogicalDevice</a> (const <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanContextInfo.html">VulkanContextInfo</a>&lt; Features ... &gt; &amp;ctxInfo) -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
+<tr class="separator:ac0a360fba2d5871039fb29388d602665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa003a6a0f0e50d33bf309c6e0dcf8fb7" id="r_aa003a6a0f0e50d33bf309c6e0dcf8fb7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa003a6a0f0e50d33bf309c6e0dcf8fb7">createSurface</a> (const std::experimental::observer_ptr&lt; <a class="el" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a> &gt; &amp;window) -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
+<tr class="separator:aa003a6a0f0e50d33bf309c6e0dcf8fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:afed694e96c1ea50d8c68161666c8cc6b" id="r_afed694e96c1ea50d8c68161666c8cc6b"><td class="memTemplParams" colspan="2">template&lt;typename... Features&gt; </td></tr>
-<tr class="memitem:afed694e96c1ea50d8c68161666c8cc6b"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afed694e96c1ea50d8c68161666c8cc6b">createContext</a> (const <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanContextInfo.html">VulkanContextInfo</a>&lt; Features... &gt; &amp;ctxInfo) -&gt; std::expected&lt; <a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a>, std::string &gt;</td></tr>
-<tr class="separator:afed694e96c1ea50d8c68161666c8cc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21bc913a3f41899ec0eb6b5573ba411f" id="r_a21bc913a3f41899ec0eb6b5573ba411f"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21bc913a3f41899ec0eb6b5573ba411f">checkRequiredLayers</a> (const <a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;vulkanContext, std::span&lt; const char *const &gt; <a class="el" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>) -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
-<tr class="separator:a21bc913a3f41899ec0eb6b5573ba411f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d4ef9cb3df491b6e1e22530fba05e44" id="r_a1d4ef9cb3df491b6e1e22530fba05e44"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d4ef9cb3df491b6e1e22530fba05e44">checkRequiredExtensions</a> (const <a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;vulkanContext, std::span&lt; const char *const &gt; glfwExtensions) -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
-<tr class="separator:a1d4ef9cb3df491b6e1e22530fba05e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a411e22adbedd744f90ecec66e46561d2" id="r_a411e22adbedd744f90ecec66e46561d2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411e22adbedd744f90ecec66e46561d2">setupDebugMessenger</a> (<a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;vulkanContext, <a class="el" href="#a8099f6355f3297fc635d14e3cb34f412">DebugCallback</a> debugCallback)</td></tr>
-<tr class="separator:a411e22adbedd744f90ecec66e46561d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0afee5f00b187472d64f8388ac2f069d" id="r_a0afee5f00b187472d64f8388ac2f069d"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0afee5f00b187472d64f8388ac2f069d">pickPhysicalDevice</a> (<a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;vulkanContext) -&gt; std::expected&lt; bool, std::string &gt;</td></tr>
-<tr class="separator:a0afee5f00b187472d64f8388ac2f069d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a832a14edd52f56b1526d91125b33b397" id="r_a832a14edd52f56b1526d91125b33b397"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a832a14edd52f56b1526d91125b33b397">isDeviceSuitable</a> (const vk::raii::PhysicalDevice &amp;physicalDevice)</td></tr>
 <tr class="separator:a832a14edd52f56b1526d91125b33b397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec29c9530e28405e2797def2eae4cb79" id="r_aec29c9530e28405e2797def2eae4cb79"><td class="memTemplParams" colspan="2">template&lt;typename FirstFeature , typename... OtherFeatures&gt; </td></tr>
@@ -169,6 +180,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a6dac383923a97a66040c310284d6decf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4737e75936d49d95100dff2c0b4df2e0" id="r_a4737e75936d49d95100dff2c0b4df2e0"><td class="memItemLeft" align="right" valign="top">vk::raii::DebugUtilsMessengerEXT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4737e75936d49d95100dff2c0b4df2e0">_debugMessenger</a> = nullptr</td></tr>
 <tr class="separator:a4737e75936d49d95100dff2c0b4df2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af806521ceee8c9d8487f44e3118a863c" id="r_af806521ceee8c9d8487f44e3118a863c"><td class="memItemLeft" align="right" valign="top">vk::raii::Device&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af806521ceee8c9d8487f44e3118a863c">_device</a> = nullptr</td></tr>
+<tr class="separator:af806521ceee8c9d8487f44e3118a863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad90fab8ce5f18baa7f2f903e349b5b3" id="r_aad90fab8ce5f18baa7f2f903e349b5b3"><td class="memItemLeft" align="right" valign="top">vk::raii::Queue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad90fab8ce5f18baa7f2f903e349b5b3">_graphicsQueue</a> = nullptr</td></tr>
+<tr class="separator:aad90fab8ce5f18baa7f2f903e349b5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66b19173e525e4c88d30b1d24c2ae72" id="r_ac66b19173e525e4c88d30b1d24c2ae72"><td class="memItemLeft" align="right" valign="top">vk::raii::Queue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac66b19173e525e4c88d30b1d24c2ae72">_presentationQueue</a> = nullptr</td></tr>
+<tr class="separator:ac66b19173e525e4c88d30b1d24c2ae72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9353995cf0726c24ab616ea629534528" id="r_a9353995cf0726c24ab616ea629534528"><td class="memItemLeft" align="right" valign="top">vk::raii::SurfaceKHR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9353995cf0726c24ab616ea629534528">_surface</a> = nullptr</td></tr>
+<tr class="separator:a9353995cf0726c24ab616ea629534528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -263,15 +282,25 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                          :</div>
-<div class="line"><span class="lineno">   11</span><a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a>(std::exchange(other._context, vk::raii::Context())),</div>
-<div class="line"><span class="lineno">   12</span><a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>(std::exchange(other._instance, <span class="keyword">nullptr</span>)),</div>
-<div class="line"><span class="lineno">   13</span><a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a>(std::exchange(other._physicalDevice, <span class="keyword">nullptr</span>))</div>
-<div class="line"><span class="lineno">   14</span>{</div>
-<div class="line"><span class="lineno">   15</span>}</div>
-<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a6dac383923a97a66040c310284d6decf"><div class="ttname"><a href="#a6dac383923a97a66040c310284d6decf">dodo::core::VulkanContext::_physicalDevice</a></div><div class="ttdeci">vk::raii::PhysicalDevice _physicalDevice</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:26</div></div>
-<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a737856ea6a2321a1a28669d9e6eae68d"><div class="ttname"><a href="#a737856ea6a2321a1a28669d9e6eae68d">dodo::core::VulkanContext::_context</a></div><div class="ttdeci">vk::raii::Context _context</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:24</div></div>
-<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_ac4f6b520fc7806980a2a9f45e53d8fa0"><div class="ttname"><a href="#ac4f6b520fc7806980a2a9f45e53d8fa0">dodo::core::VulkanContext::_instance</a></div><div class="ttdeci">vk::raii::Instance _instance</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:25</div></div>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>                                                          :</div>
+<div class="line"><span class="lineno">   10</span><a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a>(std::exchange(other._context, vk::raii::Context())),</div>
+<div class="line"><span class="lineno">   11</span><a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>(std::exchange(other._instance, <span class="keyword">nullptr</span>)),</div>
+<div class="line"><span class="lineno">   12</span><a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a>(std::exchange(other._physicalDevice, <span class="keyword">nullptr</span>)),</div>
+<div class="line"><span class="lineno">   13</span><a class="code hl_variable" href="#a4737e75936d49d95100dff2c0b4df2e0">_debugMessenger</a>(std::exchange(other._debugMessenger, <span class="keyword">nullptr</span>)),</div>
+<div class="line"><span class="lineno">   14</span><a class="code hl_variable" href="#af806521ceee8c9d8487f44e3118a863c">_device</a>(std::exchange(other._device, <span class="keyword">nullptr</span>)),</div>
+<div class="line"><span class="lineno">   15</span><a class="code hl_variable" href="#aad90fab8ce5f18baa7f2f903e349b5b3">_graphicsQueue</a>(std::exchange(other._graphicsQueue, <span class="keyword">nullptr</span>)),</div>
+<div class="line"><span class="lineno">   16</span><a class="code hl_variable" href="#ac66b19173e525e4c88d30b1d24c2ae72">_presentationQueue</a>(std::exchange(other._presentationQueue, <span class="keyword">nullptr</span>)),</div>
+<div class="line"><span class="lineno">   17</span><a class="code hl_variable" href="#a9353995cf0726c24ab616ea629534528">_surface</a>(std::exchange(other._surface, <span class="keyword">nullptr</span>))</div>
+<div class="line"><span class="lineno">   18</span>{</div>
+<div class="line"><span class="lineno">   19</span>}</div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a4737e75936d49d95100dff2c0b4df2e0"><div class="ttname"><a href="#a4737e75936d49d95100dff2c0b4df2e0">dodo::core::VulkanContext::_debugMessenger</a></div><div class="ttdeci">vk::raii::DebugUtilsMessengerEXT _debugMessenger</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:28</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a6dac383923a97a66040c310284d6decf"><div class="ttname"><a href="#a6dac383923a97a66040c310284d6decf">dodo::core::VulkanContext::_physicalDevice</a></div><div class="ttdeci">vk::raii::PhysicalDevice _physicalDevice</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:27</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a737856ea6a2321a1a28669d9e6eae68d"><div class="ttname"><a href="#a737856ea6a2321a1a28669d9e6eae68d">dodo::core::VulkanContext::_context</a></div><div class="ttdeci">vk::raii::Context _context</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:25</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a9353995cf0726c24ab616ea629534528"><div class="ttname"><a href="#a9353995cf0726c24ab616ea629534528">dodo::core::VulkanContext::_surface</a></div><div class="ttdeci">vk::raii::SurfaceKHR _surface</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:32</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_aad90fab8ce5f18baa7f2f903e349b5b3"><div class="ttname"><a href="#aad90fab8ce5f18baa7f2f903e349b5b3">dodo::core::VulkanContext::_graphicsQueue</a></div><div class="ttdeci">vk::raii::Queue _graphicsQueue</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:30</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_ac4f6b520fc7806980a2a9f45e53d8fa0"><div class="ttname"><a href="#ac4f6b520fc7806980a2a9f45e53d8fa0">dodo::core::VulkanContext::_instance</a></div><div class="ttdeci">vk::raii::Instance _instance</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:26</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_ac66b19173e525e4c88d30b1d24c2ae72"><div class="ttname"><a href="#ac66b19173e525e4c88d30b1d24c2ae72">dodo::core::VulkanContext::_presentationQueue</a></div><div class="ttdeci">vk::raii::Queue _presentationQueue</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:31</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_af806521ceee8c9d8487f44e3118a863c"><div class="ttname"><a href="#af806521ceee8c9d8487f44e3118a863c">dodo::core::VulkanContext::_device</a></div><div class="ttdeci">vk::raii::Device _device</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:29</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -301,8 +330,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1d4ef9cb3df491b6e1e22530fba05e44" name="a1d4ef9cb3df491b6e1e22530fba05e44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d4ef9cb3df491b6e1e22530fba05e44">&#9670;&#160;</a></span>checkRequiredExtensions()</h2>
+<a id="a61875b0fb60d5ef9df07f05b11e7a953" name="a61875b0fb60d5ef9df07f05b11e7a953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61875b0fb60d5ef9df07f05b11e7a953">&#9670;&#160;</a></span>checkRequiredExtensions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,44 +342,38 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">auto dodo::core::VulkanContext::checkRequiredExtensions </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vulkanContext</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::span&lt; const char *const &gt;</td>          <td class="paramname"><span class="paramname"><em>glfwExtensions</em></span>&#160;) -&gt; std::expected&lt;bool, std::string&gt;</td>
+          <td class="paramtype">std::span&lt; const char *const &gt;</td>          <td class="paramname"><span class="paramname"><em>glfwExtensions</em></span></td><td>)</td>
+          <td> const -&gt; std::expected&lt;bool, std::string&gt;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                                                                                                          {</div>
-<div class="line"><span class="lineno">   42</span>    <span class="keyword">auto</span> extensionProperties = vulkanContext._context.enumerateInstanceExtensionProperties();</div>
-<div class="line"><span class="lineno">   43</span> </div>
-<div class="line"><span class="lineno">   44</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;available extensions:\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[extensionName, specVersion] : extensionProperties) {</div>
-<div class="line"><span class="lineno">   46</span>        std::cout &lt;&lt; <span class="charliteral">&#39;\t&#39;</span> &lt;&lt; extensionName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; specVersion &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> glfwExtension : glfwExtensions)</div>
-<div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (std::ranges::none_of(extensionProperties,</div>
-<div class="line"><span class="lineno">   52</span>                                 [glfwExtension](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; extensionProperty)</div>
-<div class="line"><span class="lineno">   53</span>                                 { <span class="keywordflow">return</span> strcmp(extensionProperty.extensionName, glfwExtension) == 0; }))</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;Required GLFW extension not supported: &quot;</span> + std::string(glfwExtension));</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   59</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>                                                                                                                            {</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keyword">auto</span> extensionProperties = <a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a>.enumerateInstanceExtensionProperties();</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;available extensions:\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[extensionName, specVersion] : extensionProperties) {</div>
+<div class="line"><span class="lineno">   81</span>        std::cout &lt;&lt; <span class="charliteral">&#39;\t&#39;</span> &lt;&lt; extensionName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; specVersion &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> glfwExtension : glfwExtensions) {</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (std::ranges::none_of(extensionProperties,</div>
+<div class="line"><span class="lineno">   86</span>                                 [glfwExtension](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; extensionProperty)</div>
+<div class="line"><span class="lineno">   87</span>                                 { <span class="keywordflow">return</span> strcmp(extensionProperty.extensionName, glfwExtension) == 0; })) {</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;Required GLFW extension not supported: &quot;</span> + std::string(glfwExtension));</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   92</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a21bc913a3f41899ec0eb6b5573ba411f" name="a21bc913a3f41899ec0eb6b5573ba411f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21bc913a3f41899ec0eb6b5573ba411f">&#9670;&#160;</a></span>checkRequiredLayers()</h2>
+<a id="ac7da52a3c9bd960355396615bda21823" name="ac7da52a3c9bd960355396615bda21823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7da52a3c9bd960355396615bda21823">&#9670;&#160;</a></span>checkRequiredLayers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -361,41 +384,37 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">auto dodo::core::VulkanContext::checkRequiredLayers </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vulkanContext</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::span&lt; const char *const &gt;</td>          <td class="paramname"><span class="paramname"><em>validationLayers</em></span>&#160;) -&gt; std::expected&lt;bool, std::string&gt;</td>
+          <td class="paramtype">std::span&lt; const char *const &gt;</td>          <td class="paramname"><span class="paramname"><em>validationLayers</em></span></td><td>)</td>
+          <td> const -&gt; std::expected&lt;bool, std::string&gt;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                                                                                                        {</div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.empty()) {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keyword">auto</span> layerProperties = vulkanContext._context.enumerateInstanceLayerProperties();</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (std::ranges::any_of(<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>, [&amp;layerProperties](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;requiredLayer) {</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> std::ranges::none_of(layerProperties, [requiredLayer](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;layerProperty) {</div>
-<div class="line"><span class="lineno">   32</span>                <span class="keywordflow">return</span> strcmp(layerProperty.layerName, requiredLayer) == 0;</div>
-<div class="line"><span class="lineno">   33</span>            });</div>
-<div class="line"><span class="lineno">   34</span>        })) {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;One or more required layers are not supported!&quot;</span>);</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   39</span>}</div>
-<div class="ttc" id="amain_8cpp_html_a2ef71d26f33a696147bfd1b7b56b6ba2"><div class="ttname"><a href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a></div><div class="ttdeci">const std::vector&lt; char const  * &gt; validationLayers</div><div class="ttdef"><b>Definition</b> main.cpp:28</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                                                                          {</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.empty()) {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keyword">auto</span> layerProperties = <a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a>.enumerateInstanceLayerProperties();</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (std::ranges::any_of(<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>, [&amp;layerProperties](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;requiredLayer) {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">return</span> std::ranges::none_of(layerProperties, [requiredLayer](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;layerProperty) {</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">return</span> strcmp(layerProperty.layerName, requiredLayer) == 0;</div>
+<div class="line"><span class="lineno">   68</span>            });</div>
+<div class="line"><span class="lineno">   69</span>        })) {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;One or more required layers are not supported!&quot;</span>);</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   74</span>}</div>
+<div class="ttc" id="amain_8cpp_html_a2ef71d26f33a696147bfd1b7b56b6ba2"><div class="ttname"><a href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a></div><div class="ttdeci">const std::vector&lt; char const  * &gt; validationLayers</div><div class="ttdef"><b>Definition</b> main.cpp:29</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.</p>
 
 </div>
 </div>
-<a id="afed694e96c1ea50d8c68161666c8cc6b" name="afed694e96c1ea50d8c68161666c8cc6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afed694e96c1ea50d8c68161666c8cc6b">&#9670;&#160;</a></span>createContext()</h2>
+<a id="ac005dbfc0f82dc7a07dcc33a63cf8236" name="ac005dbfc0f82dc7a07dcc33a63cf8236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac005dbfc0f82dc7a07dcc33a63cf8236">&#9670;&#160;</a></span>createContext()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,54 +427,135 @@ template&lt;typename... Features&gt; </div>
         <tr>
           <td class="memname">auto dodo::core::VulkanContext::createContext </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanContextInfo.html">VulkanContextInfo</a>&lt; Features... &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ctxInfo</em></span></td><td>)</td>
-          <td> -&gt; std::expected&lt;<a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a>, std::string&gt;</td>
+          <td class="paramtype">const <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanContextInfo.html">VulkanContextInfo</a>&lt; Features... &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ctxInfo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::experimental::observer_ptr&lt; <a class="el" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span>&#160;) -&gt; std::expected&lt;<a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a>, std::string&gt;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                         {</div>
-<div class="line"><span class="lineno">   84</span>    <a class="code hl_function" href="#ac39df23ac0afd2cc4b55bfae463ce7eb">VulkanContext</a> vulkanContext;</div>
-<div class="line"><span class="lineno">   85</span>    VulkanDebug debugInfo = ctxInfo.debugInfo;</div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">if</span> (debugInfo.debugEnabled) {</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a21bc913a3f41899ec0eb6b5573ba411f">checkRequiredLayers</a>(vulkanContext, debugInfo.validationLayers); !result)</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span> std::unexpected(result.error());</div>
-<div class="line"><span class="lineno">   89</span>        <span class="comment">// setupDebugMessenger(vulkanContext, debugInfo.debugCallback);</span></div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>    uint32_t glfwExtensionCount = 0;</div>
-<div class="line"><span class="lineno">   93</span>    <span class="keyword">const</span> <span class="keyword">auto</span> glfwExtensions = <a class="code hl_function" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a>(&amp;glfwExtensionCount);</div>
-<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a1d4ef9cb3df491b6e1e22530fba05e44">checkRequiredExtensions</a>(vulkanContext, std::span(glfwExtensions, glfwExtensionCount)); !result)</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>    <span class="keyword">const</span> vk::InstanceCreateInfo createInfo{</div>
-<div class="line"><span class="lineno">   98</span>        .pApplicationInfo = &amp;ctxInfo.vkInfo,</div>
-<div class="line"><span class="lineno">   99</span>        .enabledLayerCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(debugInfo.validationLayers.size()),</div>
-<div class="line"><span class="lineno">  100</span>        .ppEnabledLayerNames = debugInfo.validationLayers.data(),</div>
-<div class="line"><span class="lineno">  101</span>        .enabledExtensionCount = glfwExtensionCount,</div>
-<div class="line"><span class="lineno">  102</span>        .ppEnabledExtensionNames = glfwExtensions,</div>
-<div class="line"><span class="lineno">  103</span>    };</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>    vulkanContext._instance = vk::raii::Instance(vulkanContext._context, createInfo);</div>
-<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> vulkanContext;</div>
-<div class="line"><span class="lineno">  107</span>}</div>
-<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a1d4ef9cb3df491b6e1e22530fba05e44"><div class="ttname"><a href="#a1d4ef9cb3df491b6e1e22530fba05e44">dodo::core::VulkanContext::checkRequiredExtensions</a></div><div class="ttdeci">static auto checkRequiredExtensions(const VulkanContext &amp;vulkanContext, std::span&lt; const char *const &gt; glfwExtensions) -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:41</div></div>
-<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a21bc913a3f41899ec0eb6b5573ba411f"><div class="ttname"><a href="#a21bc913a3f41899ec0eb6b5573ba411f">dodo::core::VulkanContext::checkRequiredLayers</a></div><div class="ttdeci">static auto checkRequiredLayers(const VulkanContext &amp;vulkanContext, std::span&lt; const char *const &gt; validationLayers) -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:27</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>                                         {</div>
+<div class="line"><span class="lineno">  101</span>    <a class="code hl_function" href="#ac39df23ac0afd2cc4b55bfae463ce7eb">VulkanContext</a> vulkanContext;</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = vulkanContext.createInstance(ctxInfo.vkInfo, ctxInfo.debugInfo); !result)</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = vulkanContext.createSurface(window); !result)</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = vulkanContext.pickPhysicalDevice(ctxInfo.deviceExtensions); !result)</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = vulkanContext.createLogicalDevice(ctxInfo); !result)</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">return</span> vulkanContext;</div>
+<div class="line"><span class="lineno">  111</span>}</div>
 <div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_ac39df23ac0afd2cc4b55bfae463ce7eb"><div class="ttname"><a href="#ac39df23ac0afd2cc4b55bfae463ce7eb">dodo::core::VulkanContext::VulkanContext</a></div><div class="ttdeci">VulkanContext()=default</div></div>
-<div class="ttc" id="agroup__vulkan_html_gada152edc5bbbd0c2138728878632fd9c"><div class="ttname"><a href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a></div><div class="ttdeci">GLFWAPI const char ** glfwGetRequiredInstanceExtensions(uint32_t *count)</div><div class="ttdoc">Returns the Vulkan instance extensions required by GLFW.</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a>, <a class="el" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>, <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanDebug.html#a2555039d6f5bf29d540c2bf5d370672b">dodo::core::VulkanContext::VulkanDebug::debugEnabled</a>, <a class="el" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions()</a>, and <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanDebug.html#a4b87055ae845300d1aaacd82c9c3b49c">dodo::core::VulkanContext::VulkanDebug::validationLayers</a>.</p>
+<p class="reference">References <a class="el" href="#a8b612bf85e6beb4b0b739e35de29e5be">createInstance()</a>, <a class="el" href="#ac0a360fba2d5871039fb29388d602665">createLogicalDevice()</a>, <a class="el" href="#aa003a6a0f0e50d33bf309c6e0dcf8fb7">createSurface()</a>, and <a class="el" href="#aa9bd3ee1707edbcadd3db889c4a67216">pickPhysicalDevice()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da">dodo::core::DodoContext::createDodoContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da">dodo::core::DodoContext::createDodoContext()</a>, and <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classdodo_1_1core_1_1VulkanContext_afed694e96c1ea50d8c68161666c8cc6b_cgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1VulkanContext_afed694e96c1ea50d8c68161666c8cc6b_cgraph" alt=""/></div>
-<map name="aclassdodo_1_1core_1_1VulkanContext_afed694e96c1ea50d8c68161666c8cc6b_cgraph" id="aclassdodo_1_1core_1_1VulkanContext_afed694e96c1ea50d8c68161666c8cc6b_cgraph">
+<div class="center"><img src="classdodo_1_1core_1_1VulkanContext_ac005dbfc0f82dc7a07dcc33a63cf8236_cgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1VulkanContext_ac005dbfc0f82dc7a07dcc33a63cf8236_cgraph" alt=""/></div>
+<map name="aclassdodo_1_1core_1_1VulkanContext_ac005dbfc0f82dc7a07dcc33a63cf8236_cgraph" id="aclassdodo_1_1core_1_1VulkanContext_ac005dbfc0f82dc7a07dcc33a63cf8236_cgraph">
+<area shape="rect" title=" " alt="" coords="5,104,176,145"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#a8b612bf85e6beb4b0b739e35de29e5be" title=" " alt="" coords="224,5,394,46"/>
+<area shape="poly" title=" " alt="" coords="131,101,223,57,238,50,240,55,225,61,133,106"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#ac0a360fba2d5871039fb29388d602665" title=" " alt="" coords="224,71,394,111"/>
+<area shape="poly" title=" " alt="" coords="175,109,208,104,208,109,176,114"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#aa003a6a0f0e50d33bf309c6e0dcf8fb7" title=" " alt="" coords="224,136,394,177"/>
+<area shape="poly" title=" " alt="" coords="176,134,208,139,208,144,175,139"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#aa9bd3ee1707edbcadd3db889c4a67216" title=" " alt="" coords="224,201,394,242"/>
+<area shape="poly" title=" " alt="" coords="134,143,225,186,240,193,238,197,223,191,132,148"/>
+<area shape="rect" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c" title="Returns the Vulkan instance extensions required by GLFW." alt="" coords="442,13,672,38"/>
+<area shape="poly" title=" " alt="" coords="394,23,426,23,426,28,394,28"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdodo_1_1core_1_1VulkanContext_ac005dbfc0f82dc7a07dcc33a63cf8236_icgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1VulkanContext_ac005dbfc0f82dc7a07dcc33a63cf8236_icgraph" alt=""/></div>
+<map name="aclassdodo_1_1core_1_1VulkanContext_ac005dbfc0f82dc7a07dcc33a63cf8236_icgraph" id="aclassdodo_1_1core_1_1VulkanContext_ac005dbfc0f82dc7a07dcc33a63cf8236_icgraph">
+<area shape="rect" title=" " alt="" coords="214,35,384,75"/>
+<area shape="rect" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da" title=" " alt="" coords="5,5,166,46"/>
+<area shape="poly" title=" " alt="" coords="198,44,166,39,167,34,198,39"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="61,70,110,96"/>
+<area shape="poly" title=" " alt="" coords="198,71,111,83,110,77,198,66"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8b612bf85e6beb4b0b739e35de29e5be" name="a8b612bf85e6beb4b0b739e35de29e5be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b612bf85e6beb4b0b739e35de29e5be">&#9670;&#160;</a></span>createInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto dodo::core::VulkanContext::createInstance </td>
+          <td>(</td>
+          <td class="paramtype">const vk::ApplicationInfo &amp;</td>          <td class="paramname"><span class="paramname"><em>vkInfo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanDebug.html">VulkanDebug</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>debugInfo</em></span>&#160;) -&gt; std::expected&lt;bool, std::string&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                                                                                {</div>
+<div class="line"><span class="lineno">   36</span>    uint32_t glfwExtensionCount = 0;</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keyword">const</span> <span class="keyword">auto</span> glfwExtensions = <a class="code hl_function" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a>(&amp;glfwExtensionCount);</div>
+<div class="line"><span class="lineno">   38</span>    std::vector extensions(glfwExtensions, glfwExtensions + glfwExtensionCount);</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">if</span> (debugInfo.debugEnabled) {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#ac7da52a3c9bd960355396615bda21823">checkRequiredLayers</a>(debugInfo.validationLayers); !result)</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">   42</span>        extensions.push_back(vk::EXTDebugUtilsExtensionName);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> result = <a class="code hl_function" href="#a61875b0fb60d5ef9df07f05b11e7a953">checkRequiredExtensions</a>(std::span(extensions)); !result)</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> std::unexpected(result.error());</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>    <span class="keyword">const</span> vk::InstanceCreateInfo createInfo{</div>
+<div class="line"><span class="lineno">   49</span>        .pApplicationInfo = &amp;vkInfo,</div>
+<div class="line"><span class="lineno">   50</span>        .enabledLayerCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(debugInfo.validationLayers.size()),</div>
+<div class="line"><span class="lineno">   51</span>        .ppEnabledLayerNames = debugInfo.validationLayers.data(),</div>
+<div class="line"><span class="lineno">   52</span>        .enabledExtensionCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(extensions.size()),</div>
+<div class="line"><span class="lineno">   53</span>        .ppEnabledExtensionNames = extensions.data(),</div>
+<div class="line"><span class="lineno">   54</span>    };</div>
+<div class="line"><span class="lineno">   55</span>    <a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a> = vk::raii::Instance(<a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a>, createInfo);</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span> (debugInfo.debugEnabled)</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_function" href="#a150e2d49325fb37d502d80cb2c18630a">setupDebugMessenger</a>(debugInfo.debugCallback);</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a150e2d49325fb37d502d80cb2c18630a"><div class="ttname"><a href="#a150e2d49325fb37d502d80cb2c18630a">dodo::core::VulkanContext::setupDebugMessenger</a></div><div class="ttdeci">void setupDebugMessenger(DebugCallback debugCallback)</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:94</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a61875b0fb60d5ef9df07f05b11e7a953"><div class="ttname"><a href="#a61875b0fb60d5ef9df07f05b11e7a953">dodo::core::VulkanContext::checkRequiredExtensions</a></div><div class="ttdeci">auto checkRequiredExtensions(std::span&lt; const char *const &gt; glfwExtensions) const -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:76</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_ac7da52a3c9bd960355396615bda21823"><div class="ttname"><a href="#ac7da52a3c9bd960355396615bda21823">dodo::core::VulkanContext::checkRequiredLayers</a></div><div class="ttdeci">auto checkRequiredLayers(std::span&lt; const char *const &gt; validationLayers) const -&gt; std::expected&lt; bool, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:62</div></div>
+<div class="ttc" id="agroup__vulkan_html_gada152edc5bbbd0c2138728878632fd9c"><div class="ttname"><a href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a></div><div class="ttdeci">GLFWAPI const char ** glfwGetRequiredInstanceExtensions(uint32_t *count)</div><div class="ttdoc">Returns the Vulkan instance extensions required by GLFW.</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ac005dbfc0f82dc7a07dcc33a63cf8236">createContext()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdodo_1_1core_1_1VulkanContext_a8b612bf85e6beb4b0b739e35de29e5be_cgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1VulkanContext_a8b612bf85e6beb4b0b739e35de29e5be_cgraph" alt=""/></div>
+<map name="aclassdodo_1_1core_1_1VulkanContext_a8b612bf85e6beb4b0b739e35de29e5be_cgraph" id="aclassdodo_1_1core_1_1VulkanContext_a8b612bf85e6beb4b0b739e35de29e5be_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,176,46"/>
 <area shape="rect" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c" title="Returns the Vulkan instance extensions required by GLFW." alt="" coords="224,13,454,38"/>
 <area shape="poly" title=" " alt="" coords="176,23,208,23,208,28,176,28"/>
@@ -464,13 +564,134 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classdodo_1_1core_1_1VulkanContext_afed694e96c1ea50d8c68161666c8cc6b_icgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1VulkanContext_afed694e96c1ea50d8c68161666c8cc6b_icgraph" alt=""/></div>
-<map name="aclassdodo_1_1core_1_1VulkanContext_afed694e96c1ea50d8c68161666c8cc6b_icgraph" id="aclassdodo_1_1core_1_1VulkanContext_afed694e96c1ea50d8c68161666c8cc6b_icgraph">
-<area shape="rect" title=" " alt="" coords="311,5,481,46"/>
-<area shape="rect" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da" title=" " alt="" coords="103,5,263,46"/>
-<area shape="poly" title=" " alt="" coords="295,28,264,28,264,23,295,23"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,38"/>
-<area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
+<div class="center"><img src="classdodo_1_1core_1_1VulkanContext_a8b612bf85e6beb4b0b739e35de29e5be_icgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1VulkanContext_a8b612bf85e6beb4b0b739e35de29e5be_icgraph" alt=""/></div>
+<map name="aclassdodo_1_1core_1_1VulkanContext_a8b612bf85e6beb4b0b739e35de29e5be_icgraph" id="aclassdodo_1_1core_1_1VulkanContext_a8b612bf85e6beb4b0b739e35de29e5be_icgraph">
+<area shape="rect" title=" " alt="" coords="432,35,602,75"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#ac005dbfc0f82dc7a07dcc33a63cf8236" title=" " alt="" coords="214,35,384,75"/>
+<area shape="poly" title=" " alt="" coords="417,58,385,58,385,52,417,52"/>
+<area shape="rect" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da" title=" " alt="" coords="5,5,166,46"/>
+<area shape="poly" title=" " alt="" coords="198,44,166,39,167,34,198,39"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="61,70,110,96"/>
+<area shape="poly" title=" " alt="" coords="198,71,111,83,110,77,198,66"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac0a360fba2d5871039fb29388d602665" name="ac0a360fba2d5871039fb29388d602665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a360fba2d5871039fb29388d602665">&#9670;&#160;</a></span>createLogicalDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Features&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto dodo::core::VulkanContext::createLogicalDevice </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdodo_1_1core_1_1VulkanContext_1_1VulkanContextInfo.html">VulkanContextInfo</a>&lt; Features ... &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ctxInfo</em></span></td><td>)</td>
+          <td> -&gt; std::expected&lt;bool, std::string&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                                                                      {</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keyword">auto</span> graphicsIndex = <a class="code hl_function" href="#a292c5109305a3fd739de8787cc4a2ec8">findGraphicQueueFamily</a>(<a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a>);</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">if</span> (!graphicsIndex.has_value())</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span> std::unexpected(graphicsIndex.error());</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>    <span class="keyword">auto</span> presentationIndex = <a class="code hl_function" href="#a34868b028321fad67bdf71ec362aa540">findPresentationQueueFamily</a>(<a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a>, *graphicsIndex);</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">if</span> (!presentationIndex.has_value())</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> std::unexpected(presentationIndex.error());</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>    <span class="keyword">constexpr</span> <span class="keywordtype">float</span> queuePriority = 1.0F;</div>
+<div class="line"><span class="lineno">  129</span>    vk::DeviceQueueCreateInfo deviceQueueCreateInfo { .queueFamilyIndex = *graphicsIndex, .queueCount = 1, .pQueuePriorities = &amp;queuePriority };</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <span class="keyword">const</span> vk::DeviceCreateInfo deviceCreateInfo{</div>
+<div class="line"><span class="lineno">  132</span>        .pNext = &amp;<a class="code hl_function" href="#aec29c9530e28405e2797def2eae4cb79">getFirstFeature</a>(ctxInfo.featureChain),</div>
+<div class="line"><span class="lineno">  133</span>        .queueCreateInfoCount = 1,</div>
+<div class="line"><span class="lineno">  134</span>        .pQueueCreateInfos = &amp;deviceQueueCreateInfo,</div>
+<div class="line"><span class="lineno">  135</span>        .enabledExtensionCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(ctxInfo.deviceExtensions.size()),</div>
+<div class="line"><span class="lineno">  136</span>        .ppEnabledExtensionNames = ctxInfo.deviceExtensions.data()</div>
+<div class="line"><span class="lineno">  137</span>    };</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>    <a class="code hl_variable" href="#af806521ceee8c9d8487f44e3118a863c">_device</a> = vk::raii::Device(<a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a>, deviceCreateInfo);</div>
+<div class="line"><span class="lineno">  140</span>    <a class="code hl_variable" href="#aad90fab8ce5f18baa7f2f903e349b5b3">_graphicsQueue</a> = vk::raii::Queue(<a class="code hl_variable" href="#af806521ceee8c9d8487f44e3118a863c">_device</a>, *graphicsIndex, 0);</div>
+<div class="line"><span class="lineno">  141</span>    <a class="code hl_variable" href="#ac66b19173e525e4c88d30b1d24c2ae72">_presentationQueue</a> = vk::raii::Queue(<a class="code hl_variable" href="#af806521ceee8c9d8487f44e3118a863c">_device</a>, *presentationIndex, 0);</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  143</span>}</div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a292c5109305a3fd739de8787cc4a2ec8"><div class="ttname"><a href="#a292c5109305a3fd739de8787cc4a2ec8">dodo::core::VulkanContext::findGraphicQueueFamily</a></div><div class="ttdeci">auto findGraphicQueueFamily(const vk::raii::PhysicalDevice &amp;physicalDevice) const -&gt; std::expected&lt; uint32_t, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:157</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_a34868b028321fad67bdf71ec362aa540"><div class="ttname"><a href="#a34868b028321fad67bdf71ec362aa540">dodo::core::VulkanContext::findPresentationQueueFamily</a></div><div class="ttdeci">auto findPresentationQueueFamily(const vk::raii::PhysicalDevice &amp;physicalDevice, uint32_t &amp;graphicsIndex) const -&gt; std::expected&lt; uint32_t, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.cpp:168</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_aec29c9530e28405e2797def2eae4cb79"><div class="ttname"><a href="#aec29c9530e28405e2797def2eae4cb79">dodo::core::VulkanContext::getFirstFeature</a></div><div class="ttdeci">static FirstFeature &amp; getFirstFeature(vk::StructureChain&lt; FirstFeature, OtherFeatures... &gt; featureChain)</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:114</div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#ac005dbfc0f82dc7a07dcc33a63cf8236">createContext()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdodo_1_1core_1_1VulkanContext_ac0a360fba2d5871039fb29388d602665_icgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1VulkanContext_ac0a360fba2d5871039fb29388d602665_icgraph" alt=""/></div>
+<map name="aclassdodo_1_1core_1_1VulkanContext_ac0a360fba2d5871039fb29388d602665_icgraph" id="aclassdodo_1_1core_1_1VulkanContext_ac0a360fba2d5871039fb29388d602665_icgraph">
+<area shape="rect" title=" " alt="" coords="432,35,602,75"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#ac005dbfc0f82dc7a07dcc33a63cf8236" title=" " alt="" coords="214,35,384,75"/>
+<area shape="poly" title=" " alt="" coords="417,58,385,58,385,52,417,52"/>
+<area shape="rect" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da" title=" " alt="" coords="5,5,166,46"/>
+<area shape="poly" title=" " alt="" coords="198,44,166,39,167,34,198,39"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="61,70,110,96"/>
+<area shape="poly" title=" " alt="" coords="198,71,111,83,110,77,198,66"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa003a6a0f0e50d33bf309c6e0dcf8fb7" name="aa003a6a0f0e50d33bf309c6e0dcf8fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa003a6a0f0e50d33bf309c6e0dcf8fb7">&#9670;&#160;</a></span>createSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto dodo::core::VulkanContext::createSurface </td>
+          <td>(</td>
+          <td class="paramtype">const std::experimental::observer_ptr&lt; <a class="el" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
+          <td> -&gt; std::expected&lt;bool, std::string&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                                                                                       {</div>
+<div class="line"><span class="lineno">  202</span>    VkSurfaceKHR surface;</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">if</span> (glfwCreateWindowSurface(*<a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>, window.get(), <span class="keyword">nullptr</span>, &amp;surface) != 0)</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;failed to create window surface!&quot;</span>);</div>
+<div class="line"><span class="lineno">  205</span>    <a class="code hl_variable" href="#a9353995cf0726c24ab616ea629534528">_surface</a> = vk::raii::SurfaceKHR(<a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>, surface);</div>
+<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  207</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#ac005dbfc0f82dc7a07dcc33a63cf8236">createContext()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdodo_1_1core_1_1VulkanContext_aa003a6a0f0e50d33bf309c6e0dcf8fb7_icgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1VulkanContext_aa003a6a0f0e50d33bf309c6e0dcf8fb7_icgraph" alt=""/></div>
+<map name="aclassdodo_1_1core_1_1VulkanContext_aa003a6a0f0e50d33bf309c6e0dcf8fb7_icgraph" id="aclassdodo_1_1core_1_1VulkanContext_aa003a6a0f0e50d33bf309c6e0dcf8fb7_icgraph">
+<area shape="rect" title=" " alt="" coords="432,35,602,75"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#ac005dbfc0f82dc7a07dcc33a63cf8236" title=" " alt="" coords="214,35,384,75"/>
+<area shape="poly" title=" " alt="" coords="417,58,385,58,385,52,417,52"/>
+<area shape="rect" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da" title=" " alt="" coords="5,5,166,46"/>
+<area shape="poly" title=" " alt="" coords="198,44,166,39,167,34,198,39"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="61,70,110,96"/>
+<area shape="poly" title=" " alt="" coords="198,71,111,83,110,77,198,66"/>
 </map>
 </div>
 
@@ -512,11 +733,106 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   77</span>{</div>
-<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span> (severity &gt;= vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning)</div>
-<div class="line"><span class="lineno">   79</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; to_string(type) &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> vk::False;</div>
-<div class="line"><span class="lineno">   81</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                              {</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">if</span> (severity &gt;= vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning)</div>
+<div class="line"><span class="lineno">  119</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; to_string(type) &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> vk::False;</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a292c5109305a3fd739de8787cc4a2ec8" name="a292c5109305a3fd739de8787cc4a2ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a292c5109305a3fd739de8787cc4a2ec8">&#9670;&#160;</a></span>findGraphicQueueFamily()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto dodo::core::VulkanContext::findGraphicQueueFamily </td>
+          <td>(</td>
+          <td class="paramtype">const vk::raii::PhysicalDevice &amp;</td>          <td class="paramname"><span class="paramname"><em>physicalDevice</em></span></td><td>)</td>
+          <td> const -&gt; std::expected&lt;uint32_t, std::string&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  157</span>                                                                                                                               {</div>
+<div class="line"><span class="lineno">  158</span>   <span class="keyword">const</span> std::vector&lt;vk::QueueFamilyProperties&gt; queueFamilyProperties = physicalDevice.getQueueFamilyProperties();</div>
+<div class="line"><span class="lineno">  159</span>    <span class="keyword">auto</span> graphicsQueueFamilyProperty =</div>
+<div class="line"><span class="lineno">  160</span>      std::find_if( queueFamilyProperties.begin(),</div>
+<div class="line"><span class="lineno">  161</span>                    queueFamilyProperties.end(),</div>
+<div class="line"><span class="lineno">  162</span>                    []( vk::QueueFamilyProperties <span class="keyword">const</span> &amp; qfp ) { return qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics; } );</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">if</span> (graphicsQueueFamilyProperty == queueFamilyProperties.end())</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;No graphics queue family found&quot;</span>);</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(std::distance(queueFamilyProperties.begin(), graphicsQueueFamilyProperty));</div>
+<div class="line"><span class="lineno">  166</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a34868b028321fad67bdf71ec362aa540" name="a34868b028321fad67bdf71ec362aa540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34868b028321fad67bdf71ec362aa540">&#9670;&#160;</a></span>findPresentationQueueFamily()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto dodo::core::VulkanContext::findPresentationQueueFamily </td>
+          <td>(</td>
+          <td class="paramtype">const vk::raii::PhysicalDevice &amp;</td>          <td class="paramname"><span class="paramname"><em>physicalDevice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t &amp;</td>          <td class="paramname"><span class="paramname"><em>graphicsIndex</em></span>&#160;) const -&gt; std::expected&lt;uint32_t, std::string&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  168</span>                                                                                                                                                             {</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keyword">const</span> std::vector&lt;vk::QueueFamilyProperties&gt; queueFamilyProperties = physicalDevice.getQueueFamilyProperties();</div>
+<div class="line"><span class="lineno">  170</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> queueFamilyPropertiesCount = queueFamilyProperties.size();</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>    <span class="keyword">auto</span> presentationIndex = physicalDevice.getSurfaceSupportKHR(graphicsIndex, *<a class="code hl_variable" href="#a9353995cf0726c24ab616ea629534528">_surface</a>)</div>
+<div class="line"><span class="lineno">  173</span>    ? graphicsIndex : <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(queueFamilyProperties.size());</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">if</span> (presentationIndex == queueFamilyPropertiesCount) {</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyPropertiesCount; i++) {</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span>((queueFamilyProperties[i].queueFlags &amp; vk::QueueFlagBits::eGraphics) &amp;&amp;</div>
+<div class="line"><span class="lineno">  178</span>                physicalDevice.getSurfaceSupportKHR(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(i), *<a class="code hl_variable" href="#a9353995cf0726c24ab616ea629534528">_surface</a>)) {</div>
+<div class="line"><span class="lineno">  179</span>                graphicsIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(i);</div>
+<div class="line"><span class="lineno">  180</span>                presentationIndex = graphicsIndex;</div>
+<div class="line"><span class="lineno">  181</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  182</span>            }</div>
+<div class="line"><span class="lineno">  183</span>        }</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span> (presentationIndex == queueFamilyPropertiesCount) {</div>
+<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyPropertiesCount; i++) {</div>
+<div class="line"><span class="lineno">  186</span>                <span class="keywordflow">if</span> (physicalDevice.getSurfaceSupportKHR( <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i ), *<a class="code hl_variable" href="#a9353995cf0726c24ab616ea629534528">_surface</a>)) {</div>
+<div class="line"><span class="lineno">  187</span>                    presentationIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i );</div>
+<div class="line"><span class="lineno">  188</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  189</span>                }</div>
+<div class="line"><span class="lineno">  190</span>            }</div>
+<div class="line"><span class="lineno">  191</span>        }</div>
+<div class="line"><span class="lineno">  192</span>    }</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">if</span> (graphicsIndex == queueFamilyPropertiesCount)</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;Could not find a queue family for graphics&quot;</span>);</div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> (presentationIndex == queueFamilyPropertiesCount)</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;Could not find a queue family for presentation&quot;</span>);</div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">return</span>  presentationIndex;</div>
+<div class="line"><span class="lineno">  198</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -544,9 +860,9 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> featureChain.template get&lt;FirstFeature&gt;();</div>
-<div class="line"><span class="lineno">  121</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                                                                                                          {</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">return</span> featureChain.template get&lt;FirstFeature&gt;();</div>
+<div class="line"><span class="lineno">  116</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -572,12 +888,12 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                                               {</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceProperties = physicalDevice.getProperties();</div>
-<div class="line"><span class="lineno">  113</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceFeatures = physicalDevice.getFeatures();</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">return</span> deviceProperties.deviceType == vk::PhysicalDeviceType::eDiscreteGpu &amp;&amp; deviceFeatures.geometryShader;</div>
-<div class="line"><span class="lineno">  116</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>                                                                               {</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceProperties = physicalDevice.getProperties();</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keyword">const</span> <span class="keyword">auto</span> deviceFeatures = physicalDevice.getFeatures();</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">return</span> deviceProperties.deviceType == vk::PhysicalDeviceType::eDiscreteGpu &amp;&amp; deviceFeatures.geometryShader;</div>
+<div class="line"><span class="lineno">  155</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -628,19 +944,24 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                                      {</div>
-<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;other) {</div>
-<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a> = std::exchange(other._context, vk::raii::Context());</div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a> = std::exchange(other._instance, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a> = std::exchange(other._physicalDevice, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   24</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                      {</div>
+<div class="line"><span class="lineno">   22</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;other) {</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="#a737856ea6a2321a1a28669d9e6eae68d">_context</a> = std::exchange(other._context, vk::raii::Context());</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a> = std::exchange(other._instance, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a> = std::exchange(other._physicalDevice, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_variable" href="#a4737e75936d49d95100dff2c0b4df2e0">_debugMessenger</a> = std::exchange(other._debugMessenger, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   27</span>        <a class="code hl_variable" href="#af806521ceee8c9d8487f44e3118a863c">_device</a> = std::exchange(other._device, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_variable" href="#aad90fab8ce5f18baa7f2f903e349b5b3">_graphicsQueue</a> = std::exchange(other._graphicsQueue, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="#ac66b19173e525e4c88d30b1d24c2ae72">_presentationQueue</a> = std::exchange(other._presentationQueue, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="#a9353995cf0726c24ab616ea629534528">_surface</a> = std::exchange(other._surface, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   33</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a0afee5f00b187472d64f8388ac2f069d" name="a0afee5f00b187472d64f8388ac2f069d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0afee5f00b187472d64f8388ac2f069d">&#9670;&#160;</a></span>pickPhysicalDevice()</h2>
+<a id="aa9bd3ee1707edbcadd3db889c4a67216" name="aa9bd3ee1707edbcadd3db889c4a67216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9bd3ee1707edbcadd3db889c4a67216">&#9670;&#160;</a></span>pickPhysicalDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -651,48 +972,63 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
         <tr>
           <td class="memname">auto dodo::core::VulkanContext::pickPhysicalDevice </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vulkanContext</em></span></td><td>)</td>
+          <td class="paramtype">const std::vector&lt; const char * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>deviceExtensions</em></span></td><td>)</td>
           <td> -&gt; std::expected&lt;bool, std::string&gt;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">   84</span>    <span class="comment">// auto devices = vulkanContext._instance.enumeratePhysicalDevices();</span></div>
-<div class="line"><span class="lineno">   85</span>    <span class="comment">// const auto devIter = std::ranges::find_if(devices,</span></div>
-<div class="line"><span class="lineno">   86</span>    <span class="comment">// [&amp;](auto const &amp; device) {</span></div>
-<div class="line"><span class="lineno">   87</span>    <span class="comment">//         auto queueFamilies = device.getQueueFamilyProperties();</span></div>
-<div class="line"><span class="lineno">   88</span>    <span class="comment">//         bool isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</span></div>
-<div class="line"><span class="lineno">   89</span>    <span class="comment">//         const auto qfpIter = std::ranges::find_if(queueFamilies,</span></div>
-<div class="line"><span class="lineno">   90</span>    <span class="comment">//         []( vk::QueueFamilyProperties const &amp; qfp )</span></div>
-<div class="line"><span class="lineno">   91</span>    <span class="comment">//                 {</span></div>
-<div class="line"><span class="lineno">   92</span>    <span class="comment">//                     return (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != static_cast&lt;vk::QueueFlags&gt;(0);</span></div>
-<div class="line"><span class="lineno">   93</span>    <span class="comment">//                 } );</span></div>
-<div class="line"><span class="lineno">   94</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; ( qfpIter != queueFamilies.end() );</span></div>
-<div class="line"><span class="lineno">   95</span>    <span class="comment">//         auto extensions = device.enumerateDeviceExtensionProperties( );</span></div>
-<div class="line"><span class="lineno">   96</span>    <span class="comment">//         bool found = true;</span></div>
-<div class="line"><span class="lineno">   97</span>    <span class="comment">//         for (auto const &amp; extension : deviceExtensions) {</span></div>
-<div class="line"><span class="lineno">   98</span>    <span class="comment">//             auto extensionIter = std::ranges::find_if(extensions, [extension](auto const &amp; ext) {return strcmp(ext.extensionName, extension) == 0;});</span></div>
-<div class="line"><span class="lineno">   99</span>    <span class="comment">//             found = found &amp;&amp; extensionIter != extensions.end();</span></div>
-<div class="line"><span class="lineno">  100</span>    <span class="comment">//         }</span></div>
-<div class="line"><span class="lineno">  101</span>    <span class="comment">//         isSuitable = isSuitable &amp;&amp; found;</span></div>
-<div class="line"><span class="lineno">  102</span>    <span class="comment">//         if (isSuitable)</span></div>
-<div class="line"><span class="lineno">  103</span>    <span class="comment">//             vulkanContext._physicalDevice = device;</span></div>
-<div class="line"><span class="lineno">  104</span>    <span class="comment">//         return isSuitable;</span></div>
-<div class="line"><span class="lineno">  105</span>    <span class="comment">// });</span></div>
-<div class="line"><span class="lineno">  106</span>    <span class="comment">// if (devIter == devices.end())</span></div>
-<div class="line"><span class="lineno">  107</span>    <span class="comment">//     return std::unexpected(&quot;Failed to find a suitable GPU&quot;);</span></div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  109</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                                                                                      {</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keyword">auto</span> devices = <a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>.enumeratePhysicalDevices();</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keyword">const</span> <span class="keyword">auto</span> devIter = std::ranges::find_if(devices,</div>
+<div class="line"><span class="lineno">  126</span>    [&amp;](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; device) {</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keyword">auto</span> queueFamilies = device.getQueueFamilyProperties();</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordtype">bool</span> isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keyword">const</span> <span class="keyword">auto</span> qfpIter = std::ranges::find_if(queueFamilies,</div>
+<div class="line"><span class="lineno">  130</span>            []( vk::QueueFamilyProperties <span class="keyword">const</span> &amp;qfp){</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">return</span> (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != <span class="keyword">static_cast&lt;</span>vk::QueueFlags<span class="keyword">&gt;</span>(0);</div>
+<div class="line"><span class="lineno">  132</span>            });</div>
+<div class="line"><span class="lineno">  133</span>            isSuitable = isSuitable &amp;&amp; (qfpIter != queueFamilies.end());</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keyword">auto</span> extensions = device.enumerateDeviceExtensionProperties();</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordtype">bool</span> found = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span> &amp;extension : deviceExtensions) {</div>
+<div class="line"><span class="lineno">  137</span>                <span class="keyword">auto</span> extensionIter = std::ranges::find_if(extensions, [extension](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; ext) {<span class="keywordflow">return</span> strcmp(ext.extensionName, extension) == 0;});</div>
+<div class="line"><span class="lineno">  138</span>                found = found &amp;&amp; extensionIter != extensions.end();</div>
+<div class="line"><span class="lineno">  139</span>            }</div>
+<div class="line"><span class="lineno">  140</span>            isSuitable = isSuitable &amp;&amp; found;</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span> (isSuitable)</div>
+<div class="line"><span class="lineno">  142</span>                <a class="code hl_variable" href="#a6dac383923a97a66040c310284d6decf">_physicalDevice</a> = device;</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> isSuitable;</div>
+<div class="line"><span class="lineno">  144</span>    });</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">if</span> (devIter == devices.end())</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;Failed to find a suitable GPU&quot;</span>);</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  148</span>}</div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#ac005dbfc0f82dc7a07dcc33a63cf8236">createContext()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdodo_1_1core_1_1VulkanContext_aa9bd3ee1707edbcadd3db889c4a67216_icgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1VulkanContext_aa9bd3ee1707edbcadd3db889c4a67216_icgraph" alt=""/></div>
+<map name="aclassdodo_1_1core_1_1VulkanContext_aa9bd3ee1707edbcadd3db889c4a67216_icgraph" id="aclassdodo_1_1core_1_1VulkanContext_aa9bd3ee1707edbcadd3db889c4a67216_icgraph">
+<area shape="rect" title=" " alt="" coords="432,35,602,75"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#ac005dbfc0f82dc7a07dcc33a63cf8236" title=" " alt="" coords="214,35,384,75"/>
+<area shape="poly" title=" " alt="" coords="417,58,385,58,385,52,417,52"/>
+<area shape="rect" href="classdodo_1_1core_1_1DodoContext.html#a37a4f98af6136d48a0ddc33f509687da" title=" " alt="" coords="5,5,166,46"/>
+<area shape="poly" title=" " alt="" coords="198,44,166,39,167,34,198,39"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="61,70,110,96"/>
+<area shape="poly" title=" " alt="" coords="198,71,111,83,110,77,198,66"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a411e22adbedd744f90ecec66e46561d2" name="a411e22adbedd744f90ecec66e46561d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a411e22adbedd744f90ecec66e46561d2">&#9670;&#160;</a></span>setupDebugMessenger()</h2>
+<a id="a150e2d49325fb37d502d80cb2c18630a" name="a150e2d49325fb37d502d80cb2c18630a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a150e2d49325fb37d502d80cb2c18630a">&#9670;&#160;</a></span>setupDebugMessenger()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -703,31 +1039,35 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
         <tr>
           <td class="memname">void dodo::core::VulkanContext::setupDebugMessenger </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdodo_1_1core_1_1VulkanContext.html">VulkanContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vulkanContext</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="#a8099f6355f3297fc635d14e3cb34f412">DebugCallback</a></td>          <td class="paramname"><span class="paramname"><em>debugCallback</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a8099f6355f3297fc635d14e3cb34f412">DebugCallback</a></td>          <td class="paramname"><span class="paramname"><em>debugCallback</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">   62</span>    <span class="keyword">constexpr</span> vk::DebugUtilsMessageSeverityFlagsEXT SEVERITY_FLAGS(vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |</div>
-<div class="line"><span class="lineno">   63</span>                                                    vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |</div>
-<div class="line"><span class="lineno">   64</span>                                                    vk::DebugUtilsMessageSeverityFlagBitsEXT::eError);</div>
-<div class="line"><span class="lineno">   65</span>    <span class="keyword">constexpr</span> vk::DebugUtilsMessageTypeFlagsEXT MESSAGE_TYPE_FLAGS(</div>
-<div class="line"><span class="lineno">   66</span>            vk::DebugUtilsMessageTypeFlagBitsEXT::eGeneral | vk::DebugUtilsMessageTypeFlagBitsEXT::ePerformance | vk::DebugUtilsMessageTypeFlagBitsEXT::eValidation);</div>
-<div class="line"><span class="lineno">   67</span>    <span class="keyword">const</span> vk::DebugUtilsMessengerCreateInfoEXT debugUtilsMessengerCreateInfoEXT{.messageSeverity = SEVERITY_FLAGS,</div>
-<div class="line"><span class="lineno">   68</span>                                                                          .messageType = MESSAGE_TYPE_FLAGS,</div>
-<div class="line"><span class="lineno">   69</span>                                                                          .pfnUserCallback = debugCallback};</div>
-<div class="line"><span class="lineno">   70</span>    vulkanContext._debugMessenger = vulkanContext._instance.createDebugUtilsMessengerEXT(debugUtilsMessengerCreateInfoEXT);</div>
-<div class="line"><span class="lineno">   71</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                                   {</div>
+<div class="line"><span class="lineno">   95</span>    <span class="comment">// TODO: Move this out of function</span></div>
+<div class="line"><span class="lineno">   96</span>    <span class="keyword">constexpr</span> vk::DebugUtilsMessageSeverityFlagsEXT SEVERITY_FLAGS(</div>
+<div class="line"><span class="lineno">   97</span>        vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |</div>
+<div class="line"><span class="lineno">   98</span>        vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |</div>
+<div class="line"><span class="lineno">   99</span>        vk::DebugUtilsMessageSeverityFlagBitsEXT::eError</div>
+<div class="line"><span class="lineno">  100</span>    );</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keyword">constexpr</span> vk::DebugUtilsMessageTypeFlagsEXT MESSAGE_TYPE_FLAGS(</div>
+<div class="line"><span class="lineno">  102</span>            vk::DebugUtilsMessageTypeFlagBitsEXT::eGeneral |</div>
+<div class="line"><span class="lineno">  103</span>            vk::DebugUtilsMessageTypeFlagBitsEXT::ePerformance |</div>
+<div class="line"><span class="lineno">  104</span>            vk::DebugUtilsMessageTypeFlagBitsEXT::eValidation</div>
+<div class="line"><span class="lineno">  105</span>    );</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keyword">const</span> vk::DebugUtilsMessengerCreateInfoEXT debugUtilsMessengerCreateInfoEXT{</div>
+<div class="line"><span class="lineno">  107</span>        .messageSeverity = SEVERITY_FLAGS,</div>
+<div class="line"><span class="lineno">  108</span>        .messageType = MESSAGE_TYPE_FLAGS,</div>
+<div class="line"><span class="lineno">  109</span>        .pfnUserCallback = debugCallback</div>
+<div class="line"><span class="lineno">  110</span>    };</div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_variable" href="#a4737e75936d49d95100dff2c0b4df2e0">_debugMessenger</a> = <a class="code hl_variable" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>.createDebugUtilsMessengerEXT(debugUtilsMessengerCreateInfoEXT);</div>
+<div class="line"><span class="lineno">  112</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a4737e75936d49d95100dff2c0b4df2e0">_debugMessenger</a>, and <a class="el" href="#ac4f6b520fc7806980a2a9f45e53d8fa0">_instance</a>.</p>
 
@@ -777,8 +1117,6 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="#afed694e96c1ea50d8c68161666c8cc6b">createContext()</a>.</p>
-
 </div>
 </div>
 <a id="a4737e75936d49d95100dff2c0b4df2e0" name="a4737e75936d49d95100dff2c0b4df2e0"></a>
@@ -801,7 +1139,51 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="#a411e22adbedd744f90ecec66e46561d2">setupDebugMessenger()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a150e2d49325fb37d502d80cb2c18630a">setupDebugMessenger()</a>.</p>
+
+</div>
+</div>
+<a id="af806521ceee8c9d8487f44e3118a863c" name="af806521ceee8c9d8487f44e3118a863c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af806521ceee8c9d8487f44e3118a863c">&#9670;&#160;</a></span>_device</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vk::raii::Device dodo::core::VulkanContext::_device = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad90fab8ce5f18baa7f2f903e349b5b3" name="aad90fab8ce5f18baa7f2f903e349b5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad90fab8ce5f18baa7f2f903e349b5b3">&#9670;&#160;</a></span>_graphicsQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vk::raii::Queue dodo::core::VulkanContext::_graphicsQueue = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -825,7 +1207,7 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="#afed694e96c1ea50d8c68161666c8cc6b">createContext()</a>, and <a class="el" href="#a411e22adbedd744f90ecec66e46561d2">setupDebugMessenger()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a150e2d49325fb37d502d80cb2c18630a">setupDebugMessenger()</a>.</p>
 
 </div>
 </div>
@@ -840,6 +1222,50 @@ template&lt;typename FirstFeature , typename... OtherFeatures&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">vk::raii::PhysicalDevice dodo::core::VulkanContext::_physicalDevice = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac66b19173e525e4c88d30b1d24c2ae72" name="ac66b19173e525e4c88d30b1d24c2ae72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac66b19173e525e4c88d30b1d24c2ae72">&#9670;&#160;</a></span>_presentationQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vk::raii::Queue dodo::core::VulkanContext::_presentationQueue = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9353995cf0726c24ab616ea629534528" name="a9353995cf0726c24ab616ea629534528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9353995cf0726c24ab616ea629534528">&#9670;&#160;</a></span>_surface</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vk::raii::SurfaceKHR dodo::core::VulkanContext::_surface = nullptr</td>
         </tr>
       </table>
   </td>

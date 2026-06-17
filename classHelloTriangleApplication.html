@@ -144,10 +144,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ab88af09ee4ccadfb011ede916b00270c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1e1e2e874c12db0a39d1bdd68d1aa3b" id="r_af1e1e2e874c12db0a39d1bdd68d1aa3b"><td class="memItemLeft" align="right" valign="top">vk::raii::Queue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">_graphicsQueue</a> = nullptr</td></tr>
 <tr class="separator:af1e1e2e874c12db0a39d1bdd68d1aa3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f917cfdab06f60c22cc4c1057c16f4e" id="r_a7f917cfdab06f60c22cc4c1057c16f4e"><td class="memItemLeft" align="right" valign="top">vk::raii::SurfaceKHR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> = nullptr</td></tr>
-<tr class="separator:a7f917cfdab06f60c22cc4c1057c16f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7d80be67b1603c428d20a77d66cacb3" id="r_ac7d80be67b1603c428d20a77d66cacb3"><td class="memItemLeft" align="right" valign="top">vk::raii::Queue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7d80be67b1603c428d20a77d66cacb3">_presentQueue</a> = nullptr</td></tr>
 <tr class="separator:ac7d80be67b1603c428d20a77d66cacb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b754e9c348fbb3cfbf2e27a6334b34e" id="r_a0b754e9c348fbb3cfbf2e27a6334b34e"><td class="memItemLeft" align="right" valign="top">vk::raii::SurfaceKHR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b754e9c348fbb3cfbf2e27a6334b34e">_surface</a> = nullptr</td></tr>
+<tr class="separator:a0b754e9c348fbb3cfbf2e27a6334b34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc044f0ec31c4eacf8e512087cf7743e" id="r_acc044f0ec31c4eacf8e512087cf7743e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a></td></tr>
 <tr class="separator:acc044f0ec31c4eacf8e512087cf7743e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -174,11 +174,11 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                   {</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_function" href="group__window.html#ga806747476b7247d292be3711c323ea10">glfwDestroyWindow</a>(<a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>);</div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_function" href="group__init.html#gafd90e6fd4819ea9e22e5e739519a6504">glfwTerminate</a>();</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a65e986d68d15fad0b45ffb3b51316cff"><div class="ttname"><a href="#a65e986d68d15fad0b45ffb3b51316cff">HelloTriangleApplication::_window</a></div><div class="ttdeci">GLFWwindow * _window</div><div class="ttdef"><b>Definition</b> main.cpp:47</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>                   {</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_function" href="group__window.html#ga806747476b7247d292be3711c323ea10">glfwDestroyWindow</a>(<a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>);</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_function" href="group__init.html#gafd90e6fd4819ea9e22e5e739519a6504">glfwTerminate</a>();</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a65e986d68d15fad0b45ffb3b51316cff"><div class="ttname"><a href="#a65e986d68d15fad0b45ffb3b51316cff">HelloTriangleApplication::_window</a></div><div class="ttdeci">GLFWwindow * _window</div><div class="ttdef"><b>Definition</b> main.cpp:48</div></div>
 <div class="ttc" id="agroup__init_html_gafd90e6fd4819ea9e22e5e739519a6504"><div class="ttname"><a href="group__init.html#gafd90e6fd4819ea9e22e5e739519a6504">glfwTerminate</a></div><div class="ttdeci">GLFWAPI void glfwTerminate(void)</div><div class="ttdoc">Terminates the GLFW library.</div></div>
 <div class="ttc" id="agroup__window_html_ga806747476b7247d292be3711c323ea10"><div class="ttname"><a href="group__window.html#ga806747476b7247d292be3711c323ea10">glfwDestroyWindow</a></div><div class="ttdeci">GLFWAPI void glfwDestroyWindow(GLFWwindow *window)</div><div class="ttdoc">Destroys the specified window and its context.</div></div>
 </div><!-- fragment -->
@@ -232,76 +232,76 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                          {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="comment">// Some elements are optional, replace by builder pattern</span></div>
-<div class="line"><span class="lineno">   97</span>        <span class="keyword">constexpr</span> vk::ApplicationInfo APP_INFO{</div>
-<div class="line"><span class="lineno">   98</span>            .pApplicationName   = <span class="stringliteral">&quot;Hello Triangle&quot;</span>,</div>
-<div class="line"><span class="lineno">   99</span>            .applicationVersion = VK_MAKE_VERSION( 1, 0, 0 ),</div>
-<div class="line"><span class="lineno">  100</span>            .pEngineName        = <span class="stringliteral">&quot;No Engine&quot;</span>,</div>
-<div class="line"><span class="lineno">  101</span>            .engineVersion      = VK_MAKE_VERSION( 1, 0, 0 ),</div>
-<div class="line"><span class="lineno">  102</span>            .apiVersion         = vk::ApiVersion13</div>
-<div class="line"><span class="lineno">  103</span>        };</div>
-<div class="line"><span class="lineno">  104</span> </div>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>                          {</div>
+<div class="line"><span class="lineno">   97</span>        <span class="comment">// Some elements are optional, replace by builder pattern</span></div>
+<div class="line"><span class="lineno">   98</span>        <span class="keyword">constexpr</span> vk::ApplicationInfo APP_INFO{</div>
+<div class="line"><span class="lineno">   99</span>            .pApplicationName   = <span class="stringliteral">&quot;Hello Triangle&quot;</span>,</div>
+<div class="line"><span class="lineno">  100</span>            .applicationVersion = VK_MAKE_VERSION( 1, 0, 0 ),</div>
+<div class="line"><span class="lineno">  101</span>            .pEngineName        = <span class="stringliteral">&quot;No Engine&quot;</span>,</div>
+<div class="line"><span class="lineno">  102</span>            .engineVersion      = VK_MAKE_VERSION( 1, 0, 0 ),</div>
+<div class="line"><span class="lineno">  103</span>            .apiVersion         = vk::ApiVersion13</div>
+<div class="line"><span class="lineno">  104</span>        };</div>
 <div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>        <span class="comment">// Get the required layers</span></div>
-<div class="line"><span class="lineno">  107</span>        std::vector&lt;char const*&gt; requiredLayers;</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="main_8cpp.html#aa19a430be1b9d313312e3194456b1a20">enableValidationLayers</a>) {</div>
-<div class="line"><span class="lineno">  109</span>            requiredLayers.assign(<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.begin(), <a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.end());</div>
-<div class="line"><span class="lineno">  110</span>        }</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>        <span class="comment">// Check if the required layers are supported by the Vulkan implementation.</span></div>
-<div class="line"><span class="lineno">  113</span>        <span class="keyword">auto</span> layerProperties = <a class="code hl_variable" href="#a349053a09a201955a1872e903bdc46ef">_context</a>.enumerateInstanceLayerProperties();</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (std::ranges::any_of(requiredLayers, [&amp;layerProperties](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; requiredLayer) {</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">return</span> std::ranges::none_of(layerProperties,</div>
-<div class="line"><span class="lineno">  116</span>                                       [requiredLayer](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; layerProperty)</div>
-<div class="line"><span class="lineno">  117</span>                                       { <span class="keywordflow">return</span> strcmp(layerProperty.layerName, requiredLayer) == 0; });</div>
-<div class="line"><span class="lineno">  118</span>        }))</div>
-<div class="line"><span class="lineno">  119</span>        {</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;One or more required layers are not supported!&quot;</span>);</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> layer: requiredLayers) {</div>
-<div class="line"><span class="lineno">  124</span>            std::cout &lt;&lt; layer &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>        <span class="comment">// Get the required instance extensions from GLFW.</span></div>
-<div class="line"><span class="lineno">  128</span>        uint32_t glfwExtensionCount = 0;</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keyword">auto</span> glfwExtensions = <a class="code hl_function" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a>(&amp;glfwExtensionCount);</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>        <span class="keyword">auto</span> extensions = <a class="code hl_variable" href="#a349053a09a201955a1872e903bdc46ef">_context</a>.enumerateInstanceExtensionProperties();</div>
-<div class="line"><span class="lineno">  132</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;available extensions:\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; extension : extensions) {</div>
-<div class="line"><span class="lineno">  135</span>            std::cout &lt;&lt; <span class="charliteral">&#39;\t&#39;</span> &lt;&lt; extension.extensionName &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>        <span class="comment">// Check if the required GLFW extensions are supported by the Vulkan implementation.</span></div>
-<div class="line"><span class="lineno">  139</span>        <span class="keyword">auto</span> extensionProperties = <a class="code hl_variable" href="#a349053a09a201955a1872e903bdc46ef">_context</a>.enumerateInstanceExtensionProperties();</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; glfwExtensionCount; ++i)</div>
-<div class="line"><span class="lineno">  141</span>        {</div>
-<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">if</span> (std::ranges::none_of(extensionProperties,</div>
-<div class="line"><span class="lineno">  143</span>                                     [glfwExtension = glfwExtensions[i]](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; extensionProperty)</div>
-<div class="line"><span class="lineno">  144</span>                                     { <span class="keywordflow">return</span> strcmp(extensionProperty.extensionName, glfwExtension) == 0; }))</div>
-<div class="line"><span class="lineno">  145</span>            {</div>
-<div class="line"><span class="lineno">  146</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Required GLFW extension not supported: &quot;</span> + std::string(glfwExtensions[i]));</div>
-<div class="line"><span class="lineno">  147</span>            }</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span> </div>
-<div class="line"><span class="lineno">  150</span>        vk::InstanceCreateInfo createInfo{</div>
-<div class="line"><span class="lineno">  151</span>            .pApplicationInfo = &amp;APP_INFO,</div>
-<div class="line"><span class="lineno">  152</span>            .enabledLayerCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(requiredLayers.size()),</div>
-<div class="line"><span class="lineno">  153</span>            .ppEnabledLayerNames     = requiredLayers.data(),</div>
-<div class="line"><span class="lineno">  154</span>            .enabledExtensionCount = glfwExtensionCount,</div>
-<div class="line"><span class="lineno">  155</span>            .ppEnabledExtensionNames = glfwExtensions,</div>
-<div class="line"><span class="lineno">  156</span>        };</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>        <a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a> = vk::raii::Instance(<a class="code hl_variable" href="#a349053a09a201955a1872e903bdc46ef">_context</a>, createInfo);</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a349053a09a201955a1872e903bdc46ef"><div class="ttname"><a href="#a349053a09a201955a1872e903bdc46ef">HelloTriangleApplication::_context</a></div><div class="ttdeci">vk::raii::Context _context</div><div class="ttdef"><b>Definition</b> main.cpp:48</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_ad3e378b53088a5442a344ebb6a0ae09c"><div class="ttname"><a href="#ad3e378b53088a5442a344ebb6a0ae09c">HelloTriangleApplication::_instance</a></div><div class="ttdeci">vk::raii::Instance _instance</div><div class="ttdef"><b>Definition</b> main.cpp:49</div></div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>        <span class="comment">// Get the required layers</span></div>
+<div class="line"><span class="lineno">  108</span>        std::vector&lt;char const*&gt; requiredLayers;</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="main_8cpp.html#aa19a430be1b9d313312e3194456b1a20">enableValidationLayers</a>) {</div>
+<div class="line"><span class="lineno">  110</span>            requiredLayers.assign(<a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.begin(), <a class="code hl_variable" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.end());</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>        <span class="comment">// Check if the required layers are supported by the Vulkan implementation.</span></div>
+<div class="line"><span class="lineno">  114</span>        <span class="keyword">auto</span> layerProperties = <a class="code hl_variable" href="#a349053a09a201955a1872e903bdc46ef">_context</a>.enumerateInstanceLayerProperties();</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (std::ranges::any_of(requiredLayers, [&amp;layerProperties](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; requiredLayer) {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span> std::ranges::none_of(layerProperties,</div>
+<div class="line"><span class="lineno">  117</span>                                       [requiredLayer](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; layerProperty)</div>
+<div class="line"><span class="lineno">  118</span>                                       { <span class="keywordflow">return</span> strcmp(layerProperty.layerName, requiredLayer) == 0; });</div>
+<div class="line"><span class="lineno">  119</span>        }))</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;One or more required layers are not supported!&quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> layer: requiredLayers) {</div>
+<div class="line"><span class="lineno">  125</span>            std::cout &lt;&lt; layer &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>        <span class="comment">// Get the required instance extensions from GLFW.</span></div>
+<div class="line"><span class="lineno">  129</span>        uint32_t glfwExtensionCount = 0;</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keyword">auto</span> glfwExtensions = <a class="code hl_function" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a>(&amp;glfwExtensionCount);</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>        <span class="keyword">auto</span> extensions = <a class="code hl_variable" href="#a349053a09a201955a1872e903bdc46ef">_context</a>.enumerateInstanceExtensionProperties();</div>
+<div class="line"><span class="lineno">  133</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;available extensions:\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; extension : extensions) {</div>
+<div class="line"><span class="lineno">  136</span>            std::cout &lt;&lt; <span class="charliteral">&#39;\t&#39;</span> &lt;&lt; extension.extensionName &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  137</span>        }</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>        <span class="comment">// Check if the required GLFW extensions are supported by the Vulkan implementation.</span></div>
+<div class="line"><span class="lineno">  140</span>        <span class="keyword">auto</span> extensionProperties = <a class="code hl_variable" href="#a349053a09a201955a1872e903bdc46ef">_context</a>.enumerateInstanceExtensionProperties();</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; glfwExtensionCount; ++i)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span> (std::ranges::none_of(extensionProperties,</div>
+<div class="line"><span class="lineno">  144</span>                                     [glfwExtension = glfwExtensions[i]](<span class="keyword">auto</span> <span class="keyword">const</span>&amp; extensionProperty)</div>
+<div class="line"><span class="lineno">  145</span>                                     { <span class="keywordflow">return</span> strcmp(extensionProperty.extensionName, glfwExtension) == 0; }))</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Required GLFW extension not supported: &quot;</span> + std::string(glfwExtensions[i]));</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>        vk::InstanceCreateInfo createInfo{</div>
+<div class="line"><span class="lineno">  152</span>            .pApplicationInfo = &amp;APP_INFO,</div>
+<div class="line"><span class="lineno">  153</span>            .enabledLayerCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(requiredLayers.size()),</div>
+<div class="line"><span class="lineno">  154</span>            .ppEnabledLayerNames     = requiredLayers.data(),</div>
+<div class="line"><span class="lineno">  155</span>            .enabledExtensionCount = glfwExtensionCount,</div>
+<div class="line"><span class="lineno">  156</span>            .ppEnabledExtensionNames = glfwExtensions,</div>
+<div class="line"><span class="lineno">  157</span>        };</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>        <a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a> = vk::raii::Instance(<a class="code hl_variable" href="#a349053a09a201955a1872e903bdc46ef">_context</a>, createInfo);</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a349053a09a201955a1872e903bdc46ef"><div class="ttname"><a href="#a349053a09a201955a1872e903bdc46ef">HelloTriangleApplication::_context</a></div><div class="ttdeci">vk::raii::Context _context</div><div class="ttdef"><b>Definition</b> main.cpp:49</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_ad3e378b53088a5442a344ebb6a0ae09c"><div class="ttname"><a href="#ad3e378b53088a5442a344ebb6a0ae09c">HelloTriangleApplication::_instance</a></div><div class="ttdeci">vk::raii::Instance _instance</div><div class="ttdef"><b>Definition</b> main.cpp:50</div></div>
 <div class="ttc" id="agroup__vulkan_html_gada152edc5bbbd0c2138728878632fd9c"><div class="ttname"><a href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions</a></div><div class="ttdeci">GLFWAPI const char ** glfwGetRequiredInstanceExtensions(uint32_t *count)</div><div class="ttdoc">Returns the Vulkan instance extensions required by GLFW.</div></div>
-<div class="ttc" id="amain_8cpp_html_a2ef71d26f33a696147bfd1b7b56b6ba2"><div class="ttname"><a href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a></div><div class="ttdeci">const std::vector&lt; char const  * &gt; validationLayers</div><div class="ttdef"><b>Definition</b> main.cpp:28</div></div>
-<div class="ttc" id="amain_8cpp_html_aa19a430be1b9d313312e3194456b1a20"><div class="ttname"><a href="main_8cpp.html#aa19a430be1b9d313312e3194456b1a20">enableValidationLayers</a></div><div class="ttdeci">constexpr bool enableValidationLayers</div><div class="ttdef"><b>Definition</b> main.cpp:35</div></div>
+<div class="ttc" id="amain_8cpp_html_a2ef71d26f33a696147bfd1b7b56b6ba2"><div class="ttname"><a href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a></div><div class="ttdeci">const std::vector&lt; char const  * &gt; validationLayers</div><div class="ttdef"><b>Definition</b> main.cpp:29</div></div>
+<div class="ttc" id="amain_8cpp_html_aa19a430be1b9d313312e3194456b1a20"><div class="ttname"><a href="main_8cpp.html#aa19a430be1b9d313312e3194456b1a20">enableValidationLayers</a></div><div class="ttdeci">constexpr bool enableValidationLayers</div><div class="ttdef"><b>Definition</b> main.cpp:36</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a349053a09a201955a1872e903bdc46ef">_context</a>, <a class="el" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="el" href="main_8cpp.html#aa19a430be1b9d313312e3194456b1a20">enableValidationLayers</a>, <a class="el" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c">glfwGetRequiredInstanceExtensions()</a>, and <a class="el" href="main_8cpp.html#a2ef71d26f33a696147bfd1b7b56b6ba2">validationLayers</a>.</p>
 
@@ -353,86 +353,86 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  230</span>                               {</div>
-<div class="line"><span class="lineno">  231</span>        std::vector&lt;vk::QueueFamilyProperties&gt; queueFamilyProperties = <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getQueueFamilyProperties();</div>
-<div class="line"><span class="lineno">  232</span>        uint32_t graphicsIndex = <a class="code hl_function" href="#aeae6119968142acd9b4fa43e9c5e6c84">findQueueFamilies</a>(<a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>);</div>
-<div class="line"><span class="lineno">  233</span> </div>
-<div class="line"><span class="lineno">  234</span>        <span class="comment">// determine a queueFamilyIndex that supports present</span></div>
-<div class="line"><span class="lineno">  235</span>        <span class="comment">// first check if the graphicsIndex is good enough</span></div>
-<div class="line"><span class="lineno">  236</span>        <span class="keyword">auto</span> presentIndex = <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR(graphicsIndex, *<a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> )</div>
-<div class="line"><span class="lineno">  237</span>                                           ? graphicsIndex : <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(queueFamilyProperties.size());</div>
-<div class="line"><span class="lineno">  238</span> </div>
-<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">if</span> ( presentIndex == queueFamilyProperties.size() )</div>
-<div class="line"><span class="lineno">  240</span>        {</div>
-<div class="line"><span class="lineno">  241</span>            <span class="comment">// the graphicsIndex doesn&#39;t support present -&gt; look for another family index that supports both</span></div>
-<div class="line"><span class="lineno">  242</span>            <span class="comment">// graphics and present</span></div>
-<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyProperties.size(); i++ )</div>
-<div class="line"><span class="lineno">  244</span>            {</div>
-<div class="line"><span class="lineno">  245</span>                <span class="keywordflow">if</span> ( ( queueFamilyProperties[i].queueFlags &amp; vk::QueueFlagBits::eGraphics ) &amp;&amp;</div>
-<div class="line"><span class="lineno">  246</span>                     <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR( <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i ), *<a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> ) )</div>
-<div class="line"><span class="lineno">  247</span>                {</div>
-<div class="line"><span class="lineno">  248</span>                    graphicsIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i );</div>
-<div class="line"><span class="lineno">  249</span>                    presentIndex  = graphicsIndex;</div>
-<div class="line"><span class="lineno">  250</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  251</span>                }</div>
-<div class="line"><span class="lineno">  252</span>            }</div>
-<div class="line"><span class="lineno">  253</span>            <span class="keywordflow">if</span> ( presentIndex == queueFamilyProperties.size() )</div>
-<div class="line"><span class="lineno">  254</span>            {</div>
-<div class="line"><span class="lineno">  255</span>                <span class="comment">// there&#39;s nothing like a single family index that supports both graphics and present -&gt; look for another</span></div>
-<div class="line"><span class="lineno">  256</span>                <span class="comment">// family index that supports present</span></div>
-<div class="line"><span class="lineno">  257</span>                <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyProperties.size(); i++ )</div>
-<div class="line"><span class="lineno">  258</span>                {</div>
-<div class="line"><span class="lineno">  259</span>                    <span class="keywordflow">if</span> ( <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR( <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i ), *<a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> ) )</div>
-<div class="line"><span class="lineno">  260</span>                    {</div>
-<div class="line"><span class="lineno">  261</span>                        presentIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i );</div>
-<div class="line"><span class="lineno">  262</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  263</span>                    }</div>
-<div class="line"><span class="lineno">  264</span>                }</div>
-<div class="line"><span class="lineno">  265</span>            }</div>
-<div class="line"><span class="lineno">  266</span>        }</div>
-<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">if</span> ( ( graphicsIndex == queueFamilyProperties.size() ) || ( presentIndex == queueFamilyProperties.size() ) )</div>
-<div class="line"><span class="lineno">  268</span>        {</div>
-<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">throw</span> std::runtime_error( <span class="stringliteral">&quot;Could not find a queue for graphics or present -&gt; terminating&quot;</span> );</div>
-<div class="line"><span class="lineno">  270</span>        }</div>
-<div class="line"><span class="lineno">  271</span> </div>
+<div class="fragment"><div class="line"><span class="lineno">  231</span>                               {</div>
+<div class="line"><span class="lineno">  232</span>        std::vector&lt;vk::QueueFamilyProperties&gt; queueFamilyProperties = <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getQueueFamilyProperties();</div>
+<div class="line"><span class="lineno">  233</span>        uint32_t graphicsIndex = <a class="code hl_function" href="#aeae6119968142acd9b4fa43e9c5e6c84">findQueueFamilies</a>(<a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>);</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>        <span class="comment">// determine a queueFamilyIndex that supports present</span></div>
+<div class="line"><span class="lineno">  236</span>        <span class="comment">// first check if the graphicsIndex is good enough</span></div>
+<div class="line"><span class="lineno">  237</span>        <span class="keyword">auto</span> presentIndex = <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR(graphicsIndex, *<a class="code hl_variable" href="#a0b754e9c348fbb3cfbf2e27a6334b34e">_surface</a> )</div>
+<div class="line"><span class="lineno">  238</span>                                           ? graphicsIndex : <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(queueFamilyProperties.size());</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">if</span> ( presentIndex == queueFamilyProperties.size() )</div>
+<div class="line"><span class="lineno">  241</span>        {</div>
+<div class="line"><span class="lineno">  242</span>            <span class="comment">// the graphicsIndex doesn&#39;t support present -&gt; look for another family index that supports both</span></div>
+<div class="line"><span class="lineno">  243</span>            <span class="comment">// graphics and present</span></div>
+<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyProperties.size(); i++ )</div>
+<div class="line"><span class="lineno">  245</span>            {</div>
+<div class="line"><span class="lineno">  246</span>                <span class="keywordflow">if</span> ( ( queueFamilyProperties[i].queueFlags &amp; vk::QueueFlagBits::eGraphics ) &amp;&amp;</div>
+<div class="line"><span class="lineno">  247</span>                     <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR( <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i ), *<a class="code hl_variable" href="#a0b754e9c348fbb3cfbf2e27a6334b34e">_surface</a> ) )</div>
+<div class="line"><span class="lineno">  248</span>                {</div>
+<div class="line"><span class="lineno">  249</span>                    graphicsIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i );</div>
+<div class="line"><span class="lineno">  250</span>                    presentIndex  = graphicsIndex;</div>
+<div class="line"><span class="lineno">  251</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  252</span>                }</div>
+<div class="line"><span class="lineno">  253</span>            }</div>
+<div class="line"><span class="lineno">  254</span>            <span class="keywordflow">if</span> ( presentIndex == queueFamilyProperties.size() )</div>
+<div class="line"><span class="lineno">  255</span>            {</div>
+<div class="line"><span class="lineno">  256</span>                <span class="comment">// there&#39;s nothing like a single family index that supports both graphics and present -&gt; look for another</span></div>
+<div class="line"><span class="lineno">  257</span>                <span class="comment">// family index that supports present</span></div>
+<div class="line"><span class="lineno">  258</span>                <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i = 0; i &lt; queueFamilyProperties.size(); i++ )</div>
+<div class="line"><span class="lineno">  259</span>                {</div>
+<div class="line"><span class="lineno">  260</span>                    <span class="keywordflow">if</span> ( <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>.getSurfaceSupportKHR( <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i ), *<a class="code hl_variable" href="#a0b754e9c348fbb3cfbf2e27a6334b34e">_surface</a> ) )</div>
+<div class="line"><span class="lineno">  261</span>                    {</div>
+<div class="line"><span class="lineno">  262</span>                        presentIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>( i );</div>
+<div class="line"><span class="lineno">  263</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  264</span>                    }</div>
+<div class="line"><span class="lineno">  265</span>                }</div>
+<div class="line"><span class="lineno">  266</span>            }</div>
+<div class="line"><span class="lineno">  267</span>        }</div>
+<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">if</span> ( ( graphicsIndex == queueFamilyProperties.size() ) || ( presentIndex == queueFamilyProperties.size() ) )</div>
+<div class="line"><span class="lineno">  269</span>        {</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">throw</span> std::runtime_error( <span class="stringliteral">&quot;Could not find a queue for graphics or present -&gt; terminating&quot;</span> );</div>
+<div class="line"><span class="lineno">  271</span>        }</div>
 <div class="line"><span class="lineno">  272</span> </div>
 <div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordtype">float</span> queuePriority = 1.0f; <span class="comment">// Vulkan lets you assign priorities to queues to influence the scheduling of command buffer execution using floating point numbers between 0.0 and 1.0</span></div>
-<div class="line"><span class="lineno">  275</span>        <span class="comment">//The currently available drivers will only allow you to create a small number of queues for each queue family, and you don’t really need more than one</span></div>
-<div class="line"><span class="lineno">  276</span>        vk::DeviceQueueCreateInfo deviceQueueCreateInfo { .queueFamilyIndex = graphicsIndex, .queueCount = 1, .pQueuePriorities = &amp;queuePriority };</div>
-<div class="line"><span class="lineno">  277</span>        vk::PhysicalDeviceFeatures deviceFeatures;</div>
-<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>        <span class="keywordtype">float</span> queuePriority = 1.0f; <span class="comment">// Vulkan lets you assign priorities to queues to influence the scheduling of command buffer execution using floating point numbers between 0.0 and 1.0</span></div>
+<div class="line"><span class="lineno">  276</span>        <span class="comment">//The currently available drivers will only allow you to create a small number of queues for each queue family, and you don’t really need more than one</span></div>
+<div class="line"><span class="lineno">  277</span>        vk::DeviceQueueCreateInfo deviceQueueCreateInfo { .queueFamilyIndex = graphicsIndex, .queueCount = 1, .pQueuePriorities = &amp;queuePriority };</div>
+<div class="line"><span class="lineno">  278</span>        vk::PhysicalDeviceFeatures deviceFeatures;</div>
 <div class="line"><span class="lineno">  279</span> </div>
 <div class="line"><span class="lineno">  280</span> </div>
-<div class="line"><span class="lineno">  281</span>        <span class="comment">// Here maybe use a builder to add features to pnext</span></div>
-<div class="line"><span class="lineno">  282</span>        <span class="comment">// Create a chain of feature structures</span></div>
-<div class="line"><span class="lineno">  283</span>        vk::StructureChain&lt;vk::PhysicalDeviceFeatures2, vk::PhysicalDeviceVulkan13Features, vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT&gt; featureChain = {</div>
-<div class="line"><span class="lineno">  284</span>            {},                               <span class="comment">// vk::PhysicalDeviceFeatures2 (empty for now)</span></div>
-<div class="line"><span class="lineno">  285</span>            {.dynamicRendering = <span class="keyword">true</span> },      <span class="comment">// Enable dynamic rendering from Vulkan 1.3</span></div>
-<div class="line"><span class="lineno">  286</span>            {.extendedDynamicState = <span class="keyword">true</span> },   <span class="comment">// Enable extended dynamic state from the extension</span></div>
-<div class="line"><span class="lineno">  287</span>        };</div>
-<div class="line"><span class="lineno">  288</span> </div>
-<div class="line"><span class="lineno">  289</span>        vk::DeviceCreateInfo deviceCreateInfo{</div>
-<div class="line"><span class="lineno">  290</span>            .pNext = &amp;featureChain.get&lt;vk::PhysicalDeviceFeatures2&gt;(),</div>
-<div class="line"><span class="lineno">  291</span>            .queueCreateInfoCount = 1,</div>
-<div class="line"><span class="lineno">  292</span>            .pQueueCreateInfos = &amp;deviceQueueCreateInfo,</div>
-<div class="line"><span class="lineno">  293</span>            .enabledExtensionCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.size()),</div>
-<div class="line"><span class="lineno">  294</span>            .ppEnabledExtensionNames = <a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.data()</div>
-<div class="line"><span class="lineno">  295</span>        };</div>
-<div class="line"><span class="lineno">  296</span> </div>
-<div class="line"><span class="lineno">  297</span>        <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a> = vk::raii::Device(<a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>, deviceCreateInfo);</div>
-<div class="line"><span class="lineno">  298</span>        <a class="code hl_variable" href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">_graphicsQueue</a> = vk::raii::Queue( <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, graphicsIndex, 0 );</div>
-<div class="line"><span class="lineno">  299</span>        <a class="code hl_variable" href="#ac7d80be67b1603c428d20a77d66cacb3">_presentQueue</a> = vk::raii::Queue( <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, presentIndex, 0 );</div>
-<div class="line"><span class="lineno">  300</span>    }</div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a7f917cfdab06f60c22cc4c1057c16f4e"><div class="ttname"><a href="#a7f917cfdab06f60c22cc4c1057c16f4e">HelloTriangleApplication::surface</a></div><div class="ttdeci">vk::raii::SurfaceKHR surface</div><div class="ttdef"><b>Definition</b> main.cpp:54</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_ab88af09ee4ccadfb011ede916b00270c"><div class="ttname"><a href="#ab88af09ee4ccadfb011ede916b00270c">HelloTriangleApplication::_device</a></div><div class="ttdeci">vk::raii::Device _device</div><div class="ttdef"><b>Definition</b> main.cpp:52</div></div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>        <span class="comment">// Here maybe use a builder to add features to pnext</span></div>
+<div class="line"><span class="lineno">  283</span>        <span class="comment">// Create a chain of feature structures</span></div>
+<div class="line"><span class="lineno">  284</span>        vk::StructureChain&lt;vk::PhysicalDeviceFeatures2, vk::PhysicalDeviceVulkan13Features, vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT&gt; featureChain = {</div>
+<div class="line"><span class="lineno">  285</span>            {},                               <span class="comment">// vk::PhysicalDeviceFeatures2 (empty for now)</span></div>
+<div class="line"><span class="lineno">  286</span>            {.dynamicRendering = <span class="keyword">true</span> },      <span class="comment">// Enable dynamic rendering from Vulkan 1.3</span></div>
+<div class="line"><span class="lineno">  287</span>            {.extendedDynamicState = <span class="keyword">true</span> },   <span class="comment">// Enable extended dynamic state from the extension</span></div>
+<div class="line"><span class="lineno">  288</span>        };</div>
+<div class="line"><span class="lineno">  289</span> </div>
+<div class="line"><span class="lineno">  290</span>        vk::DeviceCreateInfo deviceCreateInfo{</div>
+<div class="line"><span class="lineno">  291</span>            .pNext = &amp;featureChain.get&lt;vk::PhysicalDeviceFeatures2&gt;(),</div>
+<div class="line"><span class="lineno">  292</span>            .queueCreateInfoCount = 1,</div>
+<div class="line"><span class="lineno">  293</span>            .pQueueCreateInfos = &amp;deviceQueueCreateInfo,</div>
+<div class="line"><span class="lineno">  294</span>            .enabledExtensionCount = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.size()),</div>
+<div class="line"><span class="lineno">  295</span>            .ppEnabledExtensionNames = <a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.data()</div>
+<div class="line"><span class="lineno">  296</span>        };</div>
+<div class="line"><span class="lineno">  297</span> </div>
+<div class="line"><span class="lineno">  298</span>        <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a> = vk::raii::Device(<a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>, deviceCreateInfo);</div>
+<div class="line"><span class="lineno">  299</span>        <a class="code hl_variable" href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">_graphicsQueue</a> = vk::raii::Queue( <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, graphicsIndex, 0 );</div>
+<div class="line"><span class="lineno">  300</span>        <a class="code hl_variable" href="#ac7d80be67b1603c428d20a77d66cacb3">_presentQueue</a> = vk::raii::Queue( <a class="code hl_variable" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, presentIndex, 0 );</div>
+<div class="line"><span class="lineno">  301</span>    }</div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a0b754e9c348fbb3cfbf2e27a6334b34e"><div class="ttname"><a href="#a0b754e9c348fbb3cfbf2e27a6334b34e">HelloTriangleApplication::_surface</a></div><div class="ttdeci">vk::raii::SurfaceKHR _surface</div><div class="ttdef"><b>Definition</b> main.cpp:56</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_ab88af09ee4ccadfb011ede916b00270c"><div class="ttname"><a href="#ab88af09ee4ccadfb011ede916b00270c">HelloTriangleApplication::_device</a></div><div class="ttdeci">vk::raii::Device _device</div><div class="ttdef"><b>Definition</b> main.cpp:53</div></div>
 <div class="ttc" id="aclassHelloTriangleApplication_html_ac7d80be67b1603c428d20a77d66cacb3"><div class="ttname"><a href="#ac7d80be67b1603c428d20a77d66cacb3">HelloTriangleApplication::_presentQueue</a></div><div class="ttdeci">vk::raii::Queue _presentQueue</div><div class="ttdef"><b>Definition</b> main.cpp:55</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_acc044f0ec31c4eacf8e512087cf7743e"><div class="ttname"><a href="#acc044f0ec31c4eacf8e512087cf7743e">HelloTriangleApplication::deviceExtensions</a></div><div class="ttdeci">std::vector&lt; const char * &gt; deviceExtensions</div><div class="ttdef"><b>Definition</b> main.cpp:174</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_aeae6119968142acd9b4fa43e9c5e6c84"><div class="ttname"><a href="#aeae6119968142acd9b4fa43e9c5e6c84">HelloTriangleApplication::findQueueFamilies</a></div><div class="ttdeci">uint32_t findQueueFamilies(vk::raii::PhysicalDevice physicalDevice)</div><div class="ttdef"><b>Definition</b> main.cpp:217</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_af1e1e2e874c12db0a39d1bdd68d1aa3b"><div class="ttname"><a href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">HelloTriangleApplication::_graphicsQueue</a></div><div class="ttdeci">vk::raii::Queue _graphicsQueue</div><div class="ttdef"><b>Definition</b> main.cpp:53</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_af2f79301bd4696826a248764b203ff75"><div class="ttname"><a href="#af2f79301bd4696826a248764b203ff75">HelloTriangleApplication::_physicalDevice</a></div><div class="ttdeci">vk::raii::PhysicalDevice _physicalDevice</div><div class="ttdef"><b>Definition</b> main.cpp:50</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_acc044f0ec31c4eacf8e512087cf7743e"><div class="ttname"><a href="#acc044f0ec31c4eacf8e512087cf7743e">HelloTriangleApplication::deviceExtensions</a></div><div class="ttdeci">std::vector&lt; const char * &gt; deviceExtensions</div><div class="ttdef"><b>Definition</b> main.cpp:175</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_aeae6119968142acd9b4fa43e9c5e6c84"><div class="ttname"><a href="#aeae6119968142acd9b4fa43e9c5e6c84">HelloTriangleApplication::findQueueFamilies</a></div><div class="ttdeci">uint32_t findQueueFamilies(vk::raii::PhysicalDevice physicalDevice)</div><div class="ttdef"><b>Definition</b> main.cpp:218</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_af1e1e2e874c12db0a39d1bdd68d1aa3b"><div class="ttname"><a href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">HelloTriangleApplication::_graphicsQueue</a></div><div class="ttdeci">vk::raii::Queue _graphicsQueue</div><div class="ttdef"><b>Definition</b> main.cpp:54</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_af2f79301bd4696826a248764b203ff75"><div class="ttname"><a href="#af2f79301bd4696826a248764b203ff75">HelloTriangleApplication::_physicalDevice</a></div><div class="ttdeci">vk::raii::PhysicalDevice _physicalDevice</div><div class="ttdef"><b>Definition</b> main.cpp:51</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, <a class="el" href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">_graphicsQueue</a>, <a class="el" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>, <a class="el" href="#ac7d80be67b1603c428d20a77d66cacb3">_presentQueue</a>, <a class="el" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>, <a class="el" href="#aeae6119968142acd9b4fa43e9c5e6c84">findQueueFamilies()</a>, and <a class="el" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a>.</p>
+<p class="reference">References <a class="el" href="#ab88af09ee4ccadfb011ede916b00270c">_device</a>, <a class="el" href="#af1e1e2e874c12db0a39d1bdd68d1aa3b">_graphicsQueue</a>, <a class="el" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>, <a class="el" href="#ac7d80be67b1603c428d20a77d66cacb3">_presentQueue</a>, <a class="el" href="#a0b754e9c348fbb3cfbf2e27a6334b34e">_surface</a>, <a class="el" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>, and <a class="el" href="#aeae6119968142acd9b4fa43e9c5e6c84">findQueueFamilies()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -468,15 +468,15 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  303</span>                         {</div>
-<div class="line"><span class="lineno">  304</span>        VkSurfaceKHR _surface;</div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">if</span> (glfwCreateWindowSurface(*<a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>, <span class="keyword">nullptr</span>, &amp;_surface) != 0) {</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;failed to create window surface!&quot;</span>);</div>
-<div class="line"><span class="lineno">  307</span>        }</div>
-<div class="line"><span class="lineno">  308</span>        <a class="code hl_variable" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a> = vk::raii::SurfaceKHR(<a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, _surface);</div>
-<div class="line"><span class="lineno">  309</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  304</span>                         {</div>
+<div class="line"><span class="lineno">  305</span>        VkSurfaceKHR surface;</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (glfwCreateWindowSurface(*<a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>, <span class="keyword">nullptr</span>, &amp;surface) != 0) {</div>
+<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;failed to create window surface!&quot;</span>);</div>
+<div class="line"><span class="lineno">  308</span>        }</div>
+<div class="line"><span class="lineno">  309</span>        <a class="code hl_variable" href="#a0b754e9c348fbb3cfbf2e27a6334b34e">_surface</a> = vk::raii::SurfaceKHR(<a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, surface);</div>
+<div class="line"><span class="lineno">  310</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="el" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>, and <a class="el" href="#a7f917cfdab06f60c22cc4c1057c16f4e">surface</a>.</p>
+<p class="reference">References <a class="el" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="el" href="#a0b754e9c348fbb3cfbf2e27a6334b34e">_surface</a>, and <a class="el" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>.</p>
 
 </div>
 </div>
@@ -516,11 +516,11 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  182</span>    {</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (severity &gt;= vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning)</div>
-<div class="line"><span class="lineno">  184</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; to_string(type) &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">return</span> vk::False;</div>
-<div class="line"><span class="lineno">  186</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>    {</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span> (severity &gt;= vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning)</div>
+<div class="line"><span class="lineno">  185</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;validation layer: type &quot;</span> &lt;&lt; to_string(type) &lt;&lt; <span class="stringliteral">&quot; msg: &quot;</span> &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> vk::False;</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a571e5442b665fa0f4d321b6114eb0b86">setupDebugMessenger()</a>.</p>
 <div class="dynheader">
@@ -528,9 +528,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classHelloTriangleApplication_a255ceee02b1a75f5809d94bf87beb14b_icgraph.png" border="0" usemap="#aclassHelloTriangleApplication_a255ceee02b1a75f5809d94bf87beb14b_icgraph" alt=""/></div>
 <map name="aclassHelloTriangleApplication_a255ceee02b1a75f5809d94bf87beb14b_icgraph" id="aclassHelloTriangleApplication_a255ceee02b1a75f5809d94bf87beb14b_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,376,46"/>
-<area shape="rect" href="classHelloTriangleApplication.html#a571e5442b665fa0f4d321b6114eb0b86" title=" " alt="" coords="5,5,167,46"/>
-<area shape="poly" title=" " alt="" coords="199,28,167,28,167,23,199,23"/>
+<area shape="rect" title=" " alt="" coords="657,5,819,46"/>
+<area shape="rect" href="classHelloTriangleApplication.html#a571e5442b665fa0f4d321b6114eb0b86" title=" " alt="" coords="448,5,609,46"/>
+<area shape="poly" title=" " alt="" coords="642,28,610,28,610,23,642,23"/>
+<area shape="rect" href="classHelloTriangleApplication.html#aceb28a2d94bd541ae1bb575f58848048" title=" " alt="" coords="239,5,400,46"/>
+<area shape="poly" title=" " alt="" coords="432,28,400,28,400,23,432,23"/>
+<area shape="rect" href="classHelloTriangleApplication.html#af77c7c3324cc1fd3fa821d1f953b65ef" title=" " alt="" coords="5,13,191,38"/>
+<area shape="poly" title=" " alt="" coords="223,28,191,28,191,23,223,23"/>
 </map>
 </div>
 
@@ -558,8 +562,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                                                                    {</div>
-<div class="line"><span class="lineno">  218</span>        <span class="comment">// find the index of the first queue family that supports graphics</span></div>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>                                                                    {</div>
 <div class="line"><span class="lineno">  219</span>        std::vector&lt;vk::QueueFamilyProperties&gt; queueFamilyProperties = physicalDevice.getQueueFamilyProperties();</div>
 <div class="line"><span class="lineno">  220</span> </div>
 <div class="line"><span class="lineno">  221</span>        <span class="comment">// get the first index into queueFamilyProperties which supports graphics</span></div>
@@ -567,9 +570,10 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  223</span>          std::find_if( queueFamilyProperties.begin(),</div>
 <div class="line"><span class="lineno">  224</span>                        queueFamilyProperties.end(),</div>
 <div class="line"><span class="lineno">  225</span>                        []( vk::QueueFamilyProperties <span class="keyword">const</span> &amp; qfp ) { return qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics; } );</div>
-<div class="line"><span class="lineno">  226</span> </div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(std::distance(queueFamilyProperties.begin(), graphicsQueueFamilyProperty));</div>
-<div class="line"><span class="lineno">  228</span>    }</div>
+<div class="line"><span class="lineno">  226</span>        <span class="comment">// if ((graphicsQueueFamilyProperty == queueFamilyProperties.end())</span></div>
+<div class="line"><span class="lineno">  227</span>            <span class="comment">// return std::unexpected(&quot;No graphics queue family found&quot;);</span></div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(std::distance(queueFamilyProperties.begin(), graphicsQueueFamilyProperty));</div>
+<div class="line"><span class="lineno">  229</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#afec790ea6335f736bc175819d7e50e18">createLogicalDevice()</a>.</p>
 <div class="dynheader">
@@ -607,15 +611,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                      {</div>
-<div class="line"><span class="lineno">   66</span>        <a class="code hl_function" href="#a2c7e569908ececa03347bf6471ef86b7">createInstance</a>();</div>
-<div class="line"><span class="lineno">   67</span>        <span class="comment">// setupDebugMessenger();</span></div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_function" href="#a78e19fdbfeffdafb9630a0a4ad275a94">pickPhysicalDevice</a>();</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a2c7e569908ececa03347bf6471ef86b7"><div class="ttname"><a href="#a2c7e569908ececa03347bf6471ef86b7">HelloTriangleApplication::createInstance</a></div><div class="ttdeci">void createInstance()</div><div class="ttdef"><b>Definition</b> main.cpp:95</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a78e19fdbfeffdafb9630a0a4ad275a94"><div class="ttname"><a href="#a78e19fdbfeffdafb9630a0a4ad275a94">HelloTriangleApplication::pickPhysicalDevice</a></div><div class="ttdeci">void pickPhysicalDevice()</div><div class="ttdef"><b>Definition</b> main.cpp:188</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>                      {</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_function" href="#a2c7e569908ececa03347bf6471ef86b7">createInstance</a>();</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_function" href="#a571e5442b665fa0f4d321b6114eb0b86">setupDebugMessenger</a>();</div>
+<div class="line"><span class="lineno">   69</span>        <span class="comment">// pickPhysicalDevice();</span></div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a2c7e569908ececa03347bf6471ef86b7"><div class="ttname"><a href="#a2c7e569908ececa03347bf6471ef86b7">HelloTriangleApplication::createInstance</a></div><div class="ttdeci">void createInstance()</div><div class="ttdef"><b>Definition</b> main.cpp:96</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a571e5442b665fa0f4d321b6114eb0b86"><div class="ttname"><a href="#a571e5442b665fa0f4d321b6114eb0b86">HelloTriangleApplication::setupDebugMessenger</a></div><div class="ttdeci">void setupDebugMessenger()</div><div class="ttdef"><b>Definition</b> main.cpp:162</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a2c7e569908ececa03347bf6471ef86b7">createInstance()</a>, and <a class="el" href="#a78e19fdbfeffdafb9630a0a4ad275a94">pickPhysicalDevice()</a>.</p>
+<p class="reference">References <a class="el" href="#a2c7e569908ececa03347bf6471ef86b7">createInstance()</a>, and <a class="el" href="#a571e5442b665fa0f4d321b6114eb0b86">setupDebugMessenger()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#af77c7c3324cc1fd3fa821d1f953b65ef">run()</a>.</p>
 <div class="dynheader">
@@ -626,10 +630,12 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,39,167,79"/>
 <area shape="rect" href="classHelloTriangleApplication.html#a2c7e569908ececa03347bf6471ef86b7" title=" " alt="" coords="215,5,376,46"/>
 <area shape="poly" title=" " alt="" coords="167,43,199,38,200,44,168,49"/>
-<area shape="rect" href="classHelloTriangleApplication.html#a78e19fdbfeffdafb9630a0a4ad275a94" title=" " alt="" coords="215,71,376,111"/>
+<area shape="rect" href="classHelloTriangleApplication.html#a571e5442b665fa0f4d321b6114eb0b86" title=" " alt="" coords="215,71,376,111"/>
 <area shape="poly" title=" " alt="" coords="168,69,200,74,199,79,167,74"/>
 <area shape="rect" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c" title="Returns the Vulkan instance extensions required by GLFW." alt="" coords="424,13,654,38"/>
 <area shape="poly" title=" " alt="" coords="377,23,408,23,408,28,377,28"/>
+<area shape="rect" href="classHelloTriangleApplication.html#a255ceee02b1a75f5809d94bf87beb14b" title=" " alt="" coords="458,71,620,111"/>
+<area shape="poly" title=" " alt="" coords="377,88,443,88,443,94,377,94"/>
 </map>
 </div>
 <div class="dynheader">
@@ -667,18 +673,18 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                      {</div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_function" href="group__init.html#gab41771f0215a2e0afb4cf1cf98082d40">glfwInit</a>(); <span class="comment">// Init glfw</span></div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="group__window.html#ga69c40728499720bef8a49aa925ea0efa">glfwWindowHint</a>(<a class="code hl_define" href="group__window.html#ga649309cf72a3d3de5b1348ca7936c95b">GLFW_CLIENT_API</a>, <a class="code hl_define" href="glfw3_8h.html#a8f6dcdc968d214ff14779564f1389264">GLFW_NO_API</a>); <span class="comment">// No API beceause OpenGL by default</span></div>
-<div class="line"><span class="lineno">   74</span>        <a class="code hl_function" href="group__window.html#ga69c40728499720bef8a49aa925ea0efa">glfwWindowHint</a>(<a class="code hl_define" href="group__window.html#gadba13c7a1b3aa40831eb2beedbd5bd1d">GLFW_RESIZABLE</a>, <a class="code hl_define" href="group__init.html#gac877fe3b627d21ef3a0a23e0a73ba8c5">GLFW_FALSE</a>); <span class="comment">// Disable resizing because more work</span></div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>        <span class="keyword">constexpr</span> <span class="keywordtype">int</span> HEIGHT = 800;</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keyword">constexpr</span> <span class="keywordtype">int</span> WIDTH = 600;</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keyword">const</span> std::string TITLE = <span class="stringliteral">&quot;Vulkan&quot;</span>;</div>
-<div class="line"><span class="lineno">   79</span>        <span class="comment">// Pass parameters by a WindowInfo struct to avoid errors like inverting width and height</span></div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a> = <a class="code hl_function" href="group__window.html#gaaccd00fafe81e2db94e8cdf55721e055">glfwCreateWindow</a>(WIDTH, HEIGHT, TITLE.c_str(), <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                      {</div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="group__init.html#gab41771f0215a2e0afb4cf1cf98082d40">glfwInit</a>(); <span class="comment">// Init glfw</span></div>
+<div class="line"><span class="lineno">   74</span>        <a class="code hl_function" href="group__window.html#ga69c40728499720bef8a49aa925ea0efa">glfwWindowHint</a>(<a class="code hl_define" href="group__window.html#ga649309cf72a3d3de5b1348ca7936c95b">GLFW_CLIENT_API</a>, <a class="code hl_define" href="glfw3_8h.html#a8f6dcdc968d214ff14779564f1389264">GLFW_NO_API</a>); <span class="comment">// No API beceause OpenGL by default</span></div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_function" href="group__window.html#ga69c40728499720bef8a49aa925ea0efa">glfwWindowHint</a>(<a class="code hl_define" href="group__window.html#gadba13c7a1b3aa40831eb2beedbd5bd1d">GLFW_RESIZABLE</a>, <a class="code hl_define" href="group__init.html#gac877fe3b627d21ef3a0a23e0a73ba8c5">GLFW_FALSE</a>); <span class="comment">// Disable resizing because more work</span></div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>        <span class="keyword">constexpr</span> <span class="keywordtype">int</span> HEIGHT = 800;</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keyword">constexpr</span> <span class="keywordtype">int</span> WIDTH = 600;</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keyword">const</span> std::string TITLE = <span class="stringliteral">&quot;Vulkan&quot;</span>;</div>
+<div class="line"><span class="lineno">   80</span>        <span class="comment">// Pass parameters by a WindowInfo struct to avoid errors like inverting width and height</span></div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a> = <a class="code hl_function" href="group__window.html#gaaccd00fafe81e2db94e8cdf55721e055">glfwCreateWindow</a>(WIDTH, HEIGHT, TITLE.c_str(), <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    }</div>
 <div class="ttc" id="aglfw3_8h_html_a8f6dcdc968d214ff14779564f1389264"><div class="ttname"><a href="glfw3_8h.html#a8f6dcdc968d214ff14779564f1389264">GLFW_NO_API</a></div><div class="ttdeci">#define GLFW_NO_API</div><div class="ttdef"><b>Definition</b> glfw3.h:1140</div></div>
 <div class="ttc" id="agroup__init_html_gab41771f0215a2e0afb4cf1cf98082d40"><div class="ttname"><a href="group__init.html#gab41771f0215a2e0afb4cf1cf98082d40">glfwInit</a></div><div class="ttdeci">GLFWAPI int glfwInit(void)</div><div class="ttdoc">Initializes the GLFW library.</div></div>
 <div class="ttc" id="agroup__init_html_gac877fe3b627d21ef3a0a23e0a73ba8c5"><div class="ttname"><a href="group__init.html#gac877fe3b627d21ef3a0a23e0a73ba8c5">GLFW_FALSE</a></div><div class="ttdeci">#define GLFW_FALSE</div><div class="ttdoc">Zero.</div><div class="ttdef"><b>Definition</b> glfw3.h:321</div></div>
@@ -739,11 +745,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                    {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">while</span> (!<a class="code hl_function" href="group__window.html#gaa6162f67dfa38b8beda2fea623649332">glfwWindowShouldClose</a>(<a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>)) {</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_function" href="group__window.html#ga872d16e4c77f58c0436f356255920cfc">glfwPollEvents</a>();</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                    {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">while</span> (!<a class="code hl_function" href="group__window.html#gaa6162f67dfa38b8beda2fea623649332">glfwWindowShouldClose</a>(<a class="code hl_variable" href="#a65e986d68d15fad0b45ffb3b51316cff">_window</a>)) {</div>
+<div class="line"><span class="lineno">   87</span>            <a class="code hl_function" href="group__window.html#ga872d16e4c77f58c0436f356255920cfc">glfwPollEvents</a>();</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
 <div class="ttc" id="agroup__window_html_ga872d16e4c77f58c0436f356255920cfc"><div class="ttname"><a href="group__window.html#ga872d16e4c77f58c0436f356255920cfc">glfwPollEvents</a></div><div class="ttdeci">GLFWAPI void glfwPollEvents(void)</div><div class="ttdoc">Processes all pending events.</div></div>
 <div class="ttc" id="agroup__window_html_gaa6162f67dfa38b8beda2fea623649332"><div class="ttname"><a href="group__window.html#gaa6162f67dfa38b8beda2fea623649332">glfwWindowShouldClose</a></div><div class="ttdeci">GLFWAPI int glfwWindowShouldClose(GLFWwindow *window)</div><div class="ttdoc">Checks the close flag of the specified window.</div></div>
 </div><!-- fragment -->
@@ -797,50 +803,36 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                              {</div>
-<div class="line"><span class="lineno">  189</span>        std::vector&lt;vk::raii::PhysicalDevice&gt; devices = <a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>.enumeratePhysicalDevices();</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keyword">const</span> <span class="keyword">auto</span> devIter = std::ranges::find_if(devices,</div>
-<div class="line"><span class="lineno">  191</span>        [&amp;](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; device) {</div>
-<div class="line"><span class="lineno">  192</span>                <span class="keyword">auto</span> queueFamilies = device.getQueueFamilyProperties();</div>
-<div class="line"><span class="lineno">  193</span>                <span class="keywordtype">bool</span> isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</div>
-<div class="line"><span class="lineno">  194</span>                <span class="keyword">const</span> <span class="keyword">auto</span> qfpIter = std::ranges::find_if(queueFamilies,</div>
-<div class="line"><span class="lineno">  195</span>                []( vk::QueueFamilyProperties <span class="keyword">const</span> &amp; qfp )</div>
-<div class="line"><span class="lineno">  196</span>                        {</div>
-<div class="line"><span class="lineno">  197</span>                            <span class="keywordflow">return</span> (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != <span class="keyword">static_cast&lt;</span>vk::QueueFlags<span class="keyword">&gt;</span>(0);</div>
-<div class="line"><span class="lineno">  198</span>                        } );</div>
-<div class="line"><span class="lineno">  199</span>                isSuitable = isSuitable &amp;&amp; ( qfpIter != queueFamilies.end() );</div>
-<div class="line"><span class="lineno">  200</span>                <span class="keyword">auto</span> extensions = device.enumerateDeviceExtensionProperties( );</div>
-<div class="line"><span class="lineno">  201</span>                <span class="keywordtype">bool</span> found = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  202</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span> &amp; extension : <a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>) {</div>
-<div class="line"><span class="lineno">  203</span>                    <span class="keyword">auto</span> extensionIter = std::ranges::find_if(extensions, [extension](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; ext) {<span class="keywordflow">return</span> strcmp(ext.extensionName, extension) == 0;});</div>
-<div class="line"><span class="lineno">  204</span>                    found = found &amp;&amp;  extensionIter != extensions.end();</div>
-<div class="line"><span class="lineno">  205</span>                }</div>
-<div class="line"><span class="lineno">  206</span>                isSuitable = isSuitable &amp;&amp; found;</div>
-<div class="line"><span class="lineno">  207</span>                <span class="keywordflow">if</span> (isSuitable) {</div>
-<div class="line"><span class="lineno">  208</span>                    <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a> = device;</div>
-<div class="line"><span class="lineno">  209</span>                }</div>
-<div class="line"><span class="lineno">  210</span>                <span class="keywordflow">return</span> isSuitable;</div>
-<div class="line"><span class="lineno">  211</span>        });</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">if</span> (devIter == devices.end()) {</div>
-<div class="line"><span class="lineno">  213</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;failed to find a suitable GPU!&quot;</span>);</div>
-<div class="line"><span class="lineno">  214</span>        }</div>
-<div class="line"><span class="lineno">  215</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>                              {</div>
+<div class="line"><span class="lineno">  190</span>        std::vector&lt;vk::raii::PhysicalDevice&gt; devices = <a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>.enumeratePhysicalDevices();</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keyword">const</span> <span class="keyword">auto</span> devIter = std::ranges::find_if(devices,</div>
+<div class="line"><span class="lineno">  192</span>        [&amp;](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; device) {</div>
+<div class="line"><span class="lineno">  193</span>                <span class="keyword">auto</span> queueFamilies = device.getQueueFamilyProperties();</div>
+<div class="line"><span class="lineno">  194</span>                <span class="keywordtype">bool</span> isSuitable = device.getProperties().apiVersion &gt;= VK_API_VERSION_1_3;</div>
+<div class="line"><span class="lineno">  195</span>                <span class="keyword">const</span> <span class="keyword">auto</span> qfpIter = std::ranges::find_if(queueFamilies,</div>
+<div class="line"><span class="lineno">  196</span>                []( vk::QueueFamilyProperties <span class="keyword">const</span> &amp; qfp )</div>
+<div class="line"><span class="lineno">  197</span>                        {</div>
+<div class="line"><span class="lineno">  198</span>                            <span class="keywordflow">return</span> (qfp.queueFlags &amp; vk::QueueFlagBits::eGraphics) != <span class="keyword">static_cast&lt;</span>vk::QueueFlags<span class="keyword">&gt;</span>(0);</div>
+<div class="line"><span class="lineno">  199</span>                        } );</div>
+<div class="line"><span class="lineno">  200</span>                isSuitable = isSuitable &amp;&amp; ( qfpIter != queueFamilies.end() );</div>
+<div class="line"><span class="lineno">  201</span>                <span class="keyword">auto</span> extensions = device.enumerateDeviceExtensionProperties( );</div>
+<div class="line"><span class="lineno">  202</span>                <span class="keywordtype">bool</span> found = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  203</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span> &amp; extension : <a class="code hl_variable" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>) {</div>
+<div class="line"><span class="lineno">  204</span>                    <span class="keyword">auto</span> extensionIter = std::ranges::find_if(extensions, [extension](<span class="keyword">auto</span> <span class="keyword">const</span> &amp; ext) {<span class="keywordflow">return</span> strcmp(ext.extensionName, extension) == 0;});</div>
+<div class="line"><span class="lineno">  205</span>                    found = found &amp;&amp;  extensionIter != extensions.end();</div>
+<div class="line"><span class="lineno">  206</span>                }</div>
+<div class="line"><span class="lineno">  207</span>                isSuitable = isSuitable &amp;&amp; found;</div>
+<div class="line"><span class="lineno">  208</span>                <span class="keywordflow">if</span> (isSuitable) {</div>
+<div class="line"><span class="lineno">  209</span>                    <a class="code hl_variable" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a> = device;</div>
+<div class="line"><span class="lineno">  210</span>                }</div>
+<div class="line"><span class="lineno">  211</span>                <span class="keywordflow">return</span> isSuitable;</div>
+<div class="line"><span class="lineno">  212</span>        });</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (devIter == devices.end()) {</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;failed to find a suitable GPU!&quot;</span>);</div>
+<div class="line"><span class="lineno">  215</span>        }</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, <a class="el" href="#af2f79301bd4696826a248764b203ff75">_physicalDevice</a>, and <a class="el" href="#acc044f0ec31c4eacf8e512087cf7743e">deviceExtensions</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="#aceb28a2d94bd541ae1bb575f58848048">initVulkan()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classHelloTriangleApplication_a78e19fdbfeffdafb9630a0a4ad275a94_icgraph.png" border="0" usemap="#aclassHelloTriangleApplication_a78e19fdbfeffdafb9630a0a4ad275a94_icgraph" alt=""/></div>
-<map name="aclassHelloTriangleApplication_a78e19fdbfeffdafb9630a0a4ad275a94_icgraph" id="aclassHelloTriangleApplication_a78e19fdbfeffdafb9630a0a4ad275a94_icgraph">
-<area shape="rect" title=" " alt="" coords="448,5,609,46"/>
-<area shape="rect" href="classHelloTriangleApplication.html#aceb28a2d94bd541ae1bb575f58848048" title=" " alt="" coords="239,5,400,46"/>
-<area shape="poly" title=" " alt="" coords="432,28,400,28,400,23,432,23"/>
-<area shape="rect" href="classHelloTriangleApplication.html#af77c7c3324cc1fd3fa821d1f953b65ef" title=" " alt="" coords="5,13,191,38"/>
-<area shape="poly" title=" " alt="" coords="223,28,191,28,191,23,223,23"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -866,16 +858,16 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   58</span>               {</div>
-<div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="#aceb28a2d94bd541ae1bb575f58848048">initVulkan</a>();</div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="#a21ef3308872f929c672965c77bba8821">initWindow</a>();</div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_function" href="#a6de2d3e759d5978212e0925b899b9e5e">mainLoop</a>();</div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_function" href="#ab4bc5a866f98b9dac9e152f1abbf9c82">cleanup</a>();</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a21ef3308872f929c672965c77bba8821"><div class="ttname"><a href="#a21ef3308872f929c672965c77bba8821">HelloTriangleApplication::initWindow</a></div><div class="ttdeci">void initWindow()</div><div class="ttdef"><b>Definition</b> main.cpp:71</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a6de2d3e759d5978212e0925b899b9e5e"><div class="ttname"><a href="#a6de2d3e759d5978212e0925b899b9e5e">HelloTriangleApplication::mainLoop</a></div><div class="ttdeci">void mainLoop()</div><div class="ttdef"><b>Definition</b> main.cpp:84</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_ab4bc5a866f98b9dac9e152f1abbf9c82"><div class="ttname"><a href="#ab4bc5a866f98b9dac9e152f1abbf9c82">HelloTriangleApplication::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdef"><b>Definition</b> main.cpp:90</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_aceb28a2d94bd541ae1bb575f58848048"><div class="ttname"><a href="#aceb28a2d94bd541ae1bb575f58848048">HelloTriangleApplication::initVulkan</a></div><div class="ttdeci">void initVulkan()</div><div class="ttdef"><b>Definition</b> main.cpp:65</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>               {</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="#aceb28a2d94bd541ae1bb575f58848048">initVulkan</a>();</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_function" href="#a21ef3308872f929c672965c77bba8821">initWindow</a>();</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_function" href="#a6de2d3e759d5978212e0925b899b9e5e">mainLoop</a>();</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_function" href="#ab4bc5a866f98b9dac9e152f1abbf9c82">cleanup</a>();</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a21ef3308872f929c672965c77bba8821"><div class="ttname"><a href="#a21ef3308872f929c672965c77bba8821">HelloTriangleApplication::initWindow</a></div><div class="ttdeci">void initWindow()</div><div class="ttdef"><b>Definition</b> main.cpp:72</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a6de2d3e759d5978212e0925b899b9e5e"><div class="ttname"><a href="#a6de2d3e759d5978212e0925b899b9e5e">HelloTriangleApplication::mainLoop</a></div><div class="ttdeci">void mainLoop()</div><div class="ttdef"><b>Definition</b> main.cpp:85</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_ab4bc5a866f98b9dac9e152f1abbf9c82"><div class="ttname"><a href="#ab4bc5a866f98b9dac9e152f1abbf9c82">HelloTriangleApplication::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdef"><b>Definition</b> main.cpp:91</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_aceb28a2d94bd541ae1bb575f58848048"><div class="ttname"><a href="#aceb28a2d94bd541ae1bb575f58848048">HelloTriangleApplication::initVulkan</a></div><div class="ttdeci">void initVulkan()</div><div class="ttdef"><b>Definition</b> main.cpp:66</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ab4bc5a866f98b9dac9e152f1abbf9c82">cleanup()</a>, <a class="el" href="#aceb28a2d94bd541ae1bb575f58848048">initVulkan()</a>, <a class="el" href="#a21ef3308872f929c672965c77bba8821">initWindow()</a>, and <a class="el" href="#a6de2d3e759d5978212e0925b899b9e5e">mainLoop()</a>.</p>
 <div class="dynheader">
@@ -898,10 +890,12 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="401,65,464,65,464,70,401,70"/>
 <area shape="rect" href="classHelloTriangleApplication.html#a2c7e569908ececa03347bf6471ef86b7" title=" " alt="" coords="450,104,611,145"/>
 <area shape="poly" title=" " alt="" coords="386,167,447,148,448,153,388,172"/>
-<area shape="rect" href="classHelloTriangleApplication.html#a78e19fdbfeffdafb9630a0a4ad275a94" title=" " alt="" coords="450,170,611,210"/>
+<area shape="rect" href="classHelloTriangleApplication.html#a571e5442b665fa0f4d321b6114eb0b86" title=" " alt="" coords="450,170,611,210"/>
 <area shape="poly" title=" " alt="" coords="401,188,434,188,434,193,401,193"/>
 <area shape="rect" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c" title="Returns the Vulkan instance extensions required by GLFW." alt="" coords="660,112,891,138"/>
 <area shape="poly" title=" " alt="" coords="611,122,645,122,645,128,611,128"/>
+<area shape="rect" href="classHelloTriangleApplication.html#a255ceee02b1a75f5809d94bf87beb14b" title=" " alt="" coords="695,170,856,210"/>
+<area shape="poly" title=" " alt="" coords="611,188,679,188,679,193,611,193"/>
 <area shape="rect" href="group__window.html#gaaccd00fafe81e2db94e8cdf55721e055" title="Creates a window and its associated context." alt="" coords="466,235,595,260"/>
 <area shape="poly" title=" " alt="" coords="400,263,449,256,450,261,401,268"/>
 <area shape="rect" href="group__init.html#gab41771f0215a2e0afb4cf1cf98082d40" title="Initializes the GLFW library." alt="" coords="498,284,562,310"/>
@@ -939,21 +933,23 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
-<div class="line"><span class="lineno">  163</span>        vk::DebugUtilsMessageSeverityFlagsEXT severityFlags(vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |</div>
-<div class="line"><span class="lineno">  164</span>                                                            vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |</div>
-<div class="line"><span class="lineno">  165</span>                                                            vk::DebugUtilsMessageSeverityFlagBitsEXT::eError);</div>
-<div class="line"><span class="lineno">  166</span>        vk::DebugUtilsMessageTypeFlagsEXT     messageTypeFlags(</div>
-<div class="line"><span class="lineno">  167</span>    vk::DebugUtilsMessageTypeFlagBitsEXT::eGeneral | vk::DebugUtilsMessageTypeFlagBitsEXT::ePerformance | vk::DebugUtilsMessageTypeFlagBitsEXT::eValidation);</div>
-<div class="line"><span class="lineno">  168</span>        vk::DebugUtilsMessengerCreateInfoEXT debugUtilsMessengerCreateInfoEXT{.messageSeverity = severityFlags,</div>
-<div class="line"><span class="lineno">  169</span>                                                                              .messageType     = messageTypeFlags,</div>
-<div class="line"><span class="lineno">  170</span>                                                                              .pfnUserCallback = &amp;<a class="code hl_function" href="#a255ceee02b1a75f5809d94bf87beb14b">debugCallback</a>};</div>
-<div class="line"><span class="lineno">  171</span>        <a class="code hl_variable" href="#a469a914a3f4e518f9717724e7f83c4de">_debugMessenger</a> = <a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>.createDebugUtilsMessengerEXT(debugUtilsMessengerCreateInfoEXT);</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a255ceee02b1a75f5809d94bf87beb14b"><div class="ttname"><a href="#a255ceee02b1a75f5809d94bf87beb14b">HelloTriangleApplication::debugCallback</a></div><div class="ttdeci">static VKAPI_ATTR vk::Bool32 VKAPI_CALL debugCallback(vk::DebugUtilsMessageSeverityFlagBitsEXT severity, vk::DebugUtilsMessageTypeFlagsEXT type, const vk::DebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)</div><div class="ttdef"><b>Definition</b> main.cpp:178</div></div>
-<div class="ttc" id="aclassHelloTriangleApplication_html_a469a914a3f4e518f9717724e7f83c4de"><div class="ttname"><a href="#a469a914a3f4e518f9717724e7f83c4de">HelloTriangleApplication::_debugMessenger</a></div><div class="ttdeci">vk::raii::DebugUtilsMessengerEXT _debugMessenger</div><div class="ttdef"><b>Definition</b> main.cpp:51</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>    {</div>
+<div class="line"><span class="lineno">  164</span>        vk::DebugUtilsMessageSeverityFlagsEXT severityFlags(vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |</div>
+<div class="line"><span class="lineno">  165</span>                                                            vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |</div>
+<div class="line"><span class="lineno">  166</span>                                                            vk::DebugUtilsMessageSeverityFlagBitsEXT::eError);</div>
+<div class="line"><span class="lineno">  167</span>        vk::DebugUtilsMessageTypeFlagsEXT     messageTypeFlags(</div>
+<div class="line"><span class="lineno">  168</span>    vk::DebugUtilsMessageTypeFlagBitsEXT::eGeneral | vk::DebugUtilsMessageTypeFlagBitsEXT::ePerformance | vk::DebugUtilsMessageTypeFlagBitsEXT::eValidation);</div>
+<div class="line"><span class="lineno">  169</span>        vk::DebugUtilsMessengerCreateInfoEXT debugUtilsMessengerCreateInfoEXT{.messageSeverity = severityFlags,</div>
+<div class="line"><span class="lineno">  170</span>                                                                              .messageType     = messageTypeFlags,</div>
+<div class="line"><span class="lineno">  171</span>                                                                              .pfnUserCallback = &amp;<a class="code hl_function" href="#a255ceee02b1a75f5809d94bf87beb14b">debugCallback</a>};</div>
+<div class="line"><span class="lineno">  172</span>        <a class="code hl_variable" href="#a469a914a3f4e518f9717724e7f83c4de">_debugMessenger</a> = <a class="code hl_variable" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>.createDebugUtilsMessengerEXT(debugUtilsMessengerCreateInfoEXT);</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a255ceee02b1a75f5809d94bf87beb14b"><div class="ttname"><a href="#a255ceee02b1a75f5809d94bf87beb14b">HelloTriangleApplication::debugCallback</a></div><div class="ttdeci">static VKAPI_ATTR vk::Bool32 VKAPI_CALL debugCallback(vk::DebugUtilsMessageSeverityFlagBitsEXT severity, vk::DebugUtilsMessageTypeFlagsEXT type, const vk::DebugUtilsMessengerCallbackDataEXT *pCallbackData, void *)</div><div class="ttdef"><b>Definition</b> main.cpp:179</div></div>
+<div class="ttc" id="aclassHelloTriangleApplication_html_a469a914a3f4e518f9717724e7f83c4de"><div class="ttname"><a href="#a469a914a3f4e518f9717724e7f83c4de">HelloTriangleApplication::_debugMessenger</a></div><div class="ttdeci">vk::raii::DebugUtilsMessengerEXT _debugMessenger</div><div class="ttdef"><b>Definition</b> main.cpp:52</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a469a914a3f4e518f9717724e7f83c4de">_debugMessenger</a>, <a class="el" href="#ad3e378b53088a5442a344ebb6a0ae09c">_instance</a>, and <a class="el" href="#a255ceee02b1a75f5809d94bf87beb14b">debugCallback()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#aceb28a2d94bd541ae1bb575f58848048">initVulkan()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -962,6 +958,18 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,5,167,46"/>
 <area shape="rect" href="classHelloTriangleApplication.html#a255ceee02b1a75f5809d94bf87beb14b" title=" " alt="" coords="215,5,376,46"/>
 <area shape="poly" title=" " alt="" coords="167,23,199,23,199,28,167,28"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classHelloTriangleApplication_a571e5442b665fa0f4d321b6114eb0b86_icgraph.png" border="0" usemap="#aclassHelloTriangleApplication_a571e5442b665fa0f4d321b6114eb0b86_icgraph" alt=""/></div>
+<map name="aclassHelloTriangleApplication_a571e5442b665fa0f4d321b6114eb0b86_icgraph" id="aclassHelloTriangleApplication_a571e5442b665fa0f4d321b6114eb0b86_icgraph">
+<area shape="rect" title=" " alt="" coords="448,5,609,46"/>
+<area shape="rect" href="classHelloTriangleApplication.html#aceb28a2d94bd541ae1bb575f58848048" title=" " alt="" coords="239,5,400,46"/>
+<area shape="poly" title=" " alt="" coords="432,28,400,28,400,23,432,23"/>
+<area shape="rect" href="classHelloTriangleApplication.html#af77c7c3324cc1fd3fa821d1f953b65ef" title=" " alt="" coords="5,13,191,38"/>
+<area shape="poly" title=" " alt="" coords="223,28,191,28,191,23,223,23"/>
 </map>
 </div>
 
@@ -1136,6 +1144,30 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a0b754e9c348fbb3cfbf2e27a6334b34e" name="a0b754e9c348fbb3cfbf2e27a6334b34e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b754e9c348fbb3cfbf2e27a6334b34e">&#9670;&#160;</a></span>_surface</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vk::raii::SurfaceKHR HelloTriangleApplication::_surface = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#afec790ea6335f736bc175819d7e50e18">createLogicalDevice()</a>, and <a class="el" href="#aee768c16f987da53eff6dfa09e441af7">createSurface()</a>.</p>
+
+</div>
+</div>
 <a id="a65e986d68d15fad0b45ffb3b51316cff" name="a65e986d68d15fad0b45ffb3b51316cff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a65e986d68d15fad0b45ffb3b51316cff">&#9670;&#160;</a></span>_window</h2>
 
@@ -1182,35 +1214,11 @@ Here is the call graph for this function:</div>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">        vk::KHRSwapchainExtensionName</div>
 <div class="line">    }</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><span class="lineno">  174</span>                                              {</div>
-<div class="line"><span class="lineno">  175</span>        vk::KHRSwapchainExtensionName</div>
-<div class="line"><span class="lineno">  176</span>    };</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="lineno">  175</span>                                              {</div>
+<div class="line"><span class="lineno">  176</span>        vk::KHRSwapchainExtensionName</div>
+<div class="line"><span class="lineno">  177</span>    };</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#afec790ea6335f736bc175819d7e50e18">createLogicalDevice()</a>, and <a class="el" href="#a78e19fdbfeffdafb9630a0a4ad275a94">pickPhysicalDevice()</a>.</p>
-
-</div>
-</div>
-<a id="a7f917cfdab06f60c22cc4c1057c16f4e" name="a7f917cfdab06f60c22cc4c1057c16f4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f917cfdab06f60c22cc4c1057c16f4e">&#9670;&#160;</a></span>surface</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vk::raii::SurfaceKHR HelloTriangleApplication::surface = nullptr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="#afec790ea6335f736bc175819d7e50e18">createLogicalDevice()</a>, and <a class="el" href="#aee768c16f987da53eff6dfa09e441af7">createSurface()</a>.</p>
 
 </div>
 </div>

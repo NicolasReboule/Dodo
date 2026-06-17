@@ -281,7 +281,7 @@ template&lt;typename... Features&gt; </div>
 <div class="line"><span class="lineno">   41</span>    <span class="keyword">auto</span> glfwContext = <a class="code hl_function" href="classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0">GLFWContext::createContext</a>();</div>
 <div class="line"><span class="lineno">   42</span>    <span class="keywordflow">if</span> (!glfwContext)</div>
 <div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;Failed to create GLFW context: &quot;</span> + glfwContext.error());</div>
-<div class="line"><span class="lineno">   44</span>    <span class="keyword">auto</span> vulkanContext = <a class="code hl_function" href="classdodo_1_1core_1_1VulkanContext.html#afed694e96c1ea50d8c68161666c8cc6b">VulkanContext::createContext</a>(ctxInfo);</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keyword">auto</span> vulkanContext = <a class="code hl_function" href="classdodo_1_1core_1_1VulkanContext.html#ac005dbfc0f82dc7a07dcc33a63cf8236">VulkanContext::createContext</a>(ctxInfo);</div>
 <div class="line"><span class="lineno">   45</span>    <span class="keywordflow">if</span> (!vulkanContext)</div>
 <div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> std::unexpected(<span class="stringliteral">&quot;Failed to create Vulkan context: &quot;</span> + vulkanContext.error());</div>
 <div class="line"><span class="lineno">   47</span>    <a class="code hl_function" href="#a98bcb08289267d6244ccb27f70f90080">DodoContext</a> dodoContext;</div>
@@ -290,38 +290,34 @@ template&lt;typename... Features&gt; </div>
 <div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> dodoContext;</div>
 <div class="line"><span class="lineno">   51</span>}</div>
 <div class="ttc" id="aclassdodo_1_1core_1_1DodoContext_html_a98bcb08289267d6244ccb27f70f90080"><div class="ttname"><a href="#a98bcb08289267d6244ccb27f70f90080">dodo::core::DodoContext::DodoContext</a></div><div class="ttdeci">DodoContext()=default</div></div>
-<div class="ttc" id="aclassdodo_1_1core_1_1GLFWContext_html_af66ac3d1c330cc304333ef901cb5aaf0"><div class="ttname"><a href="classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0">dodo::core::GLFWContext::createContext</a></div><div class="ttdeci">static auto createContext() -&gt; std::expected&lt; GLFWContext, std::string &gt;</div><div class="ttdef"><b>Definition</b> GLFWContext.cpp:11</div></div>
-<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_afed694e96c1ea50d8c68161666c8cc6b"><div class="ttname"><a href="classdodo_1_1core_1_1VulkanContext.html#afed694e96c1ea50d8c68161666c8cc6b">dodo::core::VulkanContext::createContext</a></div><div class="ttdeci">static auto createContext(const VulkanContextInfo&lt; Features... &gt; &amp;ctxInfo) -&gt; std::expected&lt; VulkanContext, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:82</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1GLFWContext_html_af66ac3d1c330cc304333ef901cb5aaf0"><div class="ttname"><a href="classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0">dodo::core::GLFWContext::createContext</a></div><div class="ttdeci">static auto createContext() -&gt; std::expected&lt; GLFWContext, std::string &gt;</div><div class="ttdef"><b>Definition</b> GLFWContext.cpp:9</div></div>
+<div class="ttc" id="aclassdodo_1_1core_1_1VulkanContext_html_ac005dbfc0f82dc7a07dcc33a63cf8236"><div class="ttname"><a href="classdodo_1_1core_1_1VulkanContext.html#ac005dbfc0f82dc7a07dcc33a63cf8236">dodo::core::VulkanContext::createContext</a></div><div class="ttdeci">static auto createContext(const VulkanContextInfo&lt; Features... &gt; &amp;ctxInfo, const std::experimental::observer_ptr&lt; GLFWwindow &gt; &amp;window) -&gt; std::expected&lt; VulkanContext, std::string &gt;</div><div class="ttdef"><b>Definition</b> VulkanContext.hpp:99</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#af247db7b1e8db3b359a1ceca1620f4f8">_glfwContext</a>, <a class="el" href="#a8c8fa87aa5d6234e823959ac7032e6c1">_vulkanContext</a>, <a class="el" href="classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0">dodo::core::GLFWContext::createContext()</a>, and <a class="el" href="classdodo_1_1core_1_1VulkanContext.html#afed694e96c1ea50d8c68161666c8cc6b">dodo::core::VulkanContext::createContext()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+<p class="reference">References <a class="el" href="#af247db7b1e8db3b359a1ceca1620f4f8">_glfwContext</a>, <a class="el" href="#a8c8fa87aa5d6234e823959ac7032e6c1">_vulkanContext</a>, <a class="el" href="classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0">dodo::core::GLFWContext::createContext()</a>, and <a class="el" href="classdodo_1_1core_1_1VulkanContext.html#ac005dbfc0f82dc7a07dcc33a63cf8236">dodo::core::VulkanContext::createContext()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classdodo_1_1core_1_1DodoContext_a37a4f98af6136d48a0ddc33f509687da_cgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1DodoContext_a37a4f98af6136d48a0ddc33f509687da_cgraph" alt=""/></div>
 <map name="aclassdodo_1_1core_1_1DodoContext_a37a4f98af6136d48a0ddc33f509687da_cgraph" id="aclassdodo_1_1core_1_1DodoContext_a37a4f98af6136d48a0ddc33f509687da_cgraph">
-<area shape="rect" title=" " alt="" coords="5,72,166,113"/>
-<area shape="rect" href="classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0" title=" " alt="" coords="215,39,383,80"/>
-<area shape="poly" title=" " alt="" coords="165,78,199,72,199,78,166,83"/>
-<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#afed694e96c1ea50d8c68161666c8cc6b" title=" " alt="" coords="214,104,384,145"/>
-<area shape="poly" title=" " alt="" coords="166,102,198,107,198,112,165,107"/>
-<area shape="rect" href="group__init.html#gaee7bac4c7e1b2769207747c1b5ae2f9e" title="Returns and clears the last error for the calling thread." alt="" coords="500,5,594,31"/>
-<area shape="poly" title=" " alt="" coords="383,43,485,26,486,31,384,48"/>
-<area shape="rect" href="group__init.html#gab41771f0215a2e0afb4cf1cf98082d40" title="Initializes the GLFW library." alt="" coords="516,55,579,80"/>
-<area shape="poly" title=" " alt="" coords="383,60,500,63,500,69,383,65"/>
-<area shape="rect" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c" title="Returns the Vulkan instance extensions required by GLFW." alt="" coords="432,112,662,138"/>
-<area shape="poly" title=" " alt="" coords="384,122,416,122,416,128,384,128"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classdodo_1_1core_1_1DodoContext_a37a4f98af6136d48a0ddc33f509687da_icgraph.png" border="0" usemap="#aclassdodo_1_1core_1_1DodoContext_a37a4f98af6136d48a0ddc33f509687da_icgraph" alt=""/></div>
-<map name="aclassdodo_1_1core_1_1DodoContext_a37a4f98af6136d48a0ddc33f509687da_icgraph" id="aclassdodo_1_1core_1_1DodoContext_a37a4f98af6136d48a0ddc33f509687da_icgraph">
-<area shape="rect" title=" " alt="" coords="103,5,263,46"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,38"/>
-<area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
+<area shape="rect" title=" " alt="" coords="5,108,166,149"/>
+<area shape="rect" href="classdodo_1_1core_1_1GLFWContext.html#af66ac3d1c330cc304333ef901cb5aaf0" title=" " alt="" coords="215,47,383,88"/>
+<area shape="poly" title=" " alt="" coords="158,105,210,90,212,95,159,110"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#ac005dbfc0f82dc7a07dcc33a63cf8236" title=" " alt="" coords="214,170,384,210"/>
+<area shape="poly" title=" " alt="" coords="159,147,212,162,210,168,158,152"/>
+<area shape="rect" href="group__init.html#gaee7bac4c7e1b2769207747c1b5ae2f9e" title="Returns and clears the last error for the calling thread." alt="" coords="470,5,564,31"/>
+<area shape="poly" title=" " alt="" coords="383,46,455,29,456,35,384,51"/>
+<area shape="rect" href="group__init.html#gab41771f0215a2e0afb4cf1cf98082d40" title="Initializes the GLFW library." alt="" coords="486,55,549,80"/>
+<area shape="poly" title=" " alt="" coords="384,65,470,65,470,70,384,70"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#a8b612bf85e6beb4b0b739e35de29e5be" title=" " alt="" coords="432,104,602,145"/>
+<area shape="poly" title=" " alt="" coords="368,167,432,148,433,153,370,172"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#ac0a360fba2d5871039fb29388d602665" title=" " alt="" coords="432,170,602,210"/>
+<area shape="poly" title=" " alt="" coords="384,188,416,188,416,193,384,193"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#aa003a6a0f0e50d33bf309c6e0dcf8fb7" title=" " alt="" coords="432,235,602,276"/>
+<area shape="poly" title=" " alt="" coords="370,208,433,228,432,233,368,214"/>
+<area shape="rect" href="classdodo_1_1core_1_1VulkanContext.html#aa9bd3ee1707edbcadd3db889c4a67216" title=" " alt="" coords="432,300,602,341"/>
+<area shape="poly" title=" " alt="" coords="326,209,374,247,433,285,445,291,443,296,431,290,371,251,322,213"/>
+<area shape="rect" href="group__vulkan.html#gada152edc5bbbd0c2138728878632fd9c" title="Returns the Vulkan instance extensions required by GLFW." alt="" coords="650,112,881,138"/>
+<area shape="poly" title=" " alt="" coords="603,122,634,122,634,128,603,128"/>
 </map>
 </div>
 
