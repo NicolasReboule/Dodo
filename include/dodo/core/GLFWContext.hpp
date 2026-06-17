@@ -31,10 +31,9 @@ class GLFWContext {
 
     GLFWContext &operator=(GLFWContext &&other) noexcept;
 
+    static auto createContext() -> std::expected<GLFWContext, std::string>;
    private:
     GLFWContext() = default;
-
-    static auto createContext() -> std::expected<GLFWContext, std::string>;
 
     friend class DodoContext;
 };

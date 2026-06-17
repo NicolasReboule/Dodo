@@ -6,7 +6,7 @@
 
 namespace dodo::core {
 
-auto App::createApp(const DodoContext &ctx, const AppInfo &appInfo) -> std::expected<App, std::string> {
+auto App::createApp(const GLFWContext &ctx, const AppInfo &appInfo) -> std::expected<App, std::string> {
     App app;
     if (auto result = app.createGLFWWindow(appInfo); !result)
         return std::unexpected(result.error());

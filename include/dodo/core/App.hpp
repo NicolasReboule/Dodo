@@ -6,18 +6,22 @@
 #define DODO_CORE_HPP
 
 #include <expected>
+#include <experimental/memory>
 #include <format>
 #include <string>
 #include <utility>
+#include <vulkan/vulkan_raii.hpp>
 
-#include "DodoContext.hpp"
 #include "GLFW/glfw3.h"
+#include "GLFWContext.hpp"
 
 namespace dodo::core {
 
 class App {
    private:
     GLFWwindow *_window = nullptr;
+
+    // I believe I should add contexts here and remove dodoContext entirely
    public:
     struct AppInfo {
         size_t width;
@@ -36,11 +40,13 @@ class App {
 
     App &operator=(App && other) noexcept;
 
-    static auto createApp(const DodoContext &ctx, const AppInfo &appInfo) -> std::expected<App, std::string>;
+    static auto createApp(const GLFWContext &ctx, const AppInfo &appInfo) -> std::expected<App, std::string>;
 
     bool isRunning() const { return !glfwWindowShouldClose(_window); };
 
     void pollEvents() const { glfwPollEvents(); };
+
+    std::experimental::observer_ptr<GLFWwindow> getWindow() const { return std::experimental::make_observer(_window); };
    private:
     App() = default;
 

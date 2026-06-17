@@ -4,8 +4,6 @@
 
 #include "dodo/core/GLFWContext.hpp"
 
-#include <iostream>
-
 namespace dodo::core {
 
 auto GLFWContext::createContext() -> std::expected<GLFWContext, std::string> {

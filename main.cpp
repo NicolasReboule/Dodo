@@ -1,3 +1,4 @@
+#include "dodo/core/VulkanContext.hpp"
 #if defined(__INTELLISENSE__) || !defined(USE_CPP20_MODULES)
 #include <vulkan/vulkan_raii.hpp>
 #else
@@ -51,8 +52,8 @@ private:
     vk::raii::DebugUtilsMessengerEXT _debugMessenger = nullptr;
     vk::raii::Device _device = nullptr;
     vk::raii::Queue _graphicsQueue = nullptr;
-    vk::raii::SurfaceKHR surface = nullptr;
     vk::raii::Queue _presentQueue = nullptr;
+    vk::raii::SurfaceKHR _surface = nullptr;
 
 public:
     void run() {
@@ -64,8 +65,8 @@ public:
 private:
     void initVulkan() {
         createInstance();
-        // setupDebugMessenger();
-        pickPhysicalDevice();
+        setupDebugMessenger();
+        // pickPhysicalDevice();
     }
 
     void initWindow() {
@@ -215,7 +216,6 @@ private:
     }
 
     uint32_t findQueueFamilies(vk::raii::PhysicalDevice physicalDevice) {
-        // find the index of the first queue family that supports graphics
         std::vector<vk::QueueFamilyProperties> queueFamilyProperties = physicalDevice.getQueueFamilyProperties();
 
         // get the first index into queueFamilyProperties which supports graphics
@@ -223,7 +223,8 @@ private:
           std::find_if( queueFamilyProperties.begin(),
                         queueFamilyProperties.end(),
                         []( vk::QueueFamilyProperties const & qfp ) { return qfp.queueFlags & vk::QueueFlagBits::eGraphics; } );
-
+        // if ((graphicsQueueFamilyProperty == queueFamilyProperties.end())
+            // return std::unexpected("No graphics queue family found");
         return static_cast<uint32_t>(std::distance(queueFamilyProperties.begin(), graphicsQueueFamilyProperty));
     }
 
@@ -233,7 +234,7 @@ private:
 
         // determine a queueFamilyIndex that supports present
         // first check if the graphicsIndex is good enough
-        auto presentIndex = _physicalDevice.getSurfaceSupportKHR(graphicsIndex, *surface )
+        auto presentIndex = _physicalDevice.getSurfaceSupportKHR(graphicsIndex, *_surface )
                                            ? graphicsIndex : static_cast<uint32_t>(queueFamilyProperties.size());
 
         if ( presentIndex == queueFamilyProperties.size() )
@@ -243,7 +244,7 @@ private:
             for ( size_t i = 0; i < queueFamilyProperties.size(); i++ )
             {
                 if ( ( queueFamilyProperties[i].queueFlags & vk::QueueFlagBits::eGraphics ) &&
-                     _physicalDevice.getSurfaceSupportKHR( static_cast<uint32_t>( i ), *surface ) )
+                     _physicalDevice.getSurfaceSupportKHR( static_cast<uint32_t>( i ), *_surface ) )
                 {
                     graphicsIndex = static_cast<uint32_t>( i );
                     presentIndex  = graphicsIndex;
@@ -256,7 +257,7 @@ private:
                 // family index that supports present
                 for ( size_t i = 0; i < queueFamilyProperties.size(); i++ )
                 {
-                    if ( _physicalDevice.getSurfaceSupportKHR( static_cast<uint32_t>( i ), *surface ) )
+                    if ( _physicalDevice.getSurfaceSupportKHR( static_cast<uint32_t>( i ), *_surface ) )
                     {
                         presentIndex = static_cast<uint32_t>( i );
                         break;
@@ -301,11 +302,11 @@ private:
 
     // In App
     void createSurface() {
-        VkSurfaceKHR _surface;
-        if (glfwCreateWindowSurface(*_instance, _window, nullptr, &_surface) != 0) {
+        VkSurfaceKHR surface;
+        if (glfwCreateWindowSurface(*_instance, _window, nullptr, &surface) != 0) {
             throw std::runtime_error("failed to create window surface!");
         }
-        surface = vk::raii::SurfaceKHR(_instance, _surface);
+        _surface = vk::raii::SurfaceKHR(_instance, surface);
     }
 };
 
@@ -371,22 +372,29 @@ int main() {
         .validationLayers = vLayers,
     };
 
-     const dodo::core::VulkanContext::VulkanContextInfo<vk::PhysicalDeviceFeatures2,
-                         vk::PhysicalDeviceVulkan13Features,
-                         vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT> vkCtxInfo {
-        .vkInfo = vkInfo,
-        .featureChain = featureChain,
-        .debugInfo = debugInfo
+    const std::vector<const char*> deviceExtensions = {
+        vk::KHRSwapchainExtensionName
     };
 
-    auto ctx = dodo::core::DodoContext::createDodoContext(vkCtxInfo);
-    auto app = dodo::core::App::createApp(*ctx, appInfo);
+    const dodo::core::VulkanContext::VulkanContextInfo<vk::PhysicalDeviceFeatures2,
+        vk::PhysicalDeviceVulkan13Features,
+        vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT> vkCtxInfo {
+            .vkInfo = vkInfo,
+            .featureChain = featureChain,
+            .deviceExtensions = deviceExtensions,
+            .debugInfo = debugInfo,
+    };
+
+    auto gflwContext = dodo::core::GLFWContext::createContext();
+    // auto ctx = dodo::core::DodoContext::createDodoContext(vkCtxInfo);
+    auto app = dodo::core::App::createApp(*gflwContext, appInfo);
     if (app) {
         std::cout << "Success" << std::endl;
     } else {
         std::cout << app.error() << std::endl;
         return EXIT_FAILURE;
     }
+    auto vulkanContext = dodo::core::VulkanContext::createContext(vkCtxInfo, app->getWindow());
     while (app->isRunning()) {
         app->pollEvents();
     }
@@ -397,5 +405,5 @@ int main() {
     //     std::cerr << e.what() << std::endl;
     //     return EXIT_FAILURE;
     // }
-    return EXIT_SUCCESS;
+    // return EXIT_SUCCESS;
 }
